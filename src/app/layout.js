@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BackgroundSparkles } from "@/components/BackgroundSparkles";
+import { MagnetLines } from "@/components/ui/magnet-lines";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +23,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <BackgroundSparkles>
+        <div className="fixed inset-0 z-[-1]">
+          <MagnetLines></MagnetLines>
+        </div>
         {children}
-        </BackgroundSparkles>
       </body>
     </html>
   );

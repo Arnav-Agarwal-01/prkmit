@@ -1,10 +1,11 @@
+"use client";
 import { useRef, useEffect } from "react";
 
 function MagnetLines({
   rows = 9,
   columns = 9,
-  containerSize = "80vmin",
-  lineColor = "#efefef",
+  containerSize = "100%",
+  lineColor = "#ED6B20",
   lineWidth = "1vmin",
   lineHeight = "6vmin",
   baseAngle = -10,
