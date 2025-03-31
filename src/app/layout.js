@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MagnetLines } from "@/components/ui/magnet-lines";
 import { BackgroundGrid } from "@/components/BackgroundGrid";
+import { NavBar } from "@/components/ui/tubelight-navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,12 +20,21 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // Define navigation items for the navbar
+  const navItems = [
+    { name: "Home", url: "/", icon: "home" },
+    { name: "About", url: "/about", icon: "info" },
+    { name: "Events", url: "/events", icon: "calendar" },
+    { name: "Contact", url: "/contact", icon: "mail" },
+  ];
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <BackgroundGrid color="rgb(237, 107, 32)" maxOpacity={0.7} squareSize={1.8} gridGap={10} flickerChance={0.3}>
+          <NavBar items={navItems} />
           {children}
         </BackgroundGrid>
       </body>
