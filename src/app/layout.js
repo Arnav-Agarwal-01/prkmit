@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { MagnetLines } from "@/components/ui/magnet-lines";
+import { BackgroundGrid } from "@/components/BackgroundGrid";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="fixed inset-0 z-[-1]">
-          <MagnetLines></MagnetLines>
-        </div>
-        {children}
+        <BackgroundGrid color="rgb(237, 107, 32)" maxOpacity={0.7} squareSize={1.8} gridGap={10} flickerChance={0.3}>
+          {children}
+        </BackgroundGrid>
       </body>
     </html>
   );
