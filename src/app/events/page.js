@@ -2,7 +2,7 @@ import React from 'react'
 import localFont from 'next/font/local';
 import { TextAnimate } from '@/components/magicui/text-animate';
 import {Timeline} from '@/components/ui/timeline';
-
+import { CardSpotlight } from '@/components/ui/card-spotlight';
 const familyName = localFont({
     src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
   })
@@ -55,6 +55,9 @@ export default function page() {
       ];
   return (
     <div>
+        
+
+
         <div className="container mx-auto  pt-60 pb-8 px-4 ">
           <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-12`}>
             <TextAnimate animation="blurInUp" by="character" duration={1}>
@@ -67,6 +70,34 @@ export default function page() {
         <div className="container mx-auto  px-4">
           <Timeline data={timelineData} />
         </div>
+
+        {/* Why Sponsor Us Section */}
+        <div className="container mx-auto py-12 px-4 mt-40">
+          <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-8`}>
+            <TextAnimate animation="blurInUp" by="character" duration={1}>
+              Why Sponsor Us?
+            </TextAnimate>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <CardSpotlight>
+              <h3 className="text-xl font-bold text-white mb-4">Unparalleled Visibility</h3>
+              <p className="text-neutral-400">Reach 5000+ students through our flagship events with premium branding opportunities.</p>
+            </CardSpotlight>
+            <CardSpotlight>
+              <h3 className="text-xl font-bold text-white mb-4">Targeted Engagement</h3>
+              <p className="text-neutral-400">Direct access to India's brightest engineering talent for recruitment and brand loyalty.</p>
+            </CardSpotlight>
+            <CardSpotlight>
+              <h3 className="text-xl font-bold text-white mb-4">Custom Packages</h3>
+              <p className="text-neutral-400">Tailored sponsorship solutions to meet your specific marketing objectives.</p>
+            </CardSpotlight>
+          </div>
+        </div>
+
+
+        
+
     </div>
   )
 }
