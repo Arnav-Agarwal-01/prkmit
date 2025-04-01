@@ -69,12 +69,14 @@ export const Timeline = ({
               </div>
 
               {/* See More Button */}
-              <Link 
-                href={item.link || '#'} 
-                className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 transition-colors rounded-lg text-white font-semibold"
-              >
-                See More
-              </Link>
+              <div className="relative z-50">
+                <Link 
+                  href={item.link || '#'} 
+                  className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 transition-colors rounded-lg text-white font-semibold"
+                >
+                  See More
+                </Link>
+              </div>
             </div>
           </div>
         ))}
