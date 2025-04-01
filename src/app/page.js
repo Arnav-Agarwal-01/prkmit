@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { TextScramble } from "@/components/ui/text-scramble";
 import { CardBody,CardContainer,CardItem } from "@/components/ui/3d-card";
 import { Timeline } from "@/components/ui/timeline"; // Import the Timeline component
+import { TextReveal } from "@/components/magicui/text-reveal";
 const familyName = localFont({
   src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
 })
