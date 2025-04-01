@@ -9,6 +9,9 @@ import { TextScramble } from "@/components/ui/text-scramble";
 import { CardBody,CardContainer,CardItem } from "@/components/ui/3d-card";
 import { Timeline } from "@/components/ui/timeline"; // Import the Timeline component
 import { TextReveal } from "@/components/magicui/text-reveal";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
+
+import Link from 'next/link';
 const familyName = localFont({
   src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
 })
@@ -119,6 +122,58 @@ export default function Home() {
         <div className="container mx-auto py-20 px-4">
           <Timeline data={timelineData} />
         </div>
+
+        {/* Sponsors Section */}
+        <div className="container mx-auto py-20 px-4">
+          <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-12`}>
+            
+              Our Sponsors
+            
+          </div>
+          <InfiniteSlider gap={24} reverse className="w-full h-full">
+            <img
+              src="https://motion-primitives.com/apple_music_logo.svg"
+              alt="Apple Music logo"
+              className="h-[120px] w-auto"
+            />
+            <img
+              src="https://motion-primitives.com/chrome_logo.svg"
+              alt="Chrome logo"
+              className="h-[120px] w-auto"
+            />
+            <img
+              src="https://motion-primitives.com/strava_logo.svg"
+              alt="Strava logo"
+              className="h-[120px] w-auto"
+            />
+            <img
+              src="https://motion-primitives.com/nintendo_logo.svg"
+              alt="Nintendo logo"
+              className="h-[120px] w-auto"
+            />
+            <img
+              src="https://motion-primitives.com/jquery_logo.svg"
+              alt="Jquery logo"
+              className="h-[120px] w-auto"
+            />
+            <img
+              src="https://motion-primitives.com/prada_logo.svg"
+              alt="Prada logo"
+              className="h-[120px] w-auto"
+            />
+          </InfiniteSlider>
+
+          <div className="mt-12 flex justify-center relative z-50">
+            <Link href="/contact" passHref legacyBehavior>
+              <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 w-full md:w-auto relative z-[9999] cursor-pointer pointer-events-auto mt-10">
+                Sponsor our next event
+              </a>
+            </Link>
+          </div>
+        </div>
+
+        
+
         
         {/* Add more content here */}
       </main>
