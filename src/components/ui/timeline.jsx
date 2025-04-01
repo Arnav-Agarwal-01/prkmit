@@ -1,6 +1,8 @@
 "use client";;
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export const Timeline = ({
   data
@@ -25,19 +27,7 @@ export const Timeline = ({
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
-      ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
-        </h2>
-        <p
-          className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-      </div>
+    <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
@@ -55,11 +45,36 @@ export const Timeline = ({
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3
-                className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-white">
                 {item.title}
               </h3>
-              {item.content}{" "}
+              
+              {/* Image Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {item.images?.slice(0, 2).map((image, imgIndex) => (
+                  <div key={imgIndex} className="relative aspect-video rounded-lg overflow-hidden">
+                    <Image
+                      src={image}
+                      alt={`${item.title} image ${imgIndex + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Content */}
+              <div className="prose prose-invert max-w-none mb-6">
+                {item.content}
+              </div>
+
+              {/* See More Button */}
+              <Link 
+                href={item.link || '#'} 
+                className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 transition-colors rounded-lg text-white font-semibold"
+              >
+                See More
+              </Link>
             </div>
           </div>
         ))}

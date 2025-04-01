@@ -7,11 +7,58 @@ import { AnimatedText } from "@/components/ui/animated-shiny-text";
 import { motion } from "framer-motion";
 import { TextScramble } from "@/components/ui/text-scramble";
 import { CardBody,CardContainer,CardItem } from "@/components/ui/3d-card";
+import { Timeline } from "@/components/ui/timeline"; // Import the Timeline component
 const familyName = localFont({
   src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
 })
 
 export default function Home() {
+  const timelineData = [
+    {
+      title: "January - Patang Utsav",
+      content: "Description of Event 1.",
+      images: [
+        "/events/patang1.jpg",
+        "/events/patang2.jpg"
+      ],
+      link: "/patang-utsav"
+    },
+    {
+      title: "March - KMIT EVENING",
+      content: (
+        <div>
+          <p>Description of Event 2.</p>
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+          </ul>
+        </div>
+      ),
+      images: [
+        "/events/kmit1.jpg",
+        "/events/kmit2.jpg"
+      ],
+      link: "/kmit-evening"
+    },
+    {
+      title: "October - Navraas",
+      content: (
+        <div>
+          <p>Description of Event 2.</p>
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+          </ul>
+        </div>
+      ),
+      images: [
+        "/events/kmit1.jpg",
+        "/events/kmit2.jpg"
+      ],
+      link: "/navras"
+    }
+  ];
+
   return (
     <div className="min-h-[500vh] w-full">
       <main className="flex flex-col relative min-h-[200vh]">
@@ -65,37 +112,11 @@ export default function Home() {
               KMIT Flagship Events
             </TextAnimate>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <CardContainer key={item} className="inter-var">
-                <CardBody className="bg-black/40 relative group/card hover:shadow-2xl hover:shadow-orange-500/[0.1] border-white/[0.2] border rounded-xl p-6 h-full">
-                  <CardItem
-                    translateZ="50"
-                    className="text-xl font-bold text-white"
-                  >
-                    Event Title
-                  </CardItem>
-                  <CardItem
-                    as="p"
-                    translateZ="60"
-                    className="text-white text-sm mt-2"
-                  >
-                    Event description spanning multiple lines with detailed information about the flagship event.
-                  </CardItem>
-                  <CardItem translateZ="100" className="w-full mt-4">
-                    <Image
-                      src="/prlogo.png"
-                      height="1000"
-                      width="1000"
-                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                      alt="event thumbnail"
-                    />
-                  </CardItem>
-                </CardBody>
-              </CardContainer>
-            ))}
-          </div>
+        </div>
+
+        {/* Timeline Section */}
+        <div className="container mx-auto py-20 px-4">
+          <Timeline data={timelineData} />
         </div>
         
         {/* Add more content here */}
