@@ -4,6 +4,7 @@
 
 /* Set a consistent background color */
 body {
+  @apply bg-background text-foreground;
 }
 
 :root {
