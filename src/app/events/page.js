@@ -4,6 +4,7 @@ import { TextAnimate } from '@/components/magicui/text-animate';
 import {Timeline} from '@/components/ui/timeline';
 import { CardSpotlight } from '@/components/ui/card-spotlight';
 import { Testimonial } from '@/components/ui/testimonial-card';
+import Link from 'next/link';
 const familyName = localFont({
     src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
   })
@@ -148,6 +149,20 @@ export default function page() {
             />
           </div>
         </div>
+
+
+        <div className="mt-12 flex justify-center relative z-50">
+            <Link href="/contact" passHref legacyBehavior>
+              <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 w-full md:w-auto relative z-[9999] cursor-pointer pointer-events-auto mt-10">
+                Sponsor our next event
+              </a>
+            </Link>
+          </div>
+
+          <br/>
+          <br/>
+          <br/>
+          <br/>
         
     </div>
   )
