@@ -1,11 +1,23 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export const Meteors = ({
   number,
   className
 }) => {
+  const [meteorStyles, setMeteorStyles] = useState([]);
   const meteors = new Array(number || 20).fill(true);
+  
+  // Generate random styles only on the client side
+  useEffect(() => {
+    const styles = meteors.map(() => ({
+      left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
+      animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
+      animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+    }));
+    setMeteorStyles(styles);
+  }, [number]); // Re-run if number of meteors changes
+
   return (
     <>
       {meteors.map((el, idx) => (
@@ -18,9 +30,7 @@ export const Meteors = ({
           )}
           style={{
             top: 0,
-            left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
-            animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
-            animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+            ...(meteorStyles[idx] || {}), // Use generated styles or empty object as fallback during SSR
           }}></span>
       ))}
     </>
