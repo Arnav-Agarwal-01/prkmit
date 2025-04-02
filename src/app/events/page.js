@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { TextAnimate } from '@/components/magicui/text-animate';
 import {Timeline} from '@/components/ui/timeline';
 import { CardSpotlight } from '@/components/ui/card-spotlight';
+import { Testimonial } from '@/components/ui/testimonial-card';
 const familyName = localFont({
     src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
   })
@@ -96,8 +97,58 @@ export default function page() {
         </div>
 
 
+        {/* Testimonials Section */}
+        <div className="container mx-auto py-12 px-4 mt-20">
+          <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-8`}>
+            <TextAnimate animation="blurInUp" by="character" duration={1}>
+              What People Say
+            </TextAnimate>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Testimonial
+              name="John Doe"
+              role="CEO"
+              company="Tech Corp"
+              testimonial="Partnering with KMIT events was a game-changer for our brand visibility. The engagement we received exceeded all expectations."
+              rating={5}
+              image="/events/testimonial1.jpg"
+            />
+            <Testimonial
+              name="Jane Smith"
+              role="Marketing Director"
+              company="Innovate Inc"
+              testimonial="The professional execution and student participation made this sponsorship one of our most successful campaigns this year."
+              rating={5}
+              image="/events/testimonial2.jpg"
+            />
+            <Testimonial
+              name="Alex Johnson"
+              role="CTO"
+              company="NextGen Solutions"
+              testimonial="Our sponsorship with KMIT provided exceptional reach and engagement with the tech community."
+              rating={5}
+              image="/events/testimonial3.jpg"
+            />
+            <Testimonial
+              name="Sarah Lee"
+              role="Brand Manager"
+              company="Global Innovations"
+              testimonial="The student engagement was outstanding, leading to meaningful interactions with our brand."
+              rating={5}
+              image="/events/testimonial4.jpg"
+            />
+            <Testimonial
+              name="Michael Chen"
+              role="Head of Partnerships"
+              company="TechBridge"
+              testimonial="A highly professional and impactful collaboration that delivered measurable results."
+              rating={5}
+              image="/events/testimonial5.jpg"
+            />
+          </div>
+        </div>
         
-
     </div>
   )
 }
