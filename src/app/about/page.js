@@ -90,7 +90,11 @@ function page() {
       </div>
 
       {/* Move the 6 cards with Meteors components here */}
+      <div className='text-center mt-20 mb-20 text-4xl '>
+          We work too duh
+        </div>
       <div className="flex flex-wrap justify-center items-center space-x-4 space-y-4 mt-10">
+        
         {Array.from({ length: 6 }).map((_, index) => (
           <div key={index} className="w-full relative max-w-xs">
             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
