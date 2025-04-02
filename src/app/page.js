@@ -97,11 +97,11 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </motion.div>
-            <TextAnimate animation="blurInUp" by="character" duration={1}>
+            <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
               Public Relations KMIT
             </TextAnimate>
             <div className={`text-white text-xl md:text-3xl text-center mt-8 ${familyName.className}`}>
-        <TextAnimate animation="blurInUp" by="character" duration={1}>
+        <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
           Where chaos meets creativity.
         </TextAnimate>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
         {/* KMIT Flagship Events Section */}
         <div className="container mx-auto py-20 px-4">
           <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-12`}>
-            <TextAnimate animation="blurInUp" by="character" duration={1}>
+            <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
               KMIT Flagship Events
             </TextAnimate>
           </div>
