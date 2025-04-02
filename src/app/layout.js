@@ -3,6 +3,7 @@ import "./globals.css";
 import { MagnetLines } from "@/components/ui/magnet-lines";
 import { BackgroundGrid } from "@/components/BackgroundGrid";
 import { NavBar } from "@/components/ui/tubelight-navbar";
+import { Footer } from "@/components/ui/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         <BackgroundGrid color="rgb(237, 107, 32)" maxOpacity={0.7} squareSize={1.8} gridGap={10} flickerChance={0.3}>
           <NavBar items={navItems} />
           {children}
+          <Footer />
         </BackgroundGrid>
       </body>
     </html>

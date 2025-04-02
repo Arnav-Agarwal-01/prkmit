@@ -6,7 +6,7 @@ export const BackgroundGrid = ({
   children,
   color = "rgb(237, 107, 32)",
   maxOpacity = 0.3,
-  squareSize = 4,
+  squareSize = 8,
   gridGap = 6,
   flickerChance = 0.5,
   className = ""
