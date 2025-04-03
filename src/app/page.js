@@ -67,7 +67,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-[700vh] w-full">
+    <div className="min-h-[650vh] w-full">
       <main className="flex flex-col relative min-h-[200vh]">
         {/* Hero Section */}
         <div className="h-screen flex items-center justify-center">

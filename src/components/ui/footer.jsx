@@ -8,9 +8,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { name: 'Instagram', url: 'https://instagram.com', icon: '/social/instagram.svg' },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: '/social/linkedin.svg' },
-    { name: 'Twitter', url: 'https://twitter.com', icon: '/social/twitter.svg' },
+    { name: 'Instagram', url: 'https://www.instagram.com/pr.kmit/', icon: '/social/instagram.svg' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/keshav-memorial-institute-of-technology-hyderabad/', icon: '/social/linkedin.svg' },
+    { name: 'Facebook', url: 'https://www.facebook.com/KMiT.in/', icon: '/social/facebook.svg' },
   ];
 
   const navLinks = [
@@ -37,7 +37,7 @@ export function Footer() {
               <span className="ml-3 text-white font-semibold">PR KMIT</span>
             </Link>
             <p className="text-neutral-400 text-sm">
-              Where chaos meets creativity. The official Public Relations team of KMIT.
+              The Public Relations team of KMIT.
             </p>
           </div>
           
@@ -107,7 +107,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-400 text-sm mb-4 md:mb-0">
-            © {currentYear} Public Relations KMIT. All rights reserved.
+            Designed and developed with love by PR KMIT ❤️
           </p>
           
           {/* Social Links */}
