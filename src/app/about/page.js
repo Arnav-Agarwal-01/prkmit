@@ -83,7 +83,7 @@ function page() {
   ];
   
   return (
-    <div className="min-h-[500vh] w-full">
+    <div className="w-full">
       {/* Remove absolute positioning from HeroParallax */}
       <div className="w-full">
         <HeroParallax products={products} />

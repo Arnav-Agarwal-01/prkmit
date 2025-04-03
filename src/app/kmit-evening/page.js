@@ -12,7 +12,7 @@ const familyName = localFont({
 function page() {
   
   return (
-    <div className='min-h-[2000vh] pl-8 md:pl-16 lg:pl-32'> {/* Added responsive padding */}
+    <div className='pl-8 md:pl-16 lg:pl-32'> {/* Removed fixed height */}
         <div className='text-sm md:text-base relative top-60'>
             <TextHoverEffect text="Saanjh" size='300px'/>
         </div>

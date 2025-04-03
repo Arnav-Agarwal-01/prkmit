@@ -67,8 +67,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-[650vh] w-full">
-      <main className="flex flex-col relative min-h-[200vh]">
+    <div className="w-full">
+      <main className="flex flex-col relative">
         {/* Hero Section */}
         <div className="h-screen flex items-center justify-center">
           <div className={`text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center`}>
@@ -180,9 +180,9 @@ export default function Home() {
         <br/>
 
         {/* Image Gallery Section */}
-                <div className="h-screen w-full relative">
+                <div className="w-full relative">
                   
-                  <div className="flex min-h-screen items-start justify-center pb-12">
+                  <div className="flex items-start justify-center pb-12">
                     <InView
                       viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
                       variants={{
