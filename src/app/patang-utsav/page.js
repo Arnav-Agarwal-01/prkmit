@@ -14,7 +14,8 @@ function page() {
   return (
     <div className='pl-8 md:pl-16 lg:pl-32'> {/* Removed fixed height */}
         <div className='text-sm md:text-base relative top-60'>
-            <TextHoverEffect text="Patang Utsav" size='300px'/>
+            <TextHoverEffect text="Patang" size='100%'/>
+            <TextHoverEffect text="Utsav" size='100%'/>
         </div>
 
         <div>
