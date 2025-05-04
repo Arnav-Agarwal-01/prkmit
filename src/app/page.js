@@ -13,20 +13,8 @@ import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { InView } from "@/components/ui/in-view";
 import Link from 'next/link';
 
-// Import all images
-import DanceImg from "../../public/mainPageImages/dance.jpg";
-import DrumsImg from "../../public/mainPageImages/drums.jpg";
-import MarsImg from "../../public/mainPageImages/mars.jpg";
-import KhonsuImg from "../../public/mainPageImages/khonsu.jpg";
-import DarkAndLightImg from "../../public/mainPageImages/darkAndLight.png";
-import SilhoutteImg from "../../public/mainPageImages/silhoutte.jpg";
-import StageImg from "../../public/mainPageImages/stage.jpg";
-import LightImg from "../../public/mainPageImages/light.jpg";
-import SingerBgImg from "../../public/mainPageImages/singerbg.png";
-import SingingImg from "../../public/mainPageImages/singing.jpg";
-import VoilinImg from "../../public/mainPageImages/voilin.png";
-import NavrasDecorImg from "../../public/mainPageImages/navrasdecor.png";
-import NavrasPublicImg from "../../public/mainPageImages/navraspublic.png";
+// Remove the direct imports
+// Instead we'll use the Image component with the path directly
 
 const familyName = localFont({
   src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
@@ -207,19 +195,19 @@ export default function Home() {
             >
               <div className="columns-2 gap-1 px-8 sm:columns-3">
                 {[
-                  { src: DanceImg, alt: "Dance image" },
-                  { src: DrumsImg, alt: "Drums image" },
-                  { src: MarsImg, alt: "Mars image" },
-                  { src: KhonsuImg, alt: "Khonsu image" },
-                  { src: DarkAndLightImg, alt: "Dark and Light image" },
-                  { src: SilhoutteImg, alt: "Silhoutte image" },
-                  { src: StageImg, alt: "Stage image" },
-                  { src: LightImg, alt: "Light image" },
-                  { src: SingerBgImg, alt: "Singer background image" },
-                  { src: SingingImg, alt: "Singing image" },
-                  { src: VoilinImg, alt: "Voilin image" },
-                  { src: NavrasDecorImg, alt: "Navras Decor image" },
-                  { src: NavrasPublicImg, alt: "Navras Public image" },
+                  { src: "/mainPageImages/dance.jpg", alt: "Dance image" },
+                  { src: "/mainPageImages/drums.jpg", alt: "Drums image" },
+                  { src: "/mainPageImages/mars.jpg", alt: "Mars image" },
+                  { src: "/mainPageImages/khonsu.jpg", alt: "Khonsu image" },
+                  { src: "/mainPageImages/darkAndLight.png", alt: "Dark and Light image" },
+                  { src: "/mainPageImages/silhoutte.jpg", alt: "Silhoutte image" },
+                  { src: "/mainPageImages/stage.jpg", alt: "Stage image" },
+                  { src: "/mainPageImages/light.jpg", alt: "Light image" },
+                  { src: "/mainPageImages/singerbg.png", alt: "Singer background image" },
+                  { src: "/mainPageImages/singing.jpg", alt: "Singing image" },
+                  { src: "/mainPageImages/voilin.png", alt: "Voilin image" },
+                  { src: "/mainPageImages/navrasdecor.png", alt: "Navras Decor image" },
+                  { src: "/mainPageImages/navraspublic.png", alt: "Navras Public image" },
                 ].map((img, index) => {
                   return (
                     <motion.div
@@ -233,6 +221,8 @@ export default function Home() {
                       <Image
                         src={img.src}
                         alt={img.alt}
+                        width={500}
+                        height={300}
                         className="size-full rounded-[20px] object-contain"
                       />
                     </motion.div>
