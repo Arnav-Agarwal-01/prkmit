@@ -184,7 +184,7 @@ export default function Home() {
         <div className="w-full relative">
           <div className="flex items-start justify-center pb-12">
             <InView
-              viewOptions={{ once: false, margin: "0px 0px -250px 0px" }}
+              viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
               variants={{
                 hidden: { opacity: 0 },
                 visible: {
