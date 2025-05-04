@@ -10,51 +10,51 @@ const familyName = localFont({
   })
 
 export default function page() {
-    const timelineData = [
-        {
-          title: "January - Patang Utsav",
-          content: "Description of Event 1.",
-          images: [
-            "/events/patang1.jpg",
-            "/events/patang2.jpg"
-          ],
-          link: "/patang-utsav"
-        },
-        {
-          title: "March - KMIT EVENING",
-          content: (
-            <div>
-              <p>Description of Event 2.</p>
-              <ul>
-                <li>Point 1</li>
-                <li>Point 2</li>
-              </ul>
-            </div>
-          ),
-          images: [
-            "/events/kmit1.jpg",
-            "/events/kmit2.jpg"
-          ],
-          link: "/kmit-evening"
-        },
-        {
-          title: "October - Navraas",
-          content: (
-            <div>
-              <p>Description of Event 2.</p>
-              <ul>
-                <li>Point 1</li>
-                <li>Point 2</li>
-              </ul>
-            </div>
-          ),
-          images: [
-            "/events/kmit1.jpg",
-            "/events/kmit2.jpg"
-          ],
-          link: "/navras"
-        }
-      ];
+  const timelineData = [
+    {
+      title: "January - Patang Utsav",
+      content: "Description of Event 1.",
+      images: [
+        "/events/patangutsavdecor.jpg",
+        "/events/patangutsav1.jpg"
+      ],
+      link: "/patang-utsav"
+    },
+    {
+      title: "March - KMIT EVENING",
+      content: (
+        <div>
+          <p>Description of Event 2.</p>
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+          </ul>
+        </div>
+      ),
+      images: [
+        "/events/saanjhdecor.jpg",
+        "/events/saanjh2.jpg"
+      ],
+      link: "/kmit-evening"
+    },
+    {
+      title: "October - Navraas",
+      content: (
+        <div>
+          <p>Description of Event 2.</p>
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+          </ul>
+        </div>
+      ),
+      images: [
+        "/events/navraaspreview.jpg",
+        "/events/navraasdecor.jpg",
+      ],
+      link: "/navras"
+    }
+  ];
   return (
     <div>
         

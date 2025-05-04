@@ -26,8 +26,8 @@ export default function Home() {
       title: "January - Patang Utsav",
       content: "Description of Event 1.",
       images: [
-        "/events/patang1.jpg",
-        "/events/patang2.jpg"
+        "/events/patangutsavdecor.jpg",
+        "/events/patangutsav1.jpg"
       ],
       link: "/patang-utsav"
     },
@@ -43,8 +43,8 @@ export default function Home() {
         </div>
       ),
       images: [
-        "/events/kmit1.jpg",
-        "/events/kmit2.jpg"
+        "/events/saanjhdecor.jpg",
+        "/events/saanjh2.jpg"
       ],
       link: "/kmit-evening"
     },
@@ -60,8 +60,8 @@ export default function Home() {
         </div>
       ),
       images: [
-        "/events/kmit1.jpg",
-        "/events/kmit2.jpg"
+        "/events/navraaspreview.jpg",
+        "/events/navraasdecor.jpg",
       ],
       link: "/navras"
     }
