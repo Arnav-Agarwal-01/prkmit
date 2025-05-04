@@ -55,7 +55,21 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		
+  		// Add keyframes for meteor animation
+  		keyframes: {
+  			'meteor-effect': {
+  				'0%': { transform: 'rotate(215deg) translateX(0)', opacity: 1 },
+  				'70%': { opacity: 1 },
+  				'100%': {
+  					transform: 'rotate(215deg) translateX(-500px)',
+  					opacity: 0
+  				},
+  			},
+  		},
+  		// Add animation to the animation utilities
+  		animation: {
+  			'meteor-effect': 'meteor-effect 5s linear infinite',
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
