@@ -74,8 +74,8 @@ export const TextHoverEffect = ({
         </mask>
       </defs>
       <text
-        x="50%"
-        y="50%"
+        x="45%"
+        y="45%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
@@ -84,8 +84,8 @@ export const TextHoverEffect = ({
         {text}
       </text>
       <motion.text
-        x="50%"
-        y="50%"
+        x="45%"
+        y="45%"
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
@@ -102,8 +102,8 @@ export const TextHoverEffect = ({
         {text}
       </motion.text>
       <text
-        x="50%"
-        y="50%"
+        x="45%"
+        y="45%"
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
