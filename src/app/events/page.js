@@ -13,7 +13,7 @@ export default function page() {
   const timelineData = [
     {
       title: "January - Patang Utsav",
-      content: "Description of Event 1.",
+      content: "Patang Utsav is a vibrant celebration where the sky came alive with bold streaks of color and soaring energy. Kites danced in the wind as laughter echoed below — a day that turned open skies into a symbol of joy, freedom, and shared spirit. From friendly kite duels to unforgettable moments on the ground, the festival brought the campus together in full swing.",
       images: [
         "/events/patangutsavdecor.jpg",
         "/events/patangutsav1.jpg"
@@ -24,11 +24,7 @@ export default function page() {
       title: "March - KMIT EVENING",
       content: (
         <div>
-          <p>Description of Event 2.</p>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-          </ul>
+          <p>KMIT Evening (Saanjh) is a night where talent meets spotlight. From soulful music to electrifying performances, the stage comes alive with the passion and creativity of our students. A celebration of expression, energy, and the vibrant spirit of KMIT.</p>
         </div>
       ),
       images: [
@@ -41,11 +37,7 @@ export default function page() {
       title: "October - Navraas",
       content: (
         <div>
-          <p>Description of Event 2.</p>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-          </ul>
+          <p>Navras is a spirited celebration of culture, devotion, and dance—an evening where the beats of Garba and Dandiya echoed through the campus. With vibrant colors, traditional attire, and hearts full of joy, students come together to honor Maa Durga and immerse themselves in the nine emotions of Navras. It is a night of rhythm, reverence, and radiant energy.</p>
         </div>
       ),
       images: [
@@ -83,71 +75,62 @@ export default function page() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <CardSpotlight>
-              <h3 className="text-xl font-bold text-white mb-4">Unparalleled Visibility</h3>
-              <p className="text-neutral-400">Reach 5000+ students through our flagship events with premium branding opportunities.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Custom Packages</h3>
+              <p className="text-neutral-400">We understand that every sponsor has unique goals and preferences. We offer flexible sponsorship packages tailored to your specific marketing objectives. Whether it's brand exposure, community engagement, partnering with us ensures maximizing your return on investment.</p>
             </CardSpotlight>
             <CardSpotlight>
               <h3 className="text-xl font-bold text-white mb-4">Targeted Engagement</h3>
-              <p className="text-neutral-400">Direct access to India's brightest engineering talent for recruitment and brand loyalty.</p>
+              <p className="text-neutral-400">By sponsoring our college, your brand can connect with an active community engaged in entertainment, sports, and cultural events. This partnership boosts your brand’s visibility and aligns it with popular, contemporary interests which ensures extreme brand awareness.</p>
             </CardSpotlight>
             <CardSpotlight>
-              <h3 className="text-xl font-bold text-white mb-4">Custom Packages</h3>
-              <p className="text-neutral-400">Tailored sponsorship solutions to meet your specific marketing objectives.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Unparalleled Visibility</h3>
+              <p className="text-neutral-400">Our college boasts a vibrant, engaged student body eager to explore new opportunities. By sponsoring us, your brand gains direct access to a diverse demographic of motivated young individuals who actively participate in various academic, cultural, and community-driven initiatives.</p>
             </CardSpotlight>
           </div>
         </div>
 
 
-        {/* Testimonials Section */}
-        <div className="container mx-auto py-12 px-4 mt-20">
-          <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-8`}>
+        {/* Testimonials Section - Improved Styling */}
+        <div className="container mx-auto py-16 px-4 mt-24 relative">
+          {/* Background gradient effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent opacity-30 pointer-events-none"></div>
+          
+          <div className={`text-4xl md:text-5xl text-white ${familyName.className} text-center mb-12`}>
             <TextAnimate animation="blurInUp" by="character" duration={1}>
-              What People Say
+              What Sponsors Say
             </TextAnimate>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
+            Our sponsors have experienced exceptional results through our partnership. Here's what they have to say about working with us.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Testimonial
-              name="John Doe"
-              role="CEO"
-              company="Tech Corp"
-              testimonial="Partnering with KMIT events was a game-changer for our brand visibility. The engagement we received exceeded all expectations."
+              name="Top One Percentile"
+              testimonial="The public relations team at KMIT executed their duties excellently, ensuring that all aspects outlined in the memorandum of understanding, including marketing and advertising, were delivered upon. This level of commitment and fulfillment is rare to see in other events, and we eagerly anticipate future collaborations with them."
               rating={5}
-              image="/events/testimonial1.jpg"
+              image="/sponsors/topone.png"
+              className="bg-gradient-to-br from-gray-900 to-gray-950 border-purple-500/20 hover:border-purple-500/40 transform hover:-translate-y-2 transition-all duration-300"
             />
             <Testimonial
-              name="Jane Smith"
-              role="Marketing Director"
-              company="Innovate Inc"
-              testimonial="The professional execution and student participation made this sponsorship one of our most successful campaigns this year."
+              name="Vishal Peripherals"
+              testimonial="The professional execution and student participation made this sponsorship one of our most successful campaigns this year. The PR team's attention to detail and commitment to our brand visibility exceeded our expectations."
               rating={5}
-              image="/events/testimonial2.jpg"
+              image="/sponsors/vishal.png"
+              className="bg-gradient-to-br from-gray-900 to-gray-950 border-blue-500/20 hover:border-blue-500/40 transform hover:-translate-y-2 transition-all duration-300"
             />
             <Testimonial
-              name="Alex Johnson"
-              role="CTO"
-              company="NextGen Solutions"
-              testimonial="Our sponsorship with KMIT provided exceptional reach and engagement with the tech community."
+              name="Royal Enfield"
+              testimonial="As promised the turnout was excellent, we had great fun collaborating with PR KMIT, they pulled off a wonderful event! The engagement with our target audience was precisely what we were looking for in this partnership."
               rating={5}
-              image="/events/testimonial3.jpg"
-            />
-            <Testimonial
-              name="Sarah Lee"
-              role="Brand Manager"
-              company="Global Innovations"
-              testimonial="The student engagement was outstanding, leading to meaningful interactions with our brand."
-              rating={5}
-              image="/events/testimonial4.jpg"
-            />
-            <Testimonial
-              name="Michael Chen"
-              role="Head of Partnerships"
-              company="TechBridge"
-              testimonial="A highly professional and impactful collaboration that delivered measurable results."
-              rating={5}
-              image="/events/testimonial5.jpg"
+              image="/sponsors/royalenfield.png"
+              className="bg-gradient-to-br from-gray-900 to-gray-950 border-orange-500/20 hover:border-orange-500/40 transform hover:-translate-y-2 transition-all duration-300"
             />
           </div>
+          
+          {/* Call to action button with improved styling */}
+          
         </div>
 
 

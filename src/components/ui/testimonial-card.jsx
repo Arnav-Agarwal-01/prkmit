@@ -10,7 +10,7 @@ const Testimonial = React.forwardRef(
       <div
         ref={ref}
         className={cn(
-          "relative overflow-hidden rounded-2xl border border-primary/10 bg-background p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/5 md:p-8",
+          "relative overflow-hidden rounded-2xl border border-primary/10 bg-background p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/5 md:p-8 h-full",
           className
         )}
         {...props}>
@@ -32,17 +32,19 @@ const Testimonial = React.forwardRef(
             </div>
           )}
 
-          <p className="text-pretty text-base text-muted-foreground">
+          <p className="text-pretty text-base text-muted-foreground leading-relaxed">
             {testimonial}
           </p>
 
-          <div className="flex items-center gap-4 justify-start">
+          <div className="flex items-center gap-4 justify-start mt-4 pt-4 border-t border-gray-800">
             <div className="flex items-center gap-4">
               {image && (
-                <Avatar>
-                  <AvatarImage src={image} alt={name} height={48} width={48} />
-                  <AvatarFallback>{name[0]}</AvatarFallback>
-                </Avatar>
+                <div className="h-12 w-12 relative overflow-hidden rounded-full border border-gray-700">
+                  <Avatar className="h-full w-full">
+                    <AvatarImage src={image} alt={name} className="object-contain" />
+                    <AvatarFallback>{name[0]}</AvatarFallback>
+                  </Avatar>
+                </div>
               )}
 
               <div className="flex flex-col">
