@@ -195,19 +195,19 @@ export default function Home() {
                     >
                       <div className="columns-2 gap-1 px-8 sm:columns-3">
                         {[
-                          '/mainPageImages/Dance.jpg',
+                          '/mainPageImages/dance.jpg',
                           '/mainPageImages/drums.jpg',
                           '/mainPageImages/mars.jpg',
-                          '/mainPageImages/Khonsu.jpg',
+                          '/mainPageImages/khonsu.jpg',
                           '/mainPageImages/darkAndLight.png',
-                          '/mainPageImages/Silhoutte.jpg',
+                          '/mainPageImages/silhoutte.jpg',
                           '/mainPageImages/stage.jpg',
                           '/mainPageImages/light.jpg',
                           '/mainPageImages/singerbg.png',
-                          '/mainPageImages/Singing.jpg',
-                          '/mainPageImages/Voilin.png',
-                          '/mainPageImages/NavrasDecor.png',
-                          '/mainPageImages/NavrasPublic.png',
+                          '/mainPageImages/singing.jpg',
+                          '/mainPageImages/voilin.png',
+                          '/mainPageImages/navrasdecor.png',
+                          '/mainPageImages/navraspublic.png',
                         ].map((imgSrc, index) => {
                           return (
                             <motion.div
