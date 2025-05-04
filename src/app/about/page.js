@@ -80,6 +80,57 @@ function page() {
       link: "https://efreeinvoice.com",
       thumbnail: "/Images/about/efreeinvoice.png",
     },
+    // Adding 10 more team members
+    {
+      title: "Team Member 16",
+      link: "#",
+      thumbnail: "/Images/about/image1.png", // Reusing existing images as placeholders
+    },
+    {
+      title: "Team Member 17",
+      link: "#",
+      thumbnail: "/Images/about/image2.png",
+    },
+    {
+      title: "Team Member 18",
+      link: "#",
+      thumbnail: "/Images/about/rogue.png",
+    },
+    {
+      title: "Team Member 19",
+      link: "#",
+      thumbnail: "/Images/about/editorially.png",
+    },
+    {
+      title: "Team Member 20",
+      link: "#",
+      thumbnail: "/Images/about/editrix.png",
+    },
+    {
+      title: "Team Member 21",
+      link: "#",
+      thumbnail: "/Images/about/pixelperfect.png",
+    },
+    {
+      title: "Team Member 22",
+      link: "#",
+      thumbnail: "/Images/about/algochurn.png",
+    },
+    {
+      title: "Team Member 23",
+      link: "#",
+      thumbnail: "/Images/about/aceternityui.png",
+    },
+    {
+      title: "Team Member 24",
+      link: "#",
+      thumbnail: "/Images/about/tailwindmasterkit.png",
+    },
+    {
+      title: "Team Member 25",
+      link: "#",
+      thumbnail: "/Images/about/smartbridge.png",
+    },
   ];
   
   return (
@@ -93,10 +144,9 @@ function page() {
       <div className='text-center mt-20 mb-20 text-4xl '>
           We work too duh
         </div>
-      <div className="flex flex-wrap justify-center items-center space-x-4 space-y-4 mt-10">
-        
+      <div className="flex flex-wrap justify-center items-start gap-6 mt-10 px-4">
         {Array.from({ length: 6 }).map((_, index) => (
-          <div key={index} className="w-full relative max-w-xs">
+          <div key={index} className="w-full sm:w-auto relative max-w-xs mx-auto">
             <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
             <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
               <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
