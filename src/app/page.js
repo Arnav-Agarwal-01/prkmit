@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Timeline } from "@/components/ui/timeline";
 import localFont from "next/font/local";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { WavyText } from "@/components/magicui/wavy-text";
@@ -7,11 +8,12 @@ import { AnimatedText } from "@/components/ui/animated-shiny-text";
 import { motion } from "framer-motion";
 import { TextScramble } from "@/components/ui/text-scramble";
 import { CardBody,CardContainer,CardItem } from "@/components/ui/3d-card";
-import { Timeline } from "@/components/ui/timeline"; // Import the Timeline component
+import { EventCarousel } from "@/components/ui/3d-event-carousel"; // Import the new EventCarousel component
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { InView } from "@/components/ui/in-view";
 import Link from 'next/link';
+
 
 // Remove the direct imports
 // Instead we'll use the Image component with the path directly
@@ -120,11 +122,9 @@ export default function Home() {
               KMIT Flagship Events
             </TextAnimate>
           </div>
-        </div>
-
-        {/* Timeline Section */}
-        <div className="container mx-auto py-20 px-4">
+          <div className="container mx-auto py-20 px-4">
           <Timeline data={timelineData} />
+        </div>
         </div>
 
         {/* Sponsors Section */}

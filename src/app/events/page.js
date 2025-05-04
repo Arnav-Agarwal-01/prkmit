@@ -1,7 +1,7 @@
 import React from 'react'
 import localFont from 'next/font/local';
 import { TextAnimate } from '@/components/magicui/text-animate';
-import {Timeline} from '@/components/ui/timeline';
+import { AnimatedEventShowcase } from '@/components/ui/animated-event-showcase';
 import { CardSpotlight } from '@/components/ui/card-spotlight';
 import { Testimonial } from '@/components/ui/testimonial-card';
 import Link from 'next/link';
@@ -68,9 +68,9 @@ export default function page() {
           </div>
         </div>
 
-        {/* Timeline Section */}
-        <div className="container mx-auto  px-4">
-          <Timeline data={timelineData} />
+        {/* Animated Events Showcase */}
+        <div className="container mx-auto px-4">
+          <AnimatedEventShowcase events={timelineData} />
         </div>
 
         {/* Why Sponsor Us Section */}

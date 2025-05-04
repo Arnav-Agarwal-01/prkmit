@@ -12,8 +12,8 @@ const familyName = localFont({
 function page() {
   
   return (
-    <div className='pl-8 md:pl-16 lg:pl-32'> {/* Removed fixed height */}
-        <div className='text-sm md:text-base relative top-60'>
+    <div className='pl-8 md:pl-16 lg:pl-32 '> {/* Removed fixed height */}
+        <div className='text-sm md:text-base relative top-60 text-left'>
             <TextHoverEffect text="Saanjh" size='100%'/>
         </div>
 
