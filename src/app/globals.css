@@ -18,4 +18,10 @@ body {
   --foreground: 0 0% 98%;
 }
 
+.navbar-static-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(#18181b, #18181b) padding-box, linear-gradient(90deg, #a855f7, #ec4899, #3b82f6) border-box;
+  border-radius: 9999px;
+}
+
 

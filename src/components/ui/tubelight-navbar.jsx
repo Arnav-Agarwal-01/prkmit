@@ -11,6 +11,7 @@ export function NavBar({
 }) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
+  const [showNav, setShowNav] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,15 +22,24 @@ export function NavBar({
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize);
   }, [])
+  
+  useEffect(() => {
+    // Reduced delay from 3000ms to 1500ms
+    const timer = setTimeout(() => setShowNav(true), 1500)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={showNav ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }} // Reduced from 1.5s to 0.8s
       className={cn(
         "fixed bottom-0 sm:top-10 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
         className
       )}>
       <div
-        className="flex items-center gap-3 border border-border py-1 px-1 rounded-full shadow-lg">
+        className="flex items-center gap-3 border border-transparent py-1 px-1 rounded-full shadow-lg bg-transparent navbar-static-gradient">
         {items.map((item) => {
           // Map string icon names to their corresponding components
           const getIcon = (iconName) => {
@@ -83,6 +93,6 @@ export function NavBar({
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
