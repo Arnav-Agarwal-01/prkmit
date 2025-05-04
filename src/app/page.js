@@ -195,19 +195,19 @@ export default function Home() {
             >
               <div className="columns-2 gap-1 px-8 sm:columns-3">
                 {[
-                  { src: "/mainPageImages/dance.jpg", alt: "Dance image" },
-                  { src: "/mainPageImages/drums.jpg", alt: "Drums image" },
-                  { src: "/mainPageImages/mars.jpg", alt: "Mars image" },
-                  { src: "/mainPageImages/khonsu.jpg", alt: "Khonsu image" },
-                  { src: "/mainPageImages/darkAndLight.png", alt: "Dark and Light image" },
-                  { src: "/mainPageImages/silhoutte.jpg", alt: "Silhoutte image" },
-                  { src: "/mainPageImages/stage.jpg", alt: "Stage image" },
-                  { src: "/mainPageImages/light.jpg", alt: "Light image" },
-                  { src: "/mainPageImages/singerbg.png", alt: "Singer background image" },
-                  { src: "/mainPageImages/singing.jpg", alt: "Singing image" },
-                  { src: "/mainPageImages/voilin.png", alt: "Voilin image" },
-                  { src: "/mainPageImages/navrasdecor.png", alt: "Navras Decor image" },
-                  { src: "/mainPageImages/navraspublic.png", alt: "Navras Public image" },
+                  { src: "/ImageGallery/dance.jpg", alt: "Dance image" },
+                  { src: "/ImageGallery/drums.jpg", alt: "Drums image" },
+                  { src: "/ImageGallery/mars.jpg", alt: "Mars image" },
+                  { src: "/ImageGallery/khonsu.jpg", alt: "Khonsu image" },
+                  { src: "/ImageGallery/darkAndLight.png", alt: "Dark and Light image" },
+                  { src: "/ImageGallery/silhoutte.jpg", alt: "Silhoutte image" },
+                  { src: "/ImageGallery/stage.jpg", alt: "Stage image" },
+                  { src: "/ImageGallery/light.jpg", alt: "Light image" },
+                  { src: "/ImageGallery/singerbg.png", alt: "Singer background image" },
+                  { src: "/ImageGallery/singing.jpg", alt: "Singing image" },
+                  { src: "/ImageGallery/voilin.png", alt: "Voilin image" },
+                  { src: "/ImageGallery/navrasdecor.png", alt: "Navras Decor image" },
+                  { src: "/ImageGallery/navraspublic.png", alt: "Navras Public image" },
                 ].map((img, index) => {
                   return (
                     <motion.div
