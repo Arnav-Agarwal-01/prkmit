@@ -14,12 +14,12 @@ function page() {
   return (
     <div className='pl-8 md:pl-16 lg:pl-32'> {/* Removed fixed height */}
         <div className='text-sm md:text-base relative top-60'>
-            <TextHoverEffect text="Navraas" size='100%'/>
+            <TextHoverEffect text="Navras" size='100%'/>
         </div>
 
         <div>
           <TextReveal>
-          Dandiya Garba with the divine.
+          . Dance . Devotion . Divine .
           </TextReveal>
 
           <div className={`flex flex-col md:flex-row gap-8 items-center mt-20 px-4 ${familyName.className}`}>

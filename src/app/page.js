@@ -26,7 +26,7 @@ export default function Home() {
   const timelineData = [
     {
       title: "January - Patang Utsav",
-      content: "Description of Event 1.",
+      content: "Patang Utsav is a vibrant celebration where the sky came alive with bold streaks of color and soaring energy. Kites danced in the wind as laughter echoed below — a day that turned open skies into a symbol of joy, freedom, and shared spirit. From friendly kite duels to unforgettable moments on the ground, the festival brought the campus together in full swing.",
       images: [
         "/events/patangutsavdecor.jpg",
         "/events/patangutsav1.jpg"
@@ -37,11 +37,7 @@ export default function Home() {
       title: "March - KMIT EVENING",
       content: (
         <div>
-          <p>Description of Event 2.</p>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-          </ul>
+          <p>KMIT Evening (Saanjh) is a night where talent meets spotlight. From soulful music to electrifying performances, the stage comes alive with the passion and creativity of our students. A celebration of expression, energy, and the vibrant spirit of KMIT.</p>
         </div>
       ),
       images: [
@@ -51,14 +47,10 @@ export default function Home() {
       link: "/kmit-evening"
     },
     {
-      title: "October - Navraas",
+      title: "October - Navras",
       content: (
         <div>
-          <p>Description of Event 2.</p>
-          <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-          </ul>
+          <p>Navras is a spirited celebration of culture, devotion, and dance—an evening where the beats of Garba and Dandiya echoed through the campus. With vibrant colors, traditional attire, and hearts full of joy, students come together to honor Maa Durga and immerse themselves in the nine emotions of Navras. It is a night of rhythm, reverence, and radiant energy.</p>
         </div>
       ),
       images: [
@@ -136,35 +128,43 @@ export default function Home() {
           </div>
           <InfiniteSlider gap={24} reverse className="w-full h-full">
             <img
-              src="https://motion-primitives.com/apple_music_logo.svg"
-              alt="Apple Music logo"
+              src="/sponsors/i20.png"
+              alt="i20 fever"
               className="h-[120px] w-auto"
             />
             <img
-              src="https://motion-primitives.com/chrome_logo.svg"
-              alt="Chrome logo"
+              src="/sponsors/homefoody.png"
+              alt="homefoody"
               className="h-[120px] w-auto"
             />
             <img
-              src="https://motion-primitives.com/strava_logo.svg"
-              alt="Strava logo"
+              src="/sponsors/pepsi.png"
+              alt="pepsi"
               className="h-[120px] w-auto"
             />
             <img
-              src="https://motion-primitives.com/nintendo_logo.svg"
-              alt="Nintendo logo"
+              src="sponsors/monster.png"
+              alt="Monster"
               className="h-[120px] w-auto"
             />
             <img
-              src="https://motion-primitives.com/jquery_logo.svg"
-              alt="Jquery logo"
+              src="sponsors/royalenfield.png"
+              alt="Royal Enfield"
               className="h-[120px] w-auto"
             />
             <img
-              src="https://motion-primitives.com/prada_logo.svg"
+              src="/sponsors/topone.png"
+              alt="Top One Percentile"
+              className="h-[120px] w-auto"
+            />
+
+
+            <img
+              src="/sponsors/vishal.png"
               alt="Prada logo"
               className="h-[120px] w-auto"
             />
+            
           </InfiniteSlider>
 
           <div className="mt-12 mb-10 flex justify-center relative z-50">
