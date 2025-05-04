@@ -11,10 +11,23 @@ import { Timeline } from "@/components/ui/timeline"; // Import the Timeline comp
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { InView } from "@/components/ui/in-view";
-
-
-
 import Link from 'next/link';
+
+// Import all images
+import DanceImg from "../../public/mainPageImages/dance.jpg";
+import DrumsImg from "../../public/mainPageImages/drums.jpg";
+import MarsImg from "../../public/mainPageImages/mars.jpg";
+import KhonsuImg from "../../public/mainPageImages/khonsu.jpg";
+import DarkAndLightImg from "../../public/mainPageImages/darkAndLight.png";
+import SilhoutteImg from "../../public/mainPageImages/silhoutte.jpg";
+import StageImg from "../../public/mainPageImages/stage.jpg";
+import LightImg from "../../public/mainPageImages/light.jpg";
+import SingerBgImg from "../../public/mainPageImages/singerbg.png";
+import SingingImg from "../../public/mainPageImages/singing.jpg";
+import VoilinImg from "../../public/mainPageImages/voilin.png";
+import NavrasDecorImg from "../../public/mainPageImages/navrasdecor.png";
+import NavrasPublicImg from "../../public/mainPageImages/navraspublic.png";
+
 const familyName = localFont({
   src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
 })
@@ -180,56 +193,55 @@ export default function Home() {
         <br/>
 
         {/* Image Gallery Section */}
-                <div className="w-full relative">
-                  
-                  <div className="flex items-start justify-center pb-12">
-                    <InView
-                      viewOptions={{ once: false, margin: "0px 0px -250px 0px" }}
+        <div className="w-full relative">
+          <div className="flex items-start justify-center pb-12">
+            <InView
+              viewOptions={{ once: false, margin: "0px 0px -250px 0px" }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.09 },
+                },
+              }}
+            >
+              <div className="columns-2 gap-1 px-8 sm:columns-3">
+                {[
+                  { src: DanceImg, alt: "Dance image" },
+                  { src: DrumsImg, alt: "Drums image" },
+                  { src: MarsImg, alt: "Mars image" },
+                  { src: KhonsuImg, alt: "Khonsu image" },
+                  { src: DarkAndLightImg, alt: "Dark and Light image" },
+                  { src: SilhoutteImg, alt: "Silhoutte image" },
+                  { src: StageImg, alt: "Stage image" },
+                  { src: LightImg, alt: "Light image" },
+                  { src: SingerBgImg, alt: "Singer background image" },
+                  { src: SingingImg, alt: "Singing image" },
+                  { src: VoilinImg, alt: "Voilin image" },
+                  { src: NavrasDecorImg, alt: "Navras Decor image" },
+                  { src: NavrasPublicImg, alt: "Navras Public image" },
+                ].map((img, index) => {
+                  return (
+                    <motion.div
                       variants={{
-                        hidden: { opacity: 0 },
-                        visible: {
-                          opacity: 1,
-                          transition: { staggerChildren: 0.09 },
-                        },
+                        hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+                        visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
                       }}
+                      key={index}
+                      className="mb-4"
                     >
-                      <div className="columns-2 gap-1 px-8 sm:columns-3">
-                        {[
-                          '/mainPageImages/dance.jpg',
-                          '/mainPageImages/drums.jpg',
-                          '/mainPageImages/mars.jpg',
-                          '/mainPageImages/khonsu.jpg',
-                          '/mainPageImages/darkAndLight.png',
-                          '/mainPageImages/silhoutte.jpg',
-                          '/mainPageImages/stage.jpg',
-                          '/mainPageImages/light.jpg',
-                          '/mainPageImages/singerbg.png',
-                          '/mainPageImages/singing.jpg',
-                          '/mainPageImages/voilin.png',
-                          '/mainPageImages/navrasdecor.png',
-                          '/mainPageImages/navraspublic.png',
-                        ].map((imgSrc, index) => {
-                          return (
-                            <motion.div
-                              variants={{
-                                hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
-                                visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
-                              }}
-                              key={index}
-                              className="mb-4"
-                            >
-                              <img
-                                src={imgSrc}
-                                alt={`Image placeholder from cosmos.so, index:${index}`}
-                                className="size-full rounded-[20px] object-contain"
-                              />
-                            </motion.div>
-                          );
-                        })}
-                      </div>
-                    </InView>
-                  </div>
-                </div>
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        className="size-full rounded-[20px] object-contain"
+                      />
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </InView>
+          </div>
+        </div>
       </main>
     </div>
   );
