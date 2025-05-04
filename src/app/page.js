@@ -223,6 +223,7 @@ export default function Home() {
                         alt={img.alt}
                         width={500}
                         height={300}
+                        priority={index<11}
                         className="size-full rounded-[20px] object-contain"
                       />
                     </motion.div>
