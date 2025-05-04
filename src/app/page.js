@@ -224,7 +224,6 @@ export default function Home() {
                         width={500}
                         height={300}
                         priority={index<11}
-                        unoptimized
                         className="size-full rounded-[20px] object-contain"
                       />
                     </motion.div>
