@@ -184,17 +184,58 @@ function page() {
             <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
           
-          
+          {/* Rythma */}
           <div className="flex flex-col items-center">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520"
+              src="team/rythma.jpg"
               alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
-              className="aspect-square w-[200px] rounded-[6px]"
+              className=" w-[250px] h-[300px] rounded-[6px]"
             />
-            <p className="mt-3 text-2xl font-bold">Sreekruthi</p>
-            <p className="text-sm text-gray-500">PR Head</p>
+            <p className="mt-3 text-2xl font-bold">Rythma</p>
+            <p className="text-sm text-gray-500">Graphic Designer</p>
             <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
+
+
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/rishab.jpeg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[250px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Rishab</p>
+            <p className="text-sm text-gray-500">Sponsorship Manager</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/rishika.jpeg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[200px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Rishika</p>
+            <p className="text-sm text-gray-500">Documentation Incharge</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/arnav.jpeg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[220px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Arnav</p>
+            <p className="text-sm text-gray-500">Developer</p>
+            <p className="mt-2 text-center italic text-sm">"Bhagwaan Bharose"</p>
+          </div>
+
+
+
         </InfiniteSlider>
       </div>
 
