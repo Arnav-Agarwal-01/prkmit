@@ -116,61 +116,84 @@ function page() {
       <div className="my-20 pb-32 pt-10"> {/* Increased bottom padding to 8rem (32) */}
         <InfiniteSlider durationOnHover={75} gap={32}> {/* Increased gap between items */}
           {/* Increased width and border radius for images */}
+
+
+
+          {/* Sreekruthi */}
           <div className="flex flex-col items-center">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677"
-              alt="Dean blunt - Black Metal 2"
-              className="aspect-square w-[300px] rounded-[6px]" 
+              src="/team/sree.jpg"
+              alt="one"
+              className="w-[230px] h-[300px] rounded-[6px]" 
             />
-            <p className="mt-3 text-center font-medium">Dean Blunt - Black Metal 2</p>
+            <p className="mt-3 text-2xl font-bold">Sreekruthi</p>
+            <p className="text-sm text-gray-500">Content Creator</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
           
+
+
+          {/* Jishnu */}
           <div className="flex flex-col items-center">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141"
+              src="/team/jishnu.jpeg"
               alt="Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
-              className="aspect-square w-[300px] rounded-[6px]"
+              className="w-[300px] h-[300px] rounded-[6px]" 
             />
-            <p className="mt-3 text-center font-medium">Jungle Jack - JUNGLE DES ILLUSIONS VOL 2</p>
+            <p className="mt-3 text-2xl font-bold">Jishnu</p>
+            <p className="text-sm text-gray-500">Content Creator</p>
+            <p className="mt-2 text-center italic text-sm">"A true artist is an ugly man"</p>
           </div>
           
+
+          {/* Rishi */}
           <div className="flex flex-col items-center">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf"
+              src="/team/rishi.jpeg"
               alt="Yung Lean - Stardust"
-              className="aspect-square w-[300px] rounded-[6px]"
+              className="w-[250px] h-[300px] rounded-[6px]" 
             />
-            <p className="mt-3 text-center font-medium">Yung Lean - Stardust</p>
+            <p className="mt-3 text-2xl font-bold">Rishi</p>
+            <p className="text-sm text-gray-500">CR Manager | PR Head</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
           
+
+          {/* Vardaan */}
           <div className="flex flex-col items-center">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f"
+              src="team/vardaan.jpeg"
               alt="Lana Del Rey - Ultraviolence"
-              className="aspect-square w-[300px] rounded-[6px]"
+              className="w-[280px] h-[300px] rounded-[6px]" 
             />
-            <p className="mt-3 text-center font-medium">Lana Del Rey - Ultraviolence</p>
+            <p className="mt-3 text-2xl font-bold">Vardaan</p>
+            <p className="text-sm text-gray-500">Developer | Sponsorship Manager | Video Editor</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
           
+
+          {/* Rushik */}
           <div className="flex flex-col items-center">
             <img
-              src="https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288"
+              src="/team/rushik.jpeg"
               alt="A$AP Rocky - Tailor Swif"
-              className="aspect-square w-[300px] rounded-[6px]"
+              className="w-[300px] h-[300px] rounded-[6px]" 
             />
-            <p className="mt-3 text-center font-medium">A$AP Rocky f
-              <br/>
-              hii lmao ffffffffffff fffffff
-            </p>
+            <p className="mt-3 text-2xl font-bold">Rushik</p>
+            <p className="text-sm text-gray-500">Video Editor</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
+          
           
           <div className="flex flex-col items-center">
             <img
               src="https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520"
               alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
-              className="aspect-square w-[300px] rounded-[6px]"
+              className="aspect-square w-[200px] rounded-[6px]"
             />
-            <p className="mt-3 text-center font-medium">Midnight Miami - Nino Paid, Konvy</p>
+            <p className="mt-3 text-2xl font-bold">Sreekruthi</p>
+            <p className="text-sm text-gray-500">PR Head</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
         </InfiniteSlider>
       </div>
