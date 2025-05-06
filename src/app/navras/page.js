@@ -19,7 +19,7 @@ function page() {
 
         <div>
           <TextReveal>
-          . Dance . Devotion . Divine .
+           Dance . Devotion . Divine 
           </TextReveal>
 
           <div className={`flex flex-col md:flex-row gap-8 items-center mt-20 px-4 ${familyName.className}`}>
@@ -33,9 +33,10 @@ function page() {
             </div>
             <div className="md:w-1/2 relative aspect-square">
               <Image 
-                src="/events/kmit1.jpg" 
+                src="/picsforspons/navras-1.png" 
                 alt="KMIT Evening Sponsors"
-                fill
+                height={1000}
+                width={1000}
                 className="rounded-xl object-cover"
               />
             </div>
@@ -52,9 +53,10 @@ function page() {
             </div>
             <div className="md:w-1/2 relative aspect-square">
               <Image 
-                src="/events/kmit1.jpg" 
+                src="/picsforspons/navras-2.png" 
                 alt="KMIT Evening Sponsors"
-                fill
+                height={1000}
+                width={1000}
                 className="rounded-xl object-cover"
               />
             </div>
@@ -72,10 +74,12 @@ function page() {
             </div>
             <div className="md:w-1/2 relative aspect-square">
               <Image 
-                src="/events/kmit1.jpg" 
+                src="/picsforspons/navras-3.png" 
                 alt="KMIT Evening Sponsors"
-                fill
+                height={1000}
+                width={1000}
                 className="rounded-xl object-cover"
+                style={{height : '80%' , width : '100%'}}
               />
             </div>
           </div>

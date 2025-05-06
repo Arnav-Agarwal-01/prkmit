@@ -35,9 +35,10 @@ function page() {
             </div>
             <div className="md:w-1/2 relative aspect-square">
               <Image 
-                src="/events/kmit1.jpg" 
+                src="/picsforspons/eve-1.png" 
                 alt="KMIT Evening Sponsors"
-                fill
+                height={5000}
+                width={5000}
                 className="rounded-xl object-cover"
               />
             </div>
@@ -54,10 +55,12 @@ function page() {
             </div>
             <div className="md:w-1/2 relative aspect-square">
               <Image 
-                src="/events/kmit1.jpg" 
+                src="/picsforspons/eve-2.png" 
                 alt="KMIT Evening Sponsors"
-                fill
-                className="rounded-xl object-cover"
+                width={100}
+                height={100}
+                className=" rounded-xl object-cover mt-40"
+                style={{ width:'100%', height: '70%' }}
               />
             </div>
           </div>
@@ -73,10 +76,11 @@ function page() {
             </div>
             <div className="md:w-1/2 relative aspect-square">
               <Image 
-                src="/events/kmit1.jpg" 
+                src="/picsforspons/eve-3.png" 
                 alt="KMIT Evening Sponsors"
-                fill
-                className="rounded-xl object-cover"
+                height={5000}
+                width={5000}
+                className="rounded-xl object-cover mt-40"
               />
             </div>
           </div>

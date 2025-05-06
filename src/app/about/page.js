@@ -2,137 +2,34 @@
 import React from 'react'
 import { HeroParallax } from '@/components/blocks/hero-parallax';
 import { Meteors } from '@/components/ui/meteors';
-
+import { BentoCell,BentoGrid,ContainerScale,ContainerScroll } from '@/components/blocks/hero-gallery-scroll-animation';
+import { Button } from '@/components/ui/button';
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { TextAnimate } from '@/components/magicui/text-animate';
 function page() {
+  
+  const IMAGES = [
+    "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?q=80&w=2264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=2368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9reW98ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww",
+
+
+  ]
+
+
   // Team members data for the HeroParallax component
+  /*
   const products = [
     {
       title: "Moonbeam",
       link: "https://gomoonbeam.com", 
       thumbnail: "/Images/about/image1.png",
     },
-    {
-      title: "Cursor",
-      link: "https://cursor.so",
-      thumbnail: "/Images/about/image2.png",
-    },
-    {
-      title: "Rogue",
-      link: "https://userogue.com",
-      thumbnail: "/Images/about/rogue.png",
-    },
-    {
-      title: "Editorially",
-      link: "https://editorially.org",
-      thumbnail: "/Images/about/editorially.png",
-    },
-    {
-      title: "Editrix AI",
-      link: "https://editrix.ai",
-      thumbnail: "/Images/about/editrix.png",
-    },
-    {
-      title: "Pixel Perfect",
-      link: "https://app.pixelperfect.quest",
-      thumbnail: "/Images/about/pixelperfect.png",
-    },
-    {
-      title: "Algochurn",
-      link: "https://algochurn.com",
-      thumbnail: "/Images/about/algochurn.png",
-    },
-    {
-      title: "Aceternity UI",
-      link: "https://ui.aceternity.com",
-      thumbnail: "/Images/about/aceternityui.png",
-    },
-    {
-      title: "Tailwind Master Kit",
-      link: "https://tailwindmasterkit.com",
-      thumbnail: "/Images/about/tailwindmasterkit.png",
-    },
-    {
-      title: "SmartBridge",
-      link: "https://smartbridgetech.com",
-      thumbnail: "/Images/about/smartbridge.png",
-    },
-    {
-      title: "Renderwork Studio",
-      link: "https://renderwork.studio",
-      thumbnail: "/Images/about/renderwork.png",
-    },
-    {
-      title: "Creme Digital",
-      link: "https://cremedigital.com",
-      thumbnail: "/Images/about/cremedigital.png",
-    },
-    {
-      title: "Golden Bells Academy",
-      link: "https://goldenbellsacademy.com",
-      thumbnail: "/Images/about/goldenbellsacademy.png",
-    },
-    {
-      title: "Invoker Labs",
-      link: "https://invoker.lol",
-      thumbnail: "/Images/about/invoker.png",
-    },
-    {
-      title: "E Free Invoice",
-      link: "https://efreeinvoice.com",
-      thumbnail: "/Images/about/efreeinvoice.png",
-    },
-    // Adding 10 more team members
-    {
-      title: "Team Member 16",
-      link: "#",
-      thumbnail: "/Images/about/image1.png", // Reusing existing images as placeholders
-    },
-    {
-      title: "Team Member 17",
-      link: "#",
-      thumbnail: "/Images/about/image2.png",
-    },
-    {
-      title: "Team Member 18",
-      link: "#",
-      thumbnail: "/Images/about/rogue.png",
-    },
-    {
-      title: "Team Member 19",
-      link: "#",
-      thumbnail: "/Images/about/editorially.png",
-    },
-    {
-      title: "Team Member 20",
-      link: "#",
-      thumbnail: "/Images/about/editrix.png",
-    },
-    {
-      title: "Team Member 21",
-      link: "#",
-      thumbnail: "/Images/about/pixelperfect.png",
-    },
-    {
-      title: "Team Member 22",
-      link: "#",
-      thumbnail: "/Images/about/algochurn.png",
-    },
-    {
-      title: "Team Member 23",
-      link: "#",
-      thumbnail: "/Images/about/aceternityui.png",
-    },
-    {
-      title: "Team Member 24",
-      link: "#",
-      thumbnail: "/Images/about/tailwindmasterkit.png",
-    },
-    {
-      title: "Team Member 25",
-      link: "#",
-      thumbnail: "/Images/about/smartbridge.png",
-    },
+        
   ];
+  */
   
   // New array for the meteor cards with different content
   const meteorCards = [
@@ -171,10 +68,113 @@ function page() {
   
   return (
     <div className="w-full">
-      {/* Remove absolute positioning from HeroParallax */}
+      {/* Remove absolute positioning from HeroParallax 
       <div className="w-full">
         <HeroParallax products={products} />
       </div>
+      */}
+
+      {/* bento thing */}
+
+      
+      <ContainerScroll className="h-[350vh]">
+      <BentoGrid className="sticky left-0 top-0 z-0 h-screen w-full p-4">
+        {IMAGES.map((imageUrl, index) => (
+          <BentoCell
+            key={index}
+            className="overflow-hidden rounded-xl shadow-xl"
+          >
+            <img
+              className="size-full object-cover object-center"
+              src={imageUrl}
+              alt=""
+            />
+          </BentoCell>
+        ))}
+      </BentoGrid>
+        
+      <ContainerScale className="relative z-10 text-center">
+        <h1 className="max-w-xl text-5xl font-bold tracking-tighter text-slate-800 text-white">
+          PyaaR ❤️
+        </h1>
+        
+        
+      </ContainerScale>
+    </ContainerScroll>
+
+
+
+      
+
+
+
+      {/* Team Members section */}
+      <div className="text-center mt-20 mb-12 text-4xl font-bold">
+        The Team . The Myth . The Legend 
+      </div>
+      {/* InfiniteSlider with added spacing and increased size */}
+      <div className="my-20 pb-32 pt-10"> {/* Increased bottom padding to 8rem (32) */}
+        <InfiniteSlider durationOnHover={75} gap={32}> {/* Increased gap between items */}
+          {/* Increased width and border radius for images */}
+          <div className="flex flex-col items-center">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e02ad24c5e36ddcd1957ad35677"
+              alt="Dean blunt - Black Metal 2"
+              className="aspect-square w-[300px] rounded-[6px]" 
+            />
+            <p className="mt-3 text-center font-medium">Dean Blunt - Black Metal 2</p>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e02af73f776b92d4614152fb141"
+              alt="Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
+              className="aspect-square w-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-center font-medium">Jungle Jack - JUNGLE DES ILLUSIONS VOL 2</p>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e02ecdb8f824367a53468100faf"
+              alt="Yung Lean - Stardust"
+              className="aspect-square w-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-center font-medium">Yung Lean - Stardust</p>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f"
+              alt="Lana Del Rey - Ultraviolence"
+              className="aspect-square w-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-center font-medium">Lana Del Rey - Ultraviolence</p>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e020dcf0f3680cff56fe5ff2288"
+              alt="A$AP Rocky - Tailor Swif"
+              className="aspect-square w-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-center font-medium">A$AP Rocky f
+              <br/>
+              hii lmao ffffffffffff fffffff
+            </p>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e02bc1028b7e9cd2b17c770a520"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className="aspect-square w-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-center font-medium">Midnight Miami - Nino Paid, Konvy</p>
+          </div>
+        </InfiniteSlider>
+      </div>
+
 
       {/* What We Do section with improved layout */}
       <div className='text-center mt-20 mb-12 text-4xl font-bold'>
@@ -223,6 +223,7 @@ function page() {
           </div>
         ))}
       </div>
+      
     </div>
   )
 }
