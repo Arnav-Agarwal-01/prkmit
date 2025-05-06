@@ -19,7 +19,7 @@ export const AnimatedEventShowcase = ({ events }) => {
 const EventCard = ({ event, index }) => {
   const [ref, inView] = useInView({
     threshold: 0.2,
-    triggerOnce: false
+    triggerOnce: true // Changed to true to improve performance
   });
 
   const { scrollYProgress } = useScroll({
@@ -27,11 +27,14 @@ const EventCard = ({ event, index }) => {
     offset: ['start end', 'end start']
   });
 
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+  // Simplified transformations for better performance
+  const rotateX = useTransform(scrollYProgress, [0, 0.3], [10, 0]); // Reduced angle
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]); // Less scaling
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const rotateX = useTransform(scrollYProgress, [0, 0.5], [30, 0]);
-  const perspective = useTransform(scrollYProgress, [0, 0.5], [800, 1200]);
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]); // Reduced movement
+  
+  // Remove perspective transformation which can be expensive
+  // const perspective = useTransform(scrollYProgress, [0, 0.5], [800, 1200]);
 
   return (
     <motion.div
@@ -39,7 +42,7 @@ const EventCard = ({ event, index }) => {
       className="relative min-h-[80vh] flex items-center justify-center p-8 mb-20"
       style={{
         opacity,
-        perspective
+        // perspective removed
       }}
     >
       <motion.div
@@ -47,14 +50,20 @@ const EventCard = ({ event, index }) => {
         style={{
           scale,
           y,
-          rotateX
+          rotateX,
+          // Add will-change to optimize browser rendering
+          willChange: "transform"
         }}
       >
         <div className="relative group cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-br from-black/50 to-black/20 backdrop-blur-sm border border-white/10">
           <div className="absolute inset-0 w-full h-full">
             <div 
               className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
-              style={{ backgroundImage: `url(${event.images[0]})` }}
+              style={{ 
+                backgroundImage: `url(${event.images[0]})`,
+                // Add will-change for background image transformations
+                willChange: "transform"
+              }}
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-500" />
           </div>
