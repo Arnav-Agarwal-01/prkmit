@@ -9,7 +9,7 @@ import { TextAnimate } from '@/components/magicui/text-animate';
 function page() {
   
   const IMAGES = [
-    "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=2388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "/team/team-1.jpeg",
     "https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?q=80&w=2264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=2368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9reW98ZW58MHx8MHx8fDA%3D",
@@ -77,6 +77,9 @@ function page() {
       {/* bento thing */}
 
       
+      <div style={{ height: '150px' }}></div>
+
+
       <ContainerScroll className="h-[350vh]">
       <BentoGrid className="sticky left-0 top-0 z-0 h-screen w-full p-4">
         {IMAGES.map((imageUrl, index) => (
@@ -99,7 +102,7 @@ function page() {
         </h1>
         
         
-      </ContainerScale>
+      </ContainerScale>  
     </ContainerScroll>
 
 
@@ -232,6 +235,30 @@ function page() {
             <p className="mt-3 text-2xl font-bold">Arnav</p>
             <p className="text-sm text-gray-500">Developer</p>
             <p className="mt-2 text-center italic text-sm">"Bhagwaan Bharose"</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/syan.jpg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[200px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Syanthan</p>
+            <p className="text-sm text-gray-500">Content Creator</p>
+            <p className="mt-2 text-center italic text-sm">"Against the odds, i'd bet on myself."</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/sandeep.png"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[280px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Sandeep</p>
+            <p className="text-sm text-gray-500">Graphic Designer</p>
+            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
           </div>
 
 
