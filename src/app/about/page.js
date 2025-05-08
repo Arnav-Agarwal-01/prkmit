@@ -118,13 +118,26 @@ function page() {
         <InfiniteSlider durationOnHover={75} gap={32}> {/* Increased gap between items */}
           {/* Increased width and border radius for images */}
 
+          {/* Rishi */}
+          <div className="flex flex-col items-center">
+            <img
+              src="/team/rishi.jpeg"
+              alt="Rishi"
+              className="w-[250px] h-[300px] rounded-[6px]" 
+            />
+            <p className="mt-3 text-2xl font-bold">Rishi</p>
+            <p className="text-sm text-gray-500">PR Head | CR Manager</p>
+            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+          </div>
 
+
+          
 
           {/* Sreekruthi */}
           <div className="flex flex-col items-center">
             <img
               src="/team/sree.jpg"
-              alt="one"
+              alt="Sreekruthi"
               className="w-[230px] h-[300px] rounded-[6px]" 
             />
             <p className="mt-3 text-2xl font-bold">Sreekruthi</p>
@@ -138,7 +151,7 @@ function page() {
           <div className="flex flex-col items-center">
             <img
               src="/team/jishnu.jpeg"
-              alt="Jungle Jack - JUNGLE DES ILLUSIONS VOL 2"
+              alt="Jishnu"
               className="w-[300px] h-[300px] rounded-[6px]" 
             />
             <p className="mt-3 text-2xl font-bold">Jishnu</p>
@@ -147,37 +160,63 @@ function page() {
           </div>
           
 
-          {/* Rishi */}
-          <div className="flex flex-col items-center">
-            <img
-              src="/team/rishi.jpeg"
-              alt="Yung Lean - Stardust"
-              className="w-[250px] h-[300px] rounded-[6px]" 
-            />
-            <p className="mt-3 text-2xl font-bold">Rishi</p>
-            <p className="text-sm text-gray-500">CR Manager | PR Head</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
-          </div>
+          
           
 
           {/* Vardaan */}
           <div className="flex flex-col items-center">
             <img
               src="team/vardaan.jpeg"
-              alt="Lana Del Rey - Ultraviolence"
+              alt="Vardaan"
               className="w-[280px] h-[300px] rounded-[6px]" 
             />
             <p className="mt-3 text-2xl font-bold">Vardaan</p>
             <p className="text-sm text-gray-500">Developer | Sponsorship Manager | Video Editor</p>
             <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
+
+          {/*Sandeep*/}
+          <div className="flex flex-col items-center">
+            <img
+              src="team/sandeep.png"
+              alt="Sandeep"
+              className=" w-[280px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Sandeep</p>
+            <p className="text-sm text-gray-500">Graphic Designer</p>
+            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
+          </div>
           
+
+          {/*Nithya*/}
+          <div className="flex flex-col items-center">
+            <img
+              src="team/nithya.jpg"
+              alt="Nithya"
+              className=" w-[250px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Nithya</p>
+            <p className="text-sm text-gray-500">Social Media Handler</p>
+            <p className="mt-2 text-center italic text-sm">"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
+          </div>
+
+          {/*askyaa*/}
+          <div className="flex flex-col items-center">
+            <img
+              src="team/askya.jpeg"
+              alt="Akshaya"
+              className=" w-[250px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Akshaya</p>
+            <p className="text-sm text-gray-500">Documentation Incharge</p>
+            <p className="mt-2 text-center italic text-sm">"Documenting one laugh at a time"</p>
+          </div>
 
           {/* Rushik */}
           <div className="flex flex-col items-center">
             <img
               src="/team/rushik.jpeg"
-              alt="A$AP Rocky - Tailor Swif"
+              alt="Rushik"
               className="w-[300px] h-[300px] rounded-[6px]" 
             />
             <p className="mt-3 text-2xl font-bold">Rushik</p>
@@ -189,7 +228,7 @@ function page() {
           <div className="flex flex-col items-center">
             <img
               src="team/rythma.jpg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              alt="Rythma"
               className=" w-[250px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Rythma</p>
@@ -203,7 +242,7 @@ function page() {
           <div className="flex flex-col items-center">
             <img
               src="team/rishab.jpeg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              alt="Rishab"
               className=" w-[250px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Rishab</p>
@@ -215,7 +254,7 @@ function page() {
           <div className="flex flex-col items-center">
             <img
               src="team/rishika.jpeg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              alt="Rishika"
               className=" w-[200px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Rishika</p>
@@ -227,7 +266,7 @@ function page() {
           <div className="flex flex-col items-center">
             <img
               src="team/arnav.jpeg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              alt="Arnav"
               className=" w-[220px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Arnav</p>
@@ -239,7 +278,7 @@ function page() {
           <div className="flex flex-col items-center">
             <img
               src="team/syan.jpg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              alt="Syanthan"
               className=" w-[200px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Syanthan</p>
@@ -248,35 +287,12 @@ function page() {
           </div>
 
 
-          <div className="flex flex-col items-center">
-            <img
-              src="team/sandeep.png"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
-              className=" w-[280px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Sandeep</p>
-            <p className="text-sm text-gray-500">Graphic Designer</p>
-            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
-          </div>
-
-
-          <div className="flex flex-col items-center">
-            <img
-              src="team/nithya.jpg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
-              className=" w-[250px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Nithya</p>
-            <p className="text-sm text-gray-500">Social Media Handler</p>
-            <p className="mt-2 text-center italic text-sm">"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
-          </div>
-
-
+          
 
           <div className="flex flex-col items-center">
             <img
               src="team/rishik.jpeg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              alt="Rishik"
               className=" w-[280px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Rishik</p>
@@ -285,16 +301,7 @@ function page() {
           </div>
 
 
-          <div className="flex flex-col items-center">
-            <img
-              src="team/askya.jpeg"
-              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
-              className=" w-[250px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Akshaya</p>
-            <p className="text-sm text-gray-500">Documentation Incharge</p>
-            <p className="mt-2 text-center italic text-sm">"Documenting one laugh at a time"</p>
-          </div>
+          
 
 
 
