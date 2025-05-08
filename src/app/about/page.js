@@ -10,12 +10,10 @@ function page() {
   
   const IMAGES = [
     "/team/team-1.jpeg",
-    "https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?q=80&w=2264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=2368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9reW98ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww",
-
-
+    "/team/team-2.jpeg",
+    "/team/team-3.jpeg",
+    "/team/team-4.jpeg",
+    "/team/team-5.jpeg",
   ]
 
 
@@ -259,6 +257,43 @@ function page() {
             <p className="mt-3 text-2xl font-bold">Sandeep</p>
             <p className="text-sm text-gray-500">Graphic Designer</p>
             <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/nithya.jpg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[250px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Nithya</p>
+            <p className="text-sm text-gray-500">Social Media Handler</p>
+            <p className="mt-2 text-center italic text-sm">"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
+          </div>
+
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/rishik.jpeg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[280px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Rishik</p>
+            <p className="text-sm text-gray-500">CR Manager</p>
+            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
+          </div>
+
+
+          <div className="flex flex-col items-center">
+            <img
+              src="team/askya.jpeg"
+              alt="Midnight Miami (feat Konvy) - Nino Paid, Konvy"
+              className=" w-[250px] h-[300px] rounded-[6px]"
+            />
+            <p className="mt-3 text-2xl font-bold">Akshaya</p>
+            <p className="text-sm text-gray-500">Documentation Incharge</p>
+            <p className="mt-2 text-center italic text-sm">"Documenting one laugh at a time"</p>
           </div>
 
 
