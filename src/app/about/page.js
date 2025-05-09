@@ -259,7 +259,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rishika</p>
             <p className="text-sm text-gray-500">Documentation Incharge</p>
-            <p className="mt-2 text-center italic text-sm">"Veni Vedi Vici"</p>
+            <p className="mt-2 text-center italic text-sm">"Veni Vidi Vici"</p>
           </div>
 
 
