@@ -29,7 +29,7 @@ const SponsorSection = ({
 
   return (
     <div className={`flex flex-col ${contentOrder} gap-8 items-center justify-between mt-20 ${familyName.className}`}>
-      <div className="md:w-1/2 px-4">
+      <div className="md:w-1/2 px-4 flex flex-col justify-center">  {/* Added justify-center */}
         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white">
           {title}
         </h1>
@@ -37,7 +37,7 @@ const SponsorSection = ({
           {body}
         </p>
       </div>
-      <div className="md:w-1/2 relative aspect-square px-4">
+      <div className="md:w-1/2 relative aspect-square px-4 flex items-center justify-center"> {/* Added flex, items-center, justify-center */}
         <Image 
           src={imageSrc} 
           alt={imageAlt}
