@@ -141,7 +141,7 @@ function page() {
               className="w-[230px] h-[300px] rounded-[6px]" 
             />
             <p className="mt-3 text-2xl font-bold">Sreekruthi</p>
-            <p className="text-sm text-gray-500">Content Creator</p>
+            <p className="text-sm text-gray-500">SIC | Content Creator</p>
             <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
           </div>
           
