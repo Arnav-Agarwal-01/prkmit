@@ -313,13 +313,13 @@ function page() {
       <div className='text-center mt-20 mb-12 text-4xl font-bold'>
         What We Do
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-10 max-w-7xl mx-auto pb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-10 max-w-7xl mx-auto pb-20">
         {meteorCards.map((card, index) => (
-          <div key={index} className="relative h-[400px] group">
-            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="relative h-full shadow-xl bg-gray-900 border border-gray-800 p-6 overflow-hidden rounded-2xl flex flex-col justify-between">
+          <div key={index} className="relative h-[320px] group">
+            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.85] rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative h-full shadow-xl bg-gray-900 border border-gray-800 p-5 overflow-hidden rounded-2xl flex flex-col justify-between">
               <div>
-                <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+                <div className="h-4 w-4 rounded-full border flex items-center justify-center mb-3 border-gray-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -336,20 +336,19 @@ function page() {
                   </svg>
                 </div>
 
-                <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+                <h1 className="font-bold text-lg text-white mb-3 relative z-50">
                   {card.title}
                 </h1>
 
-                <p className="font-normal text-base text-slate-400 mb-6 relative z-50">
+                <p className="font-normal text-sm text-slate-400 mb-4 relative z-50">
                   {card.description}
                 </p>
               </div>
 
               <div>
-
                 {/* Meteor effect with z-index to ensure it's visible */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-                  <Meteors number={30} className="z-10" />
+                  <Meteors number={20} className="z-10" />
                 </div>
               </div>
             </div>

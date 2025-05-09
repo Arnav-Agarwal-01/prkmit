@@ -52,13 +52,13 @@ function ContactPage() {
   return (
     <>
       {/* Fixed height spacer div to push content down */}
-      <div style={{ height: '150px' }}></div>
+      <div style={{ height: '70px' }}></div>
       
       <div className="min-h-screen flex items-center justify-center py-20 px-4 relative overflow-hidden" style={{ pointerEvents: 'auto', zIndex: 50 }}>
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
-          <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-purple-600/10 blur-3xl" />
-          <div className="absolute -bottom-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-blue-600/10 blur-3xl" />
+        <div className="absolute  overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
+          <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-purple-600/10 blur-5xl" />
+          <div className="absolute -bottom-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-blue-600/10 blur-5xl" />
         </div>
         
         <div className="w-full max-w-4xl relative" style={{ pointerEvents: 'auto', zIndex: 60 }}>
@@ -115,17 +115,7 @@ function ContactPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-pink-500/20 p-3 rounded-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-gray-300 font-medium">Working Hours</h3>
-                    <p className="text-gray-400">Monday - Friday, 9AM - 5PM</p>
-                  </div>
-                </div>
+                
               </div>
             </motion.div>
             
