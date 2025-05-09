@@ -75,7 +75,7 @@ function page() {
       {/* bento thing */}
 
       
-      <div style={{ height: '150px' }}></div>
+      
 
 
       <ContainerScroll className="h-[350vh]">
@@ -115,7 +115,7 @@ function page() {
       </div>
       {/* InfiniteSlider with added spacing and increased size */}
       <div className="my-20 pb-32 pt-10"> {/* Increased bottom padding to 8rem (32) */}
-        <InfiniteSlider durationOnHover={75} gap={32}> {/* Increased gap between items */}
+        <InfiniteSlider duration={70} durationOnHover={150} gap={32}> {/* Increased gap between items */}
           {/* Increased width and border radius for images */}
 
           {/* Rishi */}
@@ -127,7 +127,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rishi</p>
             <p className="text-sm text-gray-500">PR Head | CR Manager</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+            <p className="mt-2 text-center italic text-sm">"I offer sarcasm, <br></br>*inserts a sarcatic one liner*"</p>
           </div>
 
 
@@ -172,7 +172,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Vardaan</p>
             <p className="text-sm text-gray-500">Developer | Sponsorship Manager | Video Editor</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+            <p className="mt-2 text-center italic text-sm"></p>
           </div>
 
           {/*Sandeep*/}
@@ -184,7 +184,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Sandeep</p>
             <p className="text-sm text-gray-500">Graphic Designer</p>
-            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
+            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever <br></br> make the most of it while it lasts."</p>
           </div>
           
 
@@ -221,19 +221,19 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rushik</p>
             <p className="text-sm text-gray-500">Video Editor</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+            <p className="mt-2 text-center italic text-sm">"Render. Watch. Refine. Repeat."</p>
           </div>
           
           {/* Rythma */}
           <div className="flex flex-col items-center">
             <img
-              src="team/rythma.jpg"
+              src="team/rythma.png"
               alt="Rythma"
-              className=" w-[250px] h-[300px] rounded-[6px]"
+              className=" w-[350px] h-[300px] rounded-[6px]"
             />
             <p className="mt-3 text-2xl font-bold">Rythma</p>
             <p className="text-sm text-gray-500">Graphic Designer</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+            <p className="mt-2 text-center italic text-sm">"Grey's Anatomy S2, E5 41:30"</p>
           </div>
 
 
@@ -247,7 +247,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rishab</p>
             <p className="text-sm text-gray-500">Sponsorship Manager</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+            <p className="mt-2 text-center italic text-sm">"Your experience of life is entirely shaped by you."</p>
           </div>
 
 
@@ -259,7 +259,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rishika</p>
             <p className="text-sm text-gray-500">Documentation Incharge</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+            <p className="mt-2 text-center italic text-sm">"Veni Vedi Vici"</p>
           </div>
 
 
@@ -297,7 +297,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rishik</p>
             <p className="text-sm text-gray-500">CR Manager</p>
-            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever make the most of it while it lasts."</p>
+            <p className="mt-2 text-center italic text-sm">"Real change begins with intention.<br></br>I lead with purpose and stand up for what matters."</p>
           </div>
 
 

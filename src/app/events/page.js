@@ -15,8 +15,9 @@ export default function page() {
       title: "January - Patang Utsav",
       content: "Patang Utsav is a vibrant celebration where the sky came alive with bold streaks of color and soaring energy. Kites danced in the wind as laughter echoed below — a day that turned open skies into a symbol of joy, freedom, and shared spirit. From friendly kite duels to unforgettable moments on the ground, the festival brought the campus together in full swing.",
       images: [
+        "/events/patangutsav1.jpg",
         "/events/patangutsavdecor.jpg",
-        "/events/patangutsav1.jpg"
+        
       ],
       link: "/patang-utsav"
     },
@@ -28,8 +29,9 @@ export default function page() {
         </div>
       ),
       images: [
+        "/events/saanjh2.jpg",
         "/events/saanjhdecor.jpg",
-        "/events/saanjh2.jpg"
+        
       ],
       link: "/kmit-evening"
     },
@@ -41,8 +43,9 @@ export default function page() {
         </div>
       ),
       images: [
-        "/events/navraaspreview.jpg",
         "/events/navraasdecor.jpg",
+        "/events/navraaspreview.jpg",
+        
       ],
       link: "/navras"
     }
