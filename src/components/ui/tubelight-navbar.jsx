@@ -33,13 +33,13 @@ export function NavBar({
     <motion.div
       initial={{ opacity: 0 }}
       animate={showNav ? { opacity: 1 } : {}}
-      transition={{ duration: 0.8, ease: "easeOut" }} // Reduced from 1.5s to 0.8s
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className={cn(
-        "fixed bottom-0 sm:top-10 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6",
+        "fixed bottom-0 sm:top-10 left-1/2 -translate-x-1/2 z-[100] mb-6 sm:pt-6 pointer-events-none",
         className
       )}>
       <div
-        className="flex items-center gap-3 border border-transparent py-1 px-1 rounded-full shadow-lg bg-transparent navbar-static-gradient">
+        className="flex items-center gap-3 border border-transparent py-1 px-1 rounded-full shadow-lg bg-transparent navbar-static-gradient pointer-events-auto">
         {items.map((item) => {
           // Map string icon names to their corresponding components
           const getIcon = (iconName) => {
