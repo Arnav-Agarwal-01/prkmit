@@ -112,21 +112,20 @@ export default function page() {
             <Testimonial
               name="Top One Percentile"
               testimonial="The public relations team at KMIT executed their duties excellently, ensuring that all aspects outlined in the memorandum of understanding, including marketing and advertising, were delivered upon. This level of commitment and fulfillment is rare to see in other events, and we eagerly anticipate future collaborations with them."
-              rating={5}
+
               image="/sponsors/topone.png"
               className="bg-gradient-to-br from-gray-900 to-gray-950 border-purple-500/20 hover:border-purple-500/40 transform hover:-translate-y-2 transition-all duration-300"
             />
             <Testimonial
               name="Vishal Peripherals"
               testimonial="The professional execution and student participation made this sponsorship one of our most successful campaigns this year. The PR team's attention to detail and commitment to our brand visibility exceeded our expectations."
-              rating={5}
+
               image="/sponsors/vishal.png"
               className="bg-gradient-to-br from-gray-900 to-gray-950 border-blue-500/20 hover:border-blue-500/40 transform hover:-translate-y-2 transition-all duration-300"
             />
             <Testimonial
               name="Royal Enfield"
               testimonial="As promised the turnout was excellent, we had great fun collaborating with PR KMIT, they pulled off a wonderful event! The engagement with our target audience was precisely what we were looking for in this partnership."
-              rating={5}
               image="/sponsors/royalenfield.png"
               className="bg-gradient-to-br from-gray-900 to-gray-950 border-orange-500/20 hover:border-orange-500/40 transform hover:-translate-y-2 transition-all duration-300"
             />
@@ -139,7 +138,7 @@ export default function page() {
 
         <div className="mt-12 flex justify-center relative z-50">
             <Link href="/contact" passHref legacyBehavior>
-              <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 w-full md:w-auto relative z-[9999] cursor-pointer pointer-events-auto mt-10">
+              <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-4 text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 w-auto md:w-auto relative z-[9999] cursor-pointer pointer-events-auto mt-10">
                 Sponsor our next event
               </a>
             </Link>

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const Testimonial = React.forwardRef(
-  ({ name, role, company, testimonial, rating = 5, image, className, ...props }, ref) => {
+  ({ name, role, company, testimonial, rating = 0, image, className, ...props }, ref) => {
     return (
       <div
         ref={ref}
