@@ -130,7 +130,7 @@ function page() {
             />
             <p className="mt-3 text-2xl font-bold">Rishi</p>
             <p className="text-sm text-gray-500">PR Head | CR Manager</p>
-            <p className="mt-2 text-center italic text-sm">"I offer sarcasm, <br></br>*inserts a sarcatic one liner*"</p>
+            <p className="mt-2 text-center italic text-sm">"I offer sarcasm, <br></br>*inserts a sarcastic one liner*"</p>
           </div>
 
 
