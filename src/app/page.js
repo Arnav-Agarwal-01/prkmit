@@ -22,11 +22,19 @@ const familyName = localFont({
   src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
 })
 
+const familyName2 = localFont({
+  src: "../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/static/Montserrat-SemiBold.ttf",
+})
+
 export default function Home() {
   const timelineData = [
     {
       title: "January - Patang Utsav",
-      content: "Patang Utsav is a vibrant celebration where the sky came alive with bold streaks of color and soaring energy. Kites danced in the wind as laughter echoed below — a day that turned open skies into a symbol of joy, freedom, and shared spirit. From friendly kite duels to unforgettable moments on the ground, the festival brought the campus together in full swing.",
+      content: (
+        <div className={`text-small ${familyName2.className}`}>
+        "Patang Utsav is a vibrant celebration where the sky came alive with bold streaks of color and soaring energy. Kites danced in the wind as laughter echoed below — a day that turned open skies into a symbol of joy, freedom, and shared spirit. From friendly kite duels to unforgettable moments on the ground, the festival brought the campus together in full swing."
+        </div>
+        ),
       images: [
         "/events/patangutsavdecor.jpg",
         "/events/patangutsav1.jpg"
@@ -36,7 +44,7 @@ export default function Home() {
     {
       title: "March - KMIT EVENING",
       content: (
-        <div>
+        <div className={`text-small ${familyName2.className}`}>
           <p>KMIT Evening (Saanjh) is a night where talent meets spotlight. From soulful music to electrifying performances, the stage comes alive with the passion and creativity of our students. A celebration of expression, energy, and the vibrant spirit of KMIT.</p>
         </div>
       ),
@@ -49,7 +57,7 @@ export default function Home() {
     {
       title: "October - Navras",
       content: (
-        <div>
+        <div className={`text-small ${familyName2.className}`}>
           <p>Navras is a spirited celebration of culture, devotion, and dance—an evening where the beats of Garba and Dandiya echoed through the campus. With vibrant colors, traditional attire, and hearts full of joy, students come together to honor Maa Durga and immerse themselves in the nine emotions of Navras. It is a night of rhythm, reverence, and radiant energy.</p>
         </div>
       ),
@@ -109,7 +117,7 @@ export default function Home() {
 
         {/* KMIT Flagship Events Section */}
         <div className="container mx-auto py-20 px-4">
-          <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-12`}>
+          <div className={`text-3xl md:text-4xl text-white ${familyName2.className} text-center mb-12`}>
             <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
               KMIT Flagship Events
             </TextAnimate>
