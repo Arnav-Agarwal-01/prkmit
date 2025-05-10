@@ -1,11 +1,14 @@
 "use client";
-import React from 'react'
+import * as React from 'react';
+
 import { HeroParallax } from '@/components/blocks/hero-parallax';
 import { Meteors } from '@/components/ui/meteors';
 import { BentoCell,BentoGrid,ContainerScale,ContainerScroll } from '@/components/blocks/hero-gallery-scroll-animation';
 import { Button } from '@/components/ui/button';
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { TextAnimate } from '@/components/magicui/text-animate';
+import { GooeyText } from '@/components/ui/gooey-text-morphing';
+
 function page() {
   
   const IMAGES = [
@@ -354,6 +357,22 @@ function page() {
             </div>
           </div>
         ))}
+      </div>
+      <div className={`text-4xl text-center justify-center`}>
+          Roles In PR
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <div className="h-[200px] flex items-center justify-center">
+      <GooeyText
+        texts={["CR Manager", "Video Editor", "Content Creator", "Developer","Documentation Incharge","Sponsorship Manager","Graphic Designer","Social Media Handler"]}
+        morphTime={1}
+        cooldownTime={0.25}
+        className="font-bold"
+      />
+    </div>
       </div>
       
     </div>
