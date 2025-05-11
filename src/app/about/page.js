@@ -11,6 +11,22 @@ import { GooeyText } from '@/components/ui/gooey-text-morphing';
 import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
 import { FlipCard,FlipCardBack,FlipCardFront } from '@/components/ui/flip-card';
 import { Logos3 } from "@/components/blocks/logos3"
+import localFont from 'next/font/local';
+const inconsolata = localFont({
+  src : "../../../public/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"
+})
+
+const familyName = localFont({
+  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
+})
+
+const familyName2 = localFont({
+  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/static/Montserrat-SemiBold.ttf",
+})
+
+const comic = localFont({
+  src : "../../../public/fonts/Comic_Relief/ComicRelief-Regular.ttf"
+})
 
 function page() {
   
@@ -20,7 +36,9 @@ function page() {
     "/team/team-3.jpeg",
     "/team/team-4.jpeg",
     "/team/team-5.jpeg",
-  ]
+  ];
+
+  
 
 
   // Team members data for the HeroParallax component
@@ -85,7 +103,7 @@ function page() {
 
 
       <ContainerScroll className="h-[350vh]">
-      <BentoGrid className="sticky left-0 top-0 z-0 h-screen w-full p-4">
+      <BentoGrid className={`sticky left-0 top-0 z-0 h-screen w-full p-4`}>
         {IMAGES.map((imageUrl, index) => (
           <BentoCell
             key={index}
@@ -114,39 +132,24 @@ function page() {
 
 
       {/* What We Do section with improved layout */}
-      <div className='text-center mt-20 mb-12 text-4xl font-bold'>
+      <div className={`text-center mt-20 mb-12 text-4xl font-bold ${inconsolata.className}`}>
         What We Do
       </div>
 
 
-      <div className="min-h-screen w-full">
+      <div className={`min-h-screen w-full ${familyName.className}`}>
         <div className="relative left-0 w-full md:absolute">
           <FeaturesSectionWithHoverEffects />
         </div>
       </div>
       
-      <div className={`text-4xl text-center justify-center`}>
-          Roles In PR
-          <br></br> 
-          <div className="h-[200px] flex items-center justify-center">
-      <GooeyText
-        texts={["CR Manager", "Video Editor", "Content Creator", "Developer","Documentation Incharge","Sponsorship Manager","Graphic Designer","Social Media Handler"]}
-        morphTime={1}
-        cooldownTime={0.25}
-        className="font-bold"
-      />
-
-  </div>
-    
-
-    
-      </div>
+      
 
           <br></br>
           <br></br>
           <br></br>
       {/* Team Members section */}
-      <div className="text-center mt-20 mb-12 text-4xl font-bold">
+      <div className={`text-center mt-20 mb-12 text-4xl font-bold ${familyName.className}`}>
         The Team . The Myth . The Legend 
       </div>
       
@@ -159,7 +162,7 @@ function page() {
 
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/rishi.jpeg"
@@ -177,7 +180,7 @@ function page() {
 
 
 
-            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+            <FlipCard  className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="/team/rishik.jpeg"
@@ -197,7 +200,7 @@ function page() {
 
 
             
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="/team/sree.jpg"
@@ -215,7 +218,7 @@ function page() {
 
 
 
-            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+            <FlipCard  className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="/team/jishnu.jpeg"
@@ -233,7 +236,7 @@ function page() {
 
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/nithya.jpg"
@@ -251,7 +254,7 @@ function page() {
 
 
 
-            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+            <FlipCard  className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/syan.jpg"
@@ -263,13 +266,13 @@ function page() {
                 <h2 className="text-xl font-bold">Syanthan</h2>
                 <h4 className="mb-4">Content Creator</h4>
                 <p className="text-sm mb-4">"Against the odds, i'd bet on myself."</p>
-                <Button className="rounded-full">Contact</Button>
+                
               </FlipCardBack>
             </FlipCard>
 
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/vardaan.jpeg"
@@ -287,7 +290,7 @@ function page() {
 
 
 
-            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+            <FlipCard  className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/arnav.jpeg"
@@ -306,7 +309,7 @@ function page() {
 
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/sandeep.png"
@@ -325,7 +328,7 @@ function page() {
 
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard  className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/rythma.png"
@@ -333,7 +336,7 @@ function page() {
                   className="h-full w-full object-cover"
                 />
               </FlipCardFront>
-              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-indigo-600 px-4 py-6 text-center text-white">
                 <h2 className="text-xl font-bold">Rythma</h2>
                 <h4 className="mb-4">Graphic Designer</h4>
                 <p className="text-sm mb-4">"Grey's Anatomy S2, E5 41:30"</p>
@@ -342,7 +345,7 @@ function page() {
             </FlipCard>
 
           
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/askya.jpeg"
@@ -350,11 +353,11 @@ function page() {
                   className="h-full w-full object-cover"
                 />
               </FlipCardFront>
-              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-purple-600 px-4 py-6 text-center text-white">
                 <h2 className="text-xl font-bold">Akshaya</h2>
                 <h4 className="mb-4">Documentation Incharge</h4>
                 <p className="text-sm mb-4">"Documenting one laugh at a time"</p>
-                <Button className="rounded-full">Contact</Button>
+                
               </FlipCardBack>
             </FlipCard>
 
@@ -362,7 +365,7 @@ function page() {
 
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard  className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/rishika.jpeg"
@@ -374,12 +377,12 @@ function page() {
                 <h2 className="text-xl font-bold">Rishika</h2>
                 <h4 className="mb-4">Documentation Incharge</h4>
                 <p className="text-sm mb-4">"Veni Vidi Vici"</p>
-                <Button className="rounded-full">Contact</Button>
+                
               </FlipCardBack>
             </FlipCard>
 
 
-            <FlipCard className="h-96 w-80 flex-shrink-0">
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
               <FlipCardFront className="rounded-xl overflow-hidden">
                 <img
                   src="team/rishab.jpeg"
@@ -387,11 +390,11 @@ function page() {
                   className="h-full w-full object-cover"
                 />
               </FlipCardFront>
-              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-rose-600 px-4 py-6 text-center text-white">
                 <h2 className="text-xl font-bold">Rishab</h2>
                 <h4 className="mb-4">Sponsorship Manager</h4>
                 <p className="text-sm mb-4">"Your experience of life is entirely shaped by you."</p>
-                <Button className="rounded-full">Contact</Button>
+                
               </FlipCardBack>
             </FlipCard>
 
@@ -406,11 +409,11 @@ function page() {
                   className="h-full w-full object-cover"
                 />
               </FlipCardFront>
-              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-teal-600 px-4 py-6 text-center text-white">
                 <h2 className="text-xl font-bold">Rushik</h2>
                 <h4 className="mb-4">Video Editor</h4>
                 <p className="text-sm mb-4">"Render. Watch. Refine. Repeat."</p>
-                <Button className="rounded-full">Contact</Button>
+                
               </FlipCardBack>
             </FlipCard>
 
