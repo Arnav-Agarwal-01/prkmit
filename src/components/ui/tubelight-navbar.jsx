@@ -61,8 +61,8 @@ export function NavBar({
       )}>
       {/* Mobile view with PRKMIT text and hamburger */}
       {isMobile && (
-        <div className="flex justify-between items-center w-full px-4 py-2 pointer-events-auto navbar-static-gradient">
-          <div className="text-xl font-bold glow-effect" style={{ textShadow: "0 0 8px rgba(255, 255, 255, 0.8)", color: "white", fontFamily: "Arial, sans-serif" }}>
+        <div className="flex justify-between items-center w-full px-6 py-4 pointer-events-auto navbar-static-gradient" style={{ minHeight: '72px' }}>
+          <div className="text-2xl font-extrabold glow-effect" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", fontFamily: "Arial, sans-serif", letterSpacing: '0.05em' }}>
             PRKMIT
           </div>
           <button 
@@ -90,8 +90,8 @@ export function NavBar({
           initial="closed"
           animate={menuOpen ? "open" : "closed"}
           className={cn(
-            "flex flex-row justify-center items-center gap-4 border-t border-gray-700/30 py-3 px-4 bg-black/90 navbar-static-gradient pointer-events-auto",
-            "w-full absolute top-[80px] left-0 overflow-hidden",
+            "flex flex-row justify-center items-center gap-6 border-t border-gray-700/30 py-5 px-6 bg-black/90 navbar-static-gradient pointer-events-auto",
+            "w-full absolute top-[96px] left-0 overflow-hidden",
             !menuOpen && "pointer-events-none h-0 opacity-0"
           )}>
         {items.map((item) => {

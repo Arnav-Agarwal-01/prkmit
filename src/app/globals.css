@@ -22,6 +22,12 @@ body {
   border: 2px solid transparent;
   background: linear-gradient(#18181b, #18181b) padding-box, linear-gradient(90deg, #a855f7, #ec4899, #3b82f6) border-box;
   border-radius: 9999px;
+  min-height: 56px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-size: 1.25rem;
 }
 
 

@@ -171,9 +171,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-rose-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Rishi</h2>
-                <h4 className="mb-4">PR Head | CR Manager</h4>
-                <p className="text-sm mb-4">"I offer sarcasm, <br></br>*inserts a sarcastic one liner*"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Rishi</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>PR Head | CR Manager</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"I offer sarcasm, <br></br>*inserts a sarcastic one liner*"</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -189,9 +189,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-emerald-500 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Rishik</h2>
-                <h4 className="mb-4">CR Manager</h4>
-                <p className="text-sm mb-4">"Real change begins with intention.<br></br>I lead with purpose and stand up for what matters."</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Rishik</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>CR Manager</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Real change begins with intention.<br></br>I lead with purpose and stand up for what matters."</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -209,9 +209,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-blue-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Sreekruthi</h2>
-                <h4 className="mb-4">SIC | Content Creator</h4>
-                <p className="text-sm mb-4">"The office s4 e4 14:28"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Sreekruthi</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>SIC | Content Creator</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"The office s4 e4 14:28"</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -227,9 +227,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-purple-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Jishnu</h2>
-                <h4 className="mb-4">Content Creator</h4>
-                <p className="text-sm mb-4">"A true artist is an ugly man"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Jishnu</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Content Creator</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"A true artist is an ugly man"</p>
 
               </FlipCardBack>
             </FlipCard>
@@ -245,9 +245,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-amber-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Nithya</h2>
-                <h4 className="mb-4">Social Media Handler</h4>
-                <p className="text-sm mb-4">"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Nithya</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Social Media Handler</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -263,9 +263,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-teal-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Syanthan</h2>
-                <h4 className="mb-4">Content Creator</h4>
-                <p className="text-sm mb-4">"Against the odds, i'd bet on myself."</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Syanthan</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Content Creator</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Against the odds, i'd bet on myself."</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -281,9 +281,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Vardaan</h2>
-                <h4 className="mb-4">Developer | Sponsorship Manager | Video Editor</h4>
-                <p className="text-sm mb-4"></p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Vardaan</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Developer | Sponsorship Manager | Video Editor</h4>
+                <p className={`text-md mb-4 ${comic.className}`}></p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -299,9 +299,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-indigo-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Arnav</h2>
-                <h4 className="mb-4">Developer</h4>
-                <p className="text-sm mb-4">"Delusion Is The Key To Success"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Arnav</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Developer</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Delusion Is The Key To Success"</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -318,9 +318,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Sandeep</h2>
-                <h4 className="mb-4">Graphic Designer</h4>
-                <p className="text-sm mb-4">"Nothing lasts for ever <br></br> make the most of it while it lasts."</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Sandeep</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Graphic Designer</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Nothing lasts for ever <br></br> make the most of it while it lasts."</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -337,9 +337,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-indigo-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Rythma</h2>
-                <h4 className="mb-4">Graphic Designer</h4>
-                <p className="text-sm mb-4">"Grey's Anatomy S2, E5 41:30"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Rythma</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Graphic Designer</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Grey's Anatomy S2, E5 41:30"</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -354,9 +354,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-purple-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Akshaya</h2>
-                <h4 className="mb-4">Documentation Incharge</h4>
-                <p className="text-sm mb-4">"Documenting one laugh at a time"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Akshaya</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Documentation Incharge</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Documenting one laugh at a time"</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -374,9 +374,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Rishika</h2>
-                <h4 className="mb-4">Documentation Incharge</h4>
-                <p className="text-sm mb-4">"Veni Vidi Vici"</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Rishika</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Documentation Incharge</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Veni Vidi Vici"</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -391,9 +391,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-rose-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Rishab</h2>
-                <h4 className="mb-4">Sponsorship Manager</h4>
-                <p className="text-sm mb-4">"Your experience of life is entirely shaped by you."</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Rishab</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Sponsorship Manager</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Your experience of life is entirely shaped by you."</p>
                 
               </FlipCardBack>
             </FlipCard>
@@ -410,9 +410,9 @@ function page() {
                 />
               </FlipCardFront>
               <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-teal-600 px-4 py-6 text-center text-white">
-                <h2 className="text-xl font-bold">Rushik</h2>
-                <h4 className="mb-4">Video Editor</h4>
-                <p className="text-sm mb-4">"Render. Watch. Refine. Repeat."</p>
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Rushik</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Video Editor</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>"Render. Watch. Refine. Repeat."</p>
                 
               </FlipCardBack>
             </FlipCard>
