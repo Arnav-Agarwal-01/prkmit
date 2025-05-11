@@ -22,7 +22,7 @@
     "embla-carousel-react": "^8.5.2",
     "framer-motion": "^12.9.4",
     "lucide-react": "^0.486.0",
-    "motion": "^12.9.4",
+    "motion": "^12.10.5",
     "next": "15.1.7",
     "nodemailer": "^6.10.0",
     "react": "^19.0.0",

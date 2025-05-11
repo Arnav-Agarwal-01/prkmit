@@ -4,6 +4,16 @@ import { TextAnimate } from '@/components/magicui/text-animate';
 import { AnimatedEventShowcase } from '@/components/ui/animated-event-showcase';
 import { CardSpotlight } from '@/components/ui/card-spotlight';
 import { Testimonial } from '@/components/ui/testimonial-card';
+import { ArrowUpRight } from "lucide-react"
+
+import { 
+  CardCurtainReveal,
+  CardCurtainRevealBody,
+  CardCurtainRevealDescription,
+  CardCurtainRevealFooter,
+  CardCurtainRevealTitle,
+  CardCurtain } from "@/components/ui/card-curtain-reveal"
+
 import Link from 'next/link';
 const familyName = localFont({
     src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
@@ -75,20 +85,65 @@ export default function page() {
               Why Sponsor Us?
             </TextAnimate>
           </div>
+
+
+
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <CardSpotlight>
-              <h3 className="text-xl font-bold text-white mb-4">Custom Packages</h3>
-              <p className="text-neutral-400">We understand that every sponsor has unique goals and preferences. We offer flexible sponsorship packages tailored to your specific marketing objectives. Whether it's brand exposure, community engagement, partnering with us ensures maximizing your return on investment.</p>
-            </CardSpotlight>
-            <CardSpotlight>
-              <h3 className="text-xl font-bold text-white mb-4">Targeted Engagement</h3>
-              <p className="text-neutral-400">By sponsoring our college, your brand can connect with an active community engaged in entertainment, sports, and cultural events. This partnership boosts your brand’s visibility and aligns it with popular, contemporary interests which ensures extreme brand awareness.</p>
-            </CardSpotlight>
-            <CardSpotlight>
-              <h3 className="text-xl font-bold text-white mb-4">Unparalleled Visibility</h3>
-              <p className="text-neutral-400">Our college boasts a vibrant, engaged student body eager to explore new opportunities. By sponsoring us, your brand gains direct access to a diverse demographic of motivated young individuals who actively participate in various academic, cultural, and community-driven initiatives.</p>
-            </CardSpotlight>
+
+          <div className="min-h-screen place-content-center place-items-center">
+          <CardCurtainReveal className="h-[460px] w-96 border border-orange-500/20 bg-gradient-to-b from-[#0f0c0c] via-[#1a1310] to-[#1a1310] text-zinc-50 shadow-md hover:shadow-orange-500/10 transition-all">
+        <CardCurtainRevealBody className="">
+        <CardCurtainRevealTitle className="text-3xl font-medium tracking-tight text-zinc-100">
+          Custom <br/>Packages
+          </CardCurtainRevealTitle>
+          <CardCurtainRevealDescription className="my-4 text-zinc-300">
+            <p>
+            We understand that every sponsor has unique goals and preferences. We offer flexible sponsorship packages tailored to your specific marketing objectives. Whether it's brand exposure, community engagement, partnering with us ensures maximizing your return on investment.
+            </p>
+          </CardCurtainRevealDescription>
+          <ArrowUpRight />
+          <CardCurtain className=" bg-zinc-50" />
+        </CardCurtainRevealBody>
+      </CardCurtainReveal>
+    </div>
+
+    <div className="min-h-screen place-content-center place-items-center">
+    <CardCurtainReveal className="h-[460px] w-96 border border-orange-500/20 bg-gradient-to-b from-[#0f0c0c] via-[#1a1310] to-[#1a1310] text-zinc-50 shadow-md hover:shadow-orange-500/10 transition-all">
+        <CardCurtainRevealBody className="">
+          <CardCurtainRevealTitle className="text-3xl font-medium tracking-tight">
+          Targered <br/>Engagement
+          </CardCurtainRevealTitle>
+          <CardCurtainRevealDescription className="my-4 ">
+            <p>
+            By sponsoring our college, your brand can connect with an active community engaged in entertainment, sports, and cultural events. This partnership boosts your brand’s visibility and aligns it with popular, contemporary interests which ensures extreme brand awareness.
+            </p>
+          </CardCurtainRevealDescription>
+          <ArrowUpRight />
+          <CardCurtain className=" bg-zinc-50" />
+        </CardCurtainRevealBody>
+      </CardCurtainReveal>
+    </div>
+
+    <div className="min-h-screen place-content-center place-items-center">
+    <CardCurtainReveal className="h-[460px] w-96 border border-orange-500/20 bg-gradient-to-b from-[#0f0c0c] via-[#1a1310] to-[#1a1310] text-zinc-50 shadow-md hover:shadow-orange-500/10 transition-all">
+        <CardCurtainRevealBody className="">
+          <CardCurtainRevealTitle className="text-3xl font-medium tracking-tight">
+          Unparalleled <br/>Visibility
+          </CardCurtainRevealTitle>
+          <CardCurtainRevealDescription className="my-4 ">
+            <p>
+            Our college boasts a vibrant, engaged student body eager to explore new opportunities. By sponsoring us, your brand gains direct access to a diverse demographic of motivated young individuals who actively participate in various academic, cultural, and community-driven initiatives.
+            </p>
+          </CardCurtainRevealDescription>
+          <ArrowUpRight />
+          <CardCurtain className=" bg-zinc-50" />
+        </CardCurtainRevealBody>
+      </CardCurtainReveal>
+    </div>
+
+            
+            
           </div>
         </div>
 
@@ -107,6 +162,8 @@ export default function page() {
           <p className="text-center text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
             Our sponsors have experienced exceptional results through our partnership. Here's what they have to say about working with us.
           </p>
+
+          
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Testimonial
