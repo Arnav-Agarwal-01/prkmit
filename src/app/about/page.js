@@ -11,6 +11,7 @@ import { GooeyText } from '@/components/ui/gooey-text-morphing';
 import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
 import { FlipCard,FlipCardBack,FlipCardFront } from '@/components/ui/flip-card';
 import { Logos3 } from "@/components/blocks/logos3"
+import { HyperText } from '@/components/ui/hyper-text';
 import localFont from 'next/font/local';
 const inconsolata = localFont({
   src : "../../../public/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"
@@ -36,6 +37,12 @@ function page() {
     "/team/team-3.jpeg",
     "/team/team-4.jpeg",
     "/team/team-5.jpeg",
+  ];
+
+  const prRoles = [
+    "CR Manager", "Content Creator", "Video Editor",
+    "Graphic Designer", "Documentation Incharge", "Sponsorship Manager", 
+    "Developer"
   ];
 
   
@@ -148,7 +155,68 @@ function page() {
           <br></br>
           <br></br>
           <br></br>
+
+          <div>
+  <TextAnimate animation="blurInUp" by="character" duration={1} className={`mt-12 pt-10 mb-10 text-5xl ${familyName.className} text-center justify-center `}>
+    Roles In PR 
+  </TextAnimate>
+
+
+  <div style={{
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "140px",
+    
+    marginTop:"100px"
+  }}>
+    {/* First row - 3 elements */}
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="Content Creator"
+    />
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="Video Editor"
+    />
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="CR Manager"
+    />
+    {/* Second row - 3 elements */}
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="Graphic Designer"
+    />
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="Developer"
+    />
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="Documentation"
+    />
+    
+  </div>
+  {/* Last centered element */}
+  <div style={{
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "100px",
+    
+    marginBottom:"200px",
+    
+  }}>
+    <HyperText
+      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      text="Sponsorship Manager"
+    />
+  </div>
+</div>
+
+
       {/* Team Members section */}
+
       <div className={`text-center mt-20 mb-12 text-4xl font-bold ${familyName.className}`}>
         The Team . The Myth . The Legend 
       </div>
