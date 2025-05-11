@@ -114,7 +114,7 @@ export const EventCarousel = ({ events }) => {
                 </div>
                 <Link 
                   href={events[currentIndex].link}
-                  className="inline-block mt-4 px-6 py-2 bg-white text-black rounded-full transform transition-all duration-300 hover:scale-105 hover:bg-opacity-90"
+                  className="inline-flex mt-4 h-10 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-6 text-base font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600"
                 >
                   Learn More
                 </Link>

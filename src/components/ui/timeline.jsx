@@ -72,7 +72,7 @@ export const Timeline = ({
               <div className="relative z-50">
                 <Link 
                   href={item.link || '#'} 
-                  className="inline-block px-6 py-3 bg-orange-600 hover:bg-orange-700 transition-colors rounded-lg text-white font-semibold"
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 relative cursor-pointer"
                 >
                   See More
                 </Link>
