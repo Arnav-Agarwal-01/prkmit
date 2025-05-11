@@ -114,20 +114,20 @@ export default function page() {
               testimonial="The public relations team at KMIT executed their duties excellently, ensuring that all aspects outlined in the memorandum of understanding, including marketing and advertising, were delivered upon. This level of commitment and fulfillment is rare to see in other events, and we eagerly anticipate future collaborations with them."
 
               image="/sponsors/topone.png"
-              className="bg-gradient-to-br from-gray-900 to-gray-950 border-purple-500/20 hover:border-purple-500/40 transform hover:-translate-y-2 transition-all duration-300"
+              
             />
             <Testimonial
               name="Vishal Peripherals"
               testimonial="The professional execution and student participation made this sponsorship one of our most successful campaigns this year. The PR team's attention to detail and commitment to our brand visibility exceeded our expectations."
 
               image="/sponsors/vishal.png"
-              className="bg-gradient-to-br from-gray-900 to-gray-950 border-blue-500/20 hover:border-blue-500/40 transform hover:-translate-y-2 transition-all duration-300"
+              
             />
             <Testimonial
               name="Royal Enfield"
               testimonial="As promised the turnout was excellent, we had great fun collaborating with PR KMIT, they pulled off a wonderful event! The engagement with our target audience was precisely what we were looking for in this partnership."
               image="/sponsors/royalenfield.png"
-              className="bg-gradient-to-br from-gray-900 to-gray-950 border-orange-500/20 hover:border-orange-500/40 transform hover:-translate-y-2 transition-all duration-300"
+              
             />
           </div>
           

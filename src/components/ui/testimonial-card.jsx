@@ -10,7 +10,8 @@ const Testimonial = React.forwardRef(
       <div
         ref={ref}
         className={cn(
-          "relative overflow-hidden rounded-2xl border border-primary/10 bg-background p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/5 md:p-8 h-full",
+          // Orangish gradient background
+          "relative overflow-hidden rounded-2xl border border-orange-500/20 bg-gradient-to-b from-black via-zinc-900 to-orange-500/20 p-6 transition-all hover:shadow-lg hover:shadow-orange-500/10 md:p-8 h-full",
           className
         )}
         {...props}>
