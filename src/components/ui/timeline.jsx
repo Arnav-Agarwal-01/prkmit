@@ -39,7 +39,7 @@ export const Timeline = ({
                   className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <h3
-                className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+                className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
