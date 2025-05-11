@@ -9,6 +9,8 @@ import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { GooeyText } from '@/components/ui/gooey-text-morphing';
 import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
+import { FlipCard,FlipCardBack,FlipCardFront } from '@/components/ui/flip-card';
+import { Logos3 } from "@/components/blocks/logos3"
 
 function page() {
   
@@ -147,200 +149,284 @@ function page() {
       <div className="text-center mt-20 mb-12 text-4xl font-bold">
         The Team . The Myth . The Legend 
       </div>
-      {/* InfiniteSlider with added spacing and increased size */}
-      <div className="my-20 pb-32 pt-10"> {/* Increased bottom padding to 8rem (32) */}
-        <InfiniteSlider duration={70} durationOnHover={150} gap={32}> {/* Increased gap between items */}
-          {/* Increased width and border radius for images */}
+      
+      <div className="w-full overflow-hidden">
+        <InfiniteSlider duration={70} durationOnHover={150} gap={64} className="py-12">
 
-          {/* Rishi */}
-          <div className="flex flex-col items-center">
-            <img
-              src="/team/rishi.jpeg"
-              alt="Rishi"
-              className="w-[250px] h-[300px] rounded-[6px]" 
-            />
-            <p className="mt-3 text-2xl font-bold">Rishi</p>
-            <p className="text-sm text-gray-500">PR Head | CR Manager</p>
-            <p className="mt-2 text-center italic text-sm">"I offer sarcasm, <br></br>*inserts a sarcastic one liner*"</p>
-          </div>
 
+
+          <div className="flex gap-8">
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/rishi.jpeg"
+                  alt="rishi"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-rose-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Rishi</h2>
+                <h4 className="mb-4">PR Head | CR Manager</h4>
+                <p className="text-sm mb-4">"I offer sarcasm, <br></br>*inserts a sarcastic one liner*"</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="/team/rishik.jpeg"
+                  alt="Team member"
+                  className="h-full w-full "
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-emerald-500 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Rishik</h2>
+                <h4 className="mb-4">CR Manager</h4>
+                <p className="text-sm mb-4">"Real change begins with intention.<br></br>I lead with purpose and stand up for what matters."</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+
+            
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="/team/sree.jpg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-blue-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Sreekruthi</h2>
+                <h4 className="mb-4">SIC | Content Creator</h4>
+                <p className="text-sm mb-4">"The office s4 e4 14:28"</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="/team/jishnu.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-purple-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Jishnu</h2>
+                <h4 className="mb-4">Content Creator</h4>
+                <p className="text-sm mb-4">"A true artist is an ugly man"</p>
+
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/nithya.jpg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-amber-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Nithya</h2>
+                <h4 className="mb-4">Social Media Handler</h4>
+                <p className="text-sm mb-4">"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/syan.jpg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-teal-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Syanthan</h2>
+                <h4 className="mb-4">Content Creator</h4>
+                <p className="text-sm mb-4">"Against the odds, i'd bet on myself."</p>
+                <Button className="rounded-full">Contact</Button>
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/vardaan.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Vardaan</h2>
+                <h4 className="mb-4">Developer | Sponsorship Manager | Video Editor</h4>
+                <p className="text-sm mb-4"></p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+            <FlipCard flipDirection="vertical" className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/arnav.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-indigo-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Arnav</h2>
+                <h4 className="mb-4">Developer</h4>
+                <p className="text-sm mb-4">"Delusion Is The Key To Success"</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/sandeep.png"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Sandeep</h2>
+                <h4 className="mb-4">Graphic Designer</h4>
+                <p className="text-sm mb-4">"Nothing lasts for ever <br></br> make the most of it while it lasts."</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/rythma.png"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Rythma</h2>
+                <h4 className="mb-4">Graphic Designer</h4>
+                <p className="text-sm mb-4">"Grey's Anatomy S2, E5 41:30"</p>
+                
+              </FlipCardBack>
+            </FlipCard>
 
           
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/askya.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Akshaya</h2>
+                <h4 className="mb-4">Documentation Incharge</h4>
+                <p className="text-sm mb-4">"Documenting one laugh at a time"</p>
+                <Button className="rounded-full">Contact</Button>
+              </FlipCardBack>
+            </FlipCard>
 
-          {/* Sreekruthi */}
-          <div className="flex flex-col items-center">
-            <img
-              src="/team/sree.jpg"
-              alt="Sreekruthi"
-              className="w-[230px] h-[300px] rounded-[6px]" 
-            />
-            <p className="mt-3 text-2xl font-bold">Sreekruthi</p>
-            <p className="text-sm text-gray-500">SIC | Content Creator</p>
-            <p className="mt-2 text-center italic text-sm">"The office s4 e4 14:28"</p>
+
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/rishika.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Rishika</h2>
+                <h4 className="mb-4">Documentation Incharge</h4>
+                <p className="text-sm mb-4">"Veni Vidi Vici"</p>
+                <Button className="rounded-full">Contact</Button>
+              </FlipCardBack>
+            </FlipCard>
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/rishab.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Rishab</h2>
+                <h4 className="mb-4">Sponsorship Manager</h4>
+                <p className="text-sm mb-4">"Your experience of life is entirely shaped by you."</p>
+                <Button className="rounded-full">Contact</Button>
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/rushik.jpeg"
+                  alt="Team member"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-pink-600 px-4 py-6 text-center text-white">
+                <h2 className="text-xl font-bold">Rushik</h2>
+                <h4 className="mb-4">Video Editor</h4>
+                <p className="text-sm mb-4">"Render. Watch. Refine. Repeat."</p>
+                <Button className="rounded-full">Contact</Button>
+              </FlipCardBack>
+            </FlipCard>
+
+
+
+
+
+            
+
+
           </div>
-          
-
-
-          {/* Jishnu */}
-          <div className="flex flex-col items-center">
-            <img
-              src="/team/jishnu.jpeg"
-              alt="Jishnu"
-              className="w-[300px] h-[300px] rounded-[6px]" 
-            />
-            <p className="mt-3 text-2xl font-bold">Jishnu</p>
-            <p className="text-sm text-gray-500">Content Creator</p>
-            <p className="mt-2 text-center italic text-sm">"A true artist is an ugly man"</p>
-          </div>
-          
-
-          
-          
-
-          {/* Vardaan */}
-          <div className="flex flex-col items-center">
-            <img
-              src="team/vardaan.jpeg"
-              alt="Vardaan"
-              className="w-[280px] h-[300px] rounded-[6px]" 
-            />
-            <p className="mt-3 text-2xl font-bold">Vardaan</p>
-            <p className="text-sm text-gray-500">Developer | Sponsorship Manager | Video Editor</p>
-            <p className="mt-2 text-center italic text-sm"></p>
-          </div>
-
-          {/*Sandeep*/}
-          <div className="flex flex-col items-center">
-            <img
-              src="team/sandeep.png"
-              alt="Sandeep"
-              className=" w-[280px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Sandeep</p>
-            <p className="text-sm text-gray-500">Graphic Designer</p>
-            <p className="mt-2 text-center italic text-sm">"Nothing lasts for ever <br></br> make the most of it while it lasts."</p>
-          </div>
-          
-
-          {/*Nithya*/}
-          <div className="flex flex-col items-center">
-            <img
-              src="team/nithya.jpg"
-              alt="Nithya"
-              className=" w-[250px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Nithya</p>
-            <p className="text-sm text-gray-500">Social Media Handler</p>
-            <p className="mt-2 text-center italic text-sm">"I'm a social media ninja, <br></br> I'm always one step ahead of the trends."</p>
-          </div>
-
-          {/*askyaa*/}
-          <div className="flex flex-col items-center">
-            <img
-              src="team/askya.jpeg"
-              alt="Akshaya"
-              className=" w-[250px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Akshaya</p>
-            <p className="text-sm text-gray-500">Documentation Incharge</p>
-            <p className="mt-2 text-center italic text-sm">"Documenting one laugh at a time"</p>
-          </div>
-
-          {/* Rushik */}
-          <div className="flex flex-col items-center">
-            <img
-              src="/team/rushik.jpeg"
-              alt="Rushik"
-              className="w-[300px] h-[300px] rounded-[6px]" 
-            />
-            <p className="mt-3 text-2xl font-bold">Rushik</p>
-            <p className="text-sm text-gray-500">Video Editor</p>
-            <p className="mt-2 text-center italic text-sm">"Render. Watch. Refine. Repeat."</p>
-          </div>
-          
-          {/* Rythma */}
-          <div className="flex flex-col items-center">
-            <img
-              src="team/rythma.png"
-              alt="Rythma"
-              className=" w-[350px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Rythma</p>
-            <p className="text-sm text-gray-500">Graphic Designer</p>
-            <p className="mt-2 text-center italic text-sm">"Grey's Anatomy S2, E5 41:30"</p>
-          </div>
-
-
-
-
-          <div className="flex flex-col items-center">
-            <img
-              src="team/rishab.jpeg"
-              alt="Rishab"
-              className=" w-[250px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Rishab</p>
-            <p className="text-sm text-gray-500">Sponsorship Manager</p>
-            <p className="mt-2 text-center italic text-sm">"Your experience of life is entirely shaped by you."</p>
-          </div>
-
-
-          <div className="flex flex-col items-center">
-            <img
-              src="team/rishika.jpeg"
-              alt="Rishika"
-              className=" w-[200px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Rishika</p>
-            <p className="text-sm text-gray-500">Documentation Incharge</p>
-            <p className="mt-2 text-center italic text-sm">"Veni Vidi Vici"</p>
-          </div>
-
-
-          <div className="flex flex-col items-center">
-            <img
-              src="team/arnav.jpeg"
-              alt="Arnav"
-              className=" w-[220px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Arnav</p>
-            <p className="text-sm text-gray-500">Developer</p>
-            <p className="mt-2 text-center italic text-sm">"Bhagwaan Bharose"</p>
-          </div>
-
-
-          <div className="flex flex-col items-center">
-            <img
-              src="team/syan.jpg"
-              alt="Syanthan"
-              className=" w-[200px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Syanthan</p>
-            <p className="text-sm text-gray-500">Content Creator</p>
-            <p className="mt-2 text-center italic text-sm">"Against the odds, i'd bet on myself."</p>
-          </div>
-
-
-          
-
-          <div className="flex flex-col items-center">
-            <img
-              src="team/rishik.jpeg"
-              alt="Rishik"
-              className=" w-[280px] h-[300px] rounded-[6px]"
-            />
-            <p className="mt-3 text-2xl font-bold">Rishik</p>
-            <p className="text-sm text-gray-500">CR Manager</p>
-            <p className="mt-2 text-center italic text-sm">"Real change begins with intention.<br></br>I lead with purpose and stand up for what matters."</p>
-          </div>
-
-
-          
-
-
-
         </InfiniteSlider>
+
+        
       </div>
+      
       
     </div>
   )
