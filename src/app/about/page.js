@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { GooeyText } from '@/components/ui/gooey-text-morphing';
+import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
 
 function page() {
   
@@ -107,11 +108,41 @@ function page() {
     </ContainerScroll>
 
 
-
       
 
 
+      {/* What We Do section with improved layout */}
+      <div className='text-center mt-20 mb-12 text-4xl font-bold'>
+        What We Do
+      </div>
 
+
+      <div className="min-h-screen w-full">
+        <div className="relative left-0 w-full md:absolute">
+          <FeaturesSectionWithHoverEffects />
+        </div>
+      </div>
+      
+      <div className={`text-4xl text-center justify-center`}>
+          Roles In PR
+          <br></br> 
+          <div className="h-[200px] flex items-center justify-center">
+      <GooeyText
+        texts={["CR Manager", "Video Editor", "Content Creator", "Developer","Documentation Incharge","Sponsorship Manager","Graphic Designer","Social Media Handler"]}
+        morphTime={1}
+        cooldownTime={0.25}
+        className="font-bold"
+      />
+
+  </div>
+    
+
+    
+      </div>
+
+          <br></br>
+          <br></br>
+          <br></br>
       {/* Team Members section */}
       <div className="text-center mt-20 mb-12 text-4xl font-bold">
         The Team . The Myth . The Legend 
@@ -309,70 +340,6 @@ function page() {
 
 
         </InfiniteSlider>
-      </div>
-
-
-      {/* What We Do section with improved layout */}
-      <div className='text-center mt-20 mb-12 text-4xl font-bold'>
-        What We Do
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-10 max-w-7xl mx-auto pb-20">
-        {meteorCards.map((card, index) => (
-          <div key={index} className="relative h-[320px] group">
-            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.85] rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="relative h-full shadow-xl bg-gray-900 border border-gray-800 p-5 overflow-hidden rounded-2xl flex flex-col justify-between">
-              <div>
-                <div className="h-4 w-4 rounded-full border flex items-center justify-center mb-3 border-gray-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="h-2 w-2 text-gray-300"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
-                    />
-                  </svg>
-                </div>
-
-                <h1 className="font-bold text-lg text-white mb-3 relative z-50">
-                  {card.title}
-                </h1>
-
-                <p className="font-normal text-sm text-slate-400 mb-4 relative z-50">
-                  {card.description}
-                </p>
-              </div>
-
-              <div>
-                {/* Meteor effect with z-index to ensure it's visible */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-                  <Meteors number={20} className="z-10" />
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className={`text-4xl text-center justify-center`}>
-          Roles In PR
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          
-          <div className="h-[200px] flex items-center justify-center">
-      <GooeyText
-        texts={["CR Manager", "Video Editor", "Content Creator", "Developer","Documentation Incharge","Sponsorship Manager","Graphic Designer","Social Media Handler"]}
-        morphTime={1}
-        cooldownTime={0.25}
-        className="font-bold"
-      />
-    </div>
       </div>
       
     </div>
