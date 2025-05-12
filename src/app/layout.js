@@ -18,6 +18,25 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "PR KMIT",
   description: "Website for PR KMIT",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        sizes: "16x16",
+        type: "image/ico"
+      },
+      {
+        url: "/favicon.ico",
+        sizes: "32x32",
+        type: "image/ico"
+      },
+      {
+        url: "/favicon.ico", 
+        sizes: "48x48",
+        type: "image/ico"
+      }
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
