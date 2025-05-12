@@ -112,7 +112,7 @@ export default function page() {
     <CardCurtainReveal className="h-[460px] w-96 border border-orange-500/20 bg-gradient-to-b from-[#0f0c0c] via-[#1a1310] to-[#1a1310] text-zinc-50 shadow-md hover:shadow-orange-500/10 transition-all">
         <CardCurtainRevealBody className="">
           <CardCurtainRevealTitle className="text-3xl font-medium tracking-tight">
-          Targered <br/>Engagement
+          Targeted <br/>Engagement
           </CardCurtainRevealTitle>
           <CardCurtainRevealDescription className="my-4 ">
             <p>
