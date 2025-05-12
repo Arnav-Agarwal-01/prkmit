@@ -157,7 +157,7 @@ function page() {
           <br></br>
 
           <div>
-  <TextAnimate animation="blurInUp" by="character" duration={1} className={`mt-12 pt-10 mb-10 text-5xl ${familyName.className} text-center justify-center `}>
+  <TextAnimate animation="blurInUp" by="character" duration={1} className={`mt-12 pt-10 mt-10 mb-10 text-5xl ${familyName.className} text-center justify-center `}>
     Roles In PR 
   </TextAnimate>
 
@@ -166,34 +166,34 @@ function page() {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
-    gap: "140px",
+    gap: "160px",
     
     marginTop:"100px"
   }}>
     {/* First row - 3 elements */}
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="Content Creator"
     />
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="Video Editor"
     />
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="CR Manager"
     />
     {/* Second row - 3 elements */}
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="Graphic Designer"
     />
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="Developer"
     />
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="Documentation"
     />
     
@@ -208,7 +208,7 @@ function page() {
     
   }}>
     <HyperText
-      className={`text-4xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
+      className={`text-3xl font-bold text-orange-300 ${familyName2.className} dark:text-white`}
       text="Sponsorship Manager"
     />
   </div>

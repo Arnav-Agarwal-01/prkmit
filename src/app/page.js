@@ -63,10 +63,10 @@ export default function Home() {
       link: "/kmit-evening"
     },
     {
-      title: "October - Navras",
+      title: "October - Navraas",
       content: (
         <div className={`text-lg ${comic.className}`}>
-          <p>Navras is a spirited celebration of culture, devotion, and dance—an evening where the beats of Garba and Dandiya echoed through the campus. With vibrant colors, traditional attire, and hearts full of joy, students come together to honor Maa Durga and immerse themselves in the nine emotions of Navras. It is a night of rhythm, reverence, and radiant energy.</p>
+          <p>Navraas is a spirited celebration of culture, devotion, and dance—an evening where the beats of Garba and Dandiya echoed through the campus. With vibrant colors, traditional attire, and hearts full of joy, students come together to honor Maa Durga and immerse themselves in the nine emotions of Navraas. It is a night of rhythm, reverence, and radiant energy.</p>
         </div>
       ),
       images: [
