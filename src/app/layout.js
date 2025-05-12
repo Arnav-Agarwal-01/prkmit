@@ -4,6 +4,7 @@ import { MagnetLines } from "@/components/ui/magnet-lines";
 import { BackgroundGrid } from "@/components/BackgroundGrid";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { Footer } from "@/components/ui/footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
