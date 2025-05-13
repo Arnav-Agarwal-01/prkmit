@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </BackgroundGrid>
+        <Analytics/>
       </body>
     </html>
   );
