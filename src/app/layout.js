@@ -44,8 +44,8 @@ export default function RootLayout({ children }) {
   // Define navigation items for the navbar
   const navItems = [
     { name: "Home", url: "/", icon: "home" },
-    { name: "About", url: "/about", icon: "info" },
     { name: "Events and Sponsorships", url: "/events", icon: "calendar" },
+    { name: "About", url: "/about", icon: "info" },
     { name: "Contact", url: "/contact", icon: "mail" },
   ];
 
