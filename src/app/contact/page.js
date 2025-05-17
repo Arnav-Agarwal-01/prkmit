@@ -51,12 +51,12 @@ function ContactPage() {
 
   return (
     <>
-      {/* Fixed height spacer div to push content down */}
-      <div style={{ height: '70px' }}></div>
+      {/* Responsive height spacer div to push content down */}
+      <div className="h-[50px] sm:h-[70px]"></div>
       
-      <div className="min-h-screen flex items-center justify-center py-20 px-4 relative overflow-hidden" style={{ pointerEvents: 'auto', zIndex: 50 }}>
+      <div className="min-h-screen flex items-center justify-center py-12 sm:py-20 px-3 sm:px-4 relative overflow-hidden" style={{ pointerEvents: 'auto', zIndex: 50 }}>
         {/* Animated background elements */}
-        <div className="absolute  overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
+        <div className="absolute overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
           <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-purple-600/10 blur-5xl" />
           <div className="absolute -bottom-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-blue-600/10 blur-5xl" />
         </div>
@@ -66,23 +66,23 @@ function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 mb-4 sm:mb-6 tracking-tight">
               Get In Touch
             </h1>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg px-2">
               Have questions or want to collaborate? We're here to help bring your ideas to life.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 sm:gap-8">
             {/* Contact info section */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="md:col-span-2 bg-gradient-to-br from-gray-900/80 to-gray-950/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-800/50 shadow-xl"
+              className="md:col-span-2 bg-gradient-to-br from-gray-900/80 to-gray-950/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-gray-800/50 shadow-xl"
               style={{ pointerEvents: 'auto' }}
             >
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
@@ -124,7 +124,7 @@ function ContactPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="md:col-span-3 bg-gradient-to-br from-gray-900/80 to-gray-950/80 backdrop-blur-sm rounded-3xl p-8 border border-gray-800/50 shadow-xl relative overflow-hidden"
+              className="md:col-span-3 bg-gradient-to-br from-gray-900/80 to-gray-950/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-gray-800/50 shadow-xl relative overflow-hidden"
               style={{ pointerEvents: 'auto' }}
             >
               {/* Success message */}
@@ -163,10 +163,10 @@ function ContactPage() {
               <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6" style={{ pointerEvents: 'auto' }}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="relative">
                     <div className={`absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 rounded-lg transition-opacity duration-300 -z-10 ${formFocus === 'name' ? 'opacity-20' : ''}`}></div>
-                    <label className="block mb-2 text-sm font-medium text-gray-300">Your Name</label>
+                    <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm font-medium text-gray-300">Your Name</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
@@ -180,8 +180,8 @@ function ContactPage() {
                         onFocus={() => setFormFocus('name')}
                         onBlur={() => setFormFocus(null)}
                         required
-                        className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg py-3 pl-10 pr-4 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-500"
-                        placeholder="John Doe"
+                        className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg py-2.5 sm:py-3 pl-10 pr-3 sm:pr-4 text-sm sm:text-base focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-500"
+                        placeholder="Your Name"
                         style={{ pointerEvents: 'auto' }}
                       />
                     </div>
@@ -189,7 +189,7 @@ function ContactPage() {
                   
                   <div className="relative">
                     <div className={`absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 rounded-lg transition-opacity duration-300 -z-10 ${formFocus === 'email' ? 'opacity-20' : ''}`}></div>
-                    <label className="block mb-2 text-sm font-medium text-gray-300">Your Email</label>
+                    <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm font-medium text-gray-300">Your Email</label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
@@ -204,8 +204,8 @@ function ContactPage() {
                         onFocus={() => setFormFocus('email')}
                         onBlur={() => setFormFocus(null)}
                         required
-                        className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg py-3 pl-10 pr-4 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-500"
-                        placeholder="john@example.com"
+                        className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg py-2.5 sm:py-3 pl-10 pr-3 sm:pr-4 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-500"
+                        placeholder="Email"
                         style={{ pointerEvents: 'auto' }}
                       />
                     </div>
@@ -214,7 +214,7 @@ function ContactPage() {
                 
                 <div className="relative">
                   <div className={`absolute inset-0 bg-gradient-to-r from-pink-500 to-blue-500 opacity-0 rounded-lg transition-opacity duration-300 -z-10 ${formFocus === 'message' ? 'opacity-20' : ''}`}></div>
-                  <label className="block mb-2 text-sm font-medium text-gray-300">Your Message</label>
+                  <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm font-medium text-gray-300">Your Message</label>
                   <div className="relative">
                     <textarea
                       value={message}
@@ -222,18 +222,18 @@ function ContactPage() {
                       onFocus={() => setFormFocus('message')}
                       onBlur={() => setFormFocus(null)}
                       required
-                      className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg p-4 h-40 focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-500"
-                      placeholder="Tell us about your sponsorship interests or questions..."
+                      className="w-full bg-gray-800/50 border border-gray-700 text-white rounded-lg p-3 sm:p-4 h-32 sm:h-40 text-sm sm:text-base focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-200 placeholder:text-gray-500"
+                      placeholder="Your Message Please ..."
                       style={{ pointerEvents: 'auto' }}
                     />
                   </div>
                 </div>
                 
-                <div className="pt-2">
+                <div className="pt-1 sm:pt-2">
                   <button
                     type="submit"
                     disabled={loading}
-                    className="relative w-full py-3 px-6 overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+                    className="relative w-full py-2.5 sm:py-3 px-4 sm:px-6 overflow-hidden group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm sm:text-base font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
                     style={{ pointerEvents: 'auto' }}
                   >
                     <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>

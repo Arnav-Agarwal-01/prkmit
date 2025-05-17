@@ -61,8 +61,8 @@ export function NavBar({
       )}>
       {/* Mobile view with PRKMIT text and hamburger */}
       {isMobile && (
-        <div className="flex justify-between items-center w-full px-6 py-4 pointer-events-auto navbar-static-gradient" style={{ minHeight: '72px' }}>
-          <div className="text-2xl font-extrabold glow-effect" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", fontFamily: "Arial, sans-serif", letterSpacing: '0.05em' }}>
+        <div className="flex justify-between items-center w-full px-4 sm:px-6 py-3 pointer-events-auto navbar-mobile-gradient" style={{ minHeight: '60px' }}>
+          <div className="text-xl sm:text-2xl font-extrabold glow-effect" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", fontFamily: "Arial, sans-serif", letterSpacing: '0.05em' }}>
             PRKMIT
           </div>
           <button 
@@ -78,7 +78,7 @@ export function NavBar({
       {/* Overlay to close menu when clicking outside */}
       {isMobile && menuOpen && (
         <div 
-          className="fixed inset-0 bg-black/30 z-[998]"
+          className="fixed inset-0 bg-black/50 z-[998]"
           onClick={() => setMenuOpen(false)}
           aria-hidden="true"
         />
@@ -90,8 +90,8 @@ export function NavBar({
           initial="closed"
           animate={menuOpen ? "open" : "closed"}
           className={cn(
-            "flex flex-row justify-center items-center gap-6 border-t border-gray-700/30 py-5 px-6 bg-black/90 navbar-static-gradient pointer-events-auto",
-            "w-full absolute top-[96px] left-0 overflow-hidden",
+            "flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 border-t border-gray-700/30 py-4 px-4 sm:px-6 bg-black/95 navbar-mobile-menu pointer-events-auto",
+            "w-full absolute top-[60px] left-0 overflow-hidden shadow-lg",
             !menuOpen && "pointer-events-none h-0 opacity-0"
           )}>
         {items.map((item) => {

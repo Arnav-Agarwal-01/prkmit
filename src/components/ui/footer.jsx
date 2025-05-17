@@ -21,16 +21,16 @@ export function Footer() {
   ];
 
   return (
-    <footer className="w-full py-8 mt-16 border-t border-neutral-800 relative z-50">
+    <footer className="w-full py-6 sm:py-8 mt-12 sm:mt-16 border-t border-neutral-800 relative z-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Logo and Description */}
-          <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="flex items-center mb-4">
+          <div className="col-span-2 sm:col-span-2 md:col-span-1 mb-2 sm:mb-0">
+            <Link href="/" className="flex items-center mb-3">
               <Image 
                 src="/prlogo.png" 
-                width={50} 
-                height={50} 
+                width={40} 
+                height={40} 
                 alt="PR KMIT Logo" 
                 className="rounded-full"
               />
@@ -105,8 +105,8 @@ export function Footer() {
         </div>
         
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-neutral-400 text-sm mb-4 md:mb-0">
+        <div className="mt-8 sm:mt-12 pt-4 sm:pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-neutral-400 text-xs sm:text-sm mb-4 md:mb-0 text-center md:text-left">
             Designed and developed with love by PR KMIT ❤️
           </p>
           

@@ -81,8 +81,8 @@ export default function Home() {
     <div className="w-full">
       <main className="flex flex-col relative">
         {/* Hero Section */}
-        <div className="h-screen flex items-center justify-center">
-          <div className={`text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center`}>
+        <div className="h-screen flex items-center justify-center px-4 py-8">
+          <div className={`text-3xl sm:text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center`}>
             <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -114,93 +114,84 @@ export default function Home() {
             <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
               Public Relations KMIT
             </TextAnimate>
-            <div className={`text-white text-xl md:text-3xl text-center mt-8 ${familyName.className}`}>
-        <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
-          Where chaos meets creativity.
-        </TextAnimate>
-        </div>
+            <div className={`text-white text-lg sm:text-2xl md:text-3xl text-center mt-4 sm:mt-6 md:mt-8 ${familyName.className}`}>
+              <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
+                Where chaos meets creativity.
+              </TextAnimate>
+            </div>
           </div>
-          
         </div>
 
         {/* KMIT Flagship Events Section */}
-        <div className="container mx-auto py-20 px-4">
-          <div className={`text-3xl md:text-5xl text-white ${familyName2.className} text-center mb-12`}>
+        <div className="container mx-auto py-12 sm:py-16 md:py-20 px-4">
+          <div className={`text-2xl sm:text-3xl md:text-5xl text-white ${familyName2.className} text-center mb-8 sm:mb-10 md:mb-12`}>
             <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false} >
               KMIT Flagship Events
             </TextAnimate>
           </div>
-          <div className="container mx-auto py-20 px-4">
-          <Timeline data={timelineData} />
-        </div>
+          <div className="container mx-auto py-8 sm:py-12 md:py-16 px-4">
+            <Timeline data={timelineData} />
+          </div>
         </div>
 
         {/* Sponsors Section */}
-        <div className="container mx-auto py-20 px-4">
-          <div className={`text-3xl md:text-4xl text-white ${familyName.className} text-center mb-12`}>
-            
-              Our Sponsors
-            
+        <div className="container mx-auto py-10 sm:py-16 md:py-20 px-4">
+          <div className={`text-2xl sm:text-3xl md:text-4xl text-white ${familyName.className} text-center mb-8 sm:mb-10 md:mb-12`}>
+            Our Sponsors
           </div>
-          <InfiniteSlider gap={24} reverse className="w-full h-full">
+          <InfiniteSlider gap={16} reverse className="w-full h-full">
             <img
               src="/sponsors/i20.png"
               alt="i20 fever"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
             <img
               src="/sponsors/homefoody.png"
               alt="homefoody"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
             <img
               src="/sponsors/pepsi.png"
               alt="pepsi"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
             <img
               src="sponsors/monster.png"
               alt="Monster"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
             <img
               src="sponsors/royalenfield.png"
               alt="Royal Enfield"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
             <img
               src="/sponsors/topone.png"
               alt="Top One Percentile"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
-
-
             <img
               src="/sponsors/vishal.png"
               alt="Prada logo"
-              className="h-[120px] w-auto"
+              className="h-[80px] sm:h-[100px] md:h-[120px] w-auto"
             />
-            
           </InfiniteSlider>
 
-          <div className="mt-12 mb-10 flex justify-center relative z-50">
+          <div className="mt-8 sm:mt-10 md:mt-12 mb-6 sm:mb-8 md:mb-10 flex justify-center relative z-50">
             <Link href="/contact" passHref legacyBehavior>
-              <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-8 text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 w-full md:w-auto relative z-[9999] cursor-pointer pointer-events-auto mt-10">
+              <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 hover:from-purple-600 hover:to-blue-600 w-full sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto mt-6 sm:mt-8 md:mt-10">
                 Sponsor our next event
               </a>
             </Link>
           </div>
         </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <div className="py-4 sm:py-6 md:py-8"></div>
 
         {/* Image Gallery Section */}
         <div className="w-full relative">
-          <div className="flex items-start justify-center pb-12">
+          <div className="flex items-start justify-center pb-8 sm:pb-10 md:pb-12">
             <InView
-              viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
+              viewOptions={{ once: true, margin: "0px 0px -200px 0px" }}
               variants={{
                 hidden: { opacity: 0 },
                 visible: {
@@ -209,7 +200,7 @@ export default function Home() {
                 },
               }}
             >
-              <div className="columns-2 gap-1 px-8 sm:columns-3">
+              <div className="columns-2 gap-1 px-4 sm:px-6 md:px-8 sm:columns-3">
                 {[
                   { src: "/ImageGallery/dance.jpg", alt: "Dance image" },
                   { src: "/ImageGallery/drums.jpg", alt: "Drums image" },
@@ -232,7 +223,7 @@ export default function Home() {
                         visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
                       }}
                       key={index}
-                      className="mb-4"
+                      className="mb-2 sm:mb-3 md:mb-4"
                     >
                       <Image
                         src={img.src}
@@ -240,7 +231,7 @@ export default function Home() {
                         width={500}
                         height={300}
                         priority={index<11}
-                        className="size-full rounded-[20px] object-contain"
+                        className="size-full rounded-[12px] sm:rounded-[16px] md:rounded-[20px] object-contain"
                       />
                     </motion.div>
                   );

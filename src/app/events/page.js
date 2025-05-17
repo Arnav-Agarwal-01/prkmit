@@ -65,8 +65,8 @@ export default function page() {
         
 
 
-        <div className="container mx-auto  pt-60 pb-8 px-4 ">
-          <div className={`text-3xl md:text-6xl text-white ${familyName.className} text-center mb-12`}>
+        <div className="container mx-auto pt-40 sm:pt-60 pb-6 sm:pb-8 px-4">
+          <div className={`text-2xl sm:text-3xl md:text-6xl text-white ${familyName.className} text-center mb-8 sm:mb-12`}>
             <TextAnimate animation="blurInUp" by="character" duration={1}>
               KMIT Flagship Events
             </TextAnimate>
