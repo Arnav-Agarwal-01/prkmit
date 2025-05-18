@@ -112,7 +112,10 @@ export default function Home() {
               />
             </motion.div>
             <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
-              Public Relations KMIT
+              Public Relations
+            </TextAnimate>
+            <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false} className={`mt-4`}>
+              KMIT
             </TextAnimate>
             <div className={`text-white text-lg sm:text-2xl md:text-3xl text-center mt-4 sm:mt-6 md:mt-8 ${familyName.className}`}>
               <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
