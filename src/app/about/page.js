@@ -485,6 +485,22 @@ function page() {
               </FlipCardBack>
             </FlipCard>
 
+            <FlipCard className="h-96 w-80 flex-shrink-0">
+              <FlipCardFront className="rounded-xl overflow-hidden">
+                <img
+                  src="team/abhinandan.jpeg"
+                  alt="Abhinandan"
+                  className="h-full w-full object-cover"
+                />
+              </FlipCardFront>
+              <FlipCardBack className="flex flex-col items-center justify-center rounded-xl bg-teal-600 px-4 py-6 text-center text-white">
+                <h2 className={`text-3xl font-bold ${familyName.className}`}>Abhinandan</h2>
+                <h4 className={`mb-4 text-2xl ${familyName2.className}`}>Video Editor</h4>
+                <p className={`text-md mb-4 ${comic.className}`}>“Chaos isn’t a pit. Chaos is a ladder.”</p>
+                
+              </FlipCardBack>
+            </FlipCard>
+
 
 
 
