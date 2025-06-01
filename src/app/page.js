@@ -13,6 +13,8 @@ import { TextReveal } from "@/components/magicui/text-reveal";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { InView } from "@/components/ui/in-view";
 import Link from 'next/link';
+import { GradientButton } from "@/components/ui/gradient-button"
+
 
 
 // Remove the direct imports
@@ -119,8 +121,16 @@ export default function Home() {
             </TextAnimate>
             <div className={`text-white text-lg sm:text-2xl md:text-3xl text-center mt-4 sm:mt-6 md:mt-8 ${familyName.className}`}>
               <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
-                Where chaos meets creativity.
+                Where chaos meets creativity
               </TextAnimate>
+            </div>
+            
+            <div className="mt-6 sm:mt-8 md:mt-20 flex justify-center relative z-50">
+              <Link href="https://linktr.ee/Public_relations" passHref legacyBehavior>
+                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto">
+                  Join your favourite club now
+                </a>
+              </Link>
             </div>
           </div>
         </div>
