@@ -125,13 +125,7 @@ export default function Home() {
               </TextAnimate>
             </div>
             
-            <div className="mt-6 sm:mt-8 md:mt-20 flex justify-center relative z-50">
-              <Link href="https://linktr.ee/Public_relations" passHref legacyBehavior>
-                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto">
-                  Join your favourite club now
-                </a>
-              </Link>
-            </div>
+            
           </div>
         </div>
 
