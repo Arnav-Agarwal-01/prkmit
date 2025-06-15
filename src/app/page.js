@@ -124,6 +124,25 @@ export default function Home() {
                 Where chaos meets creativity
               </TextAnimate>
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.3, 1, 0.3, 1],
+                delay: 0.7 // Adjust delay as needed to sync with other animations
+              }}
+              className="mt-6 sm:mt-8 md:mt-20 flex justify-center relative z-50"
+            >
+              <Link href="https://linktr.ee/Public_relations" passHref legacyBehavior>
+                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto">
+                  ✨  Club Recruitment Results  ✨
+                </a>
+              </Link>
+            </motion.div>
+
+
             
             
           </div>
