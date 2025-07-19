@@ -186,8 +186,8 @@ export default function Home() {
                     <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-8 text-lg font-medium text-white transition-transform hover:scale-105 cursor-pointer">
                       ✨ Youtube Channel ✨
                     </a>
-                  </Link>
-                </div>
+                  </Link> 
+                </div> 
               </div>
             </div>
           </div>
