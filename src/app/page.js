@@ -148,6 +148,38 @@ export default function Home() {
           </div>
         </div>
 
+
+
+        <div className="container mx-auto py-12 px-4 flex flex-col items-center">
+  <div className={`text-2xl sm:text-3xl md:text-5xl text-white ${familyName.className} text-center mb-8 sm:mb-10 md:mb-12`}>
+    Graduation 2025 Livestream
+  </div>
+  <div className="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-lg border border-purple-500/30 bg-black flex items-center justify-center">
+    {/* Replace 'YOUR_CHANNEL_ID' with your actual YouTube channel ID */}
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/live_stream?channel=UCAORXGr2qMI9N8Rtxp7-8nA"
+      title="YouTube Live Stream"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      className="w-full h-full"
+    ></iframe>
+
+    
+  </div>
+  <br></br>
+  <br></br>
+  <br></br>
+  <h4 className="text-3xl font-bold text-white mb-6">If the errors persist, please use the following button</h4>
+  <Link href="https://www.youtube.com/@KeshavMemorialInstituteofTechn" passHref legacyBehavior>
+                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto">
+                  ✨  Youtube Channel  ✨
+                </a>
+              </Link>
+</div>
+
         {/* KMIT Flagship Events Section */}
         <div className="container mx-auto py-12 sm:py-16 md:py-20 px-4">
           <div className={`text-2xl sm:text-3xl md:text-5xl text-white ${familyName2.className} text-center mb-8 sm:mb-10 md:mb-12`}>
