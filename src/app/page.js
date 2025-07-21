@@ -171,7 +171,7 @@ export default function Home() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed?channel=UCPXTXMecYqnRKNdqdVOGSFg&live=1" 
+                  src={`https://www.youtube.com/embed?channel=$UC5FLqmaQTi7BaeVxGiVgR2A&live=1`}
                   title="YouTube Live Stream"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
