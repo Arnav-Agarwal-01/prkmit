@@ -127,7 +127,7 @@ function page() {
         
       <ContainerScale className="relative z-10 text-center">
         <h1 className="max-w-xl text-5xl font-bold tracking-tighter text-slate-800 text-white">
-          PyaaR ❤️
+          PR
         </h1>
         
         
