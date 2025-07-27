@@ -180,7 +180,7 @@ export default function Home() {
                 ></iframe>
               </div>
               <div className="mt-6 flex flex-col items-center justify-center">
-                <h4 className="text-xl font-bold text-white mb-4 text-center">If the errors persist, please use the following button</h4>
+                <h4 className="text-xl font-bold text-white mb-4 text-center">If the errors persist, please use the following button to redirect</h4>
                 <div className="flex justify-center w-full">
                   <Link href="https://www.youtube.com/@KeshavMemorialInstituteofTechn" passHref legacyBehavior>
                     <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-8 text-lg font-medium text-white transition-transform hover:scale-105 cursor-pointer">
