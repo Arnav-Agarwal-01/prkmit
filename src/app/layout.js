@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
     { name: "Home", url: "/", icon: "home" },
     { name: "Sponsorships", url: "/events", icon: "calendar" },
     { name: "About", url: "/about", icon: "info" },
-    { name: "Events", url: "/eventcal" , icon : "calendar"},
+    { name: "Event Calendar", url: "/eventcal" , icon : "calendar"},
     { name: "Contact", url: "/contact", icon: "mail" },
   ];
 
