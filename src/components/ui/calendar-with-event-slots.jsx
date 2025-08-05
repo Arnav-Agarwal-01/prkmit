@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { DayPicker } from "react-day-picker";
-import "react-day-picker/dist/style.css"; // required for layout
+import "react-day-picker/dist/style.css";
 
 // --- Events Data ---
 const events = {
@@ -48,9 +48,34 @@ export const Component = () => {
   const recurringEvents = selected ? getRecurringEvents(selected) : [];
   const dayEvents = [...regularEvents, ...recurringEvents];
 
+  // --- Mark all event days (specific and recurring) ---
+  const today = new Date();
+  const start = new Date(today.getFullYear(), today.getMonth(), 1);
+  const end = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+
+  const daysWithEvents = [];
+
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+    const dClone = new Date(d);
+    const key = formatDate(dClone);
+    const regular = events[key] || [];
+    const recurring = getRecurringEvents(dClone);
+    if (regular.length || recurring.length) {
+      daysWithEvents.push(new Date(dClone));
+    }
+  }
+
+  const modifiers = {
+    subtleEvent: daysWithEvents,
+  };
+
+  const modifiersClassNames = {
+    subtleEvent:
+      "after:content-[''] after:block after:mt-1 after:mx-auto after:h-1 after:w-1 after:rounded-full after:bg-orange-400/40",
+  };
+
   return (
     <div className="flex flex-col items-center gap-6 px-6 py-10 w-full max-w-3xl mx-auto rounded-xl shadow-2xl bg-black/70 backdrop-blur-md border border-white/10 text-white">
-
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-center">📅 Event Calendar</h1>
 
       {/* Calendar */}
@@ -68,13 +93,15 @@ export const Component = () => {
                         [&_.rdp-tbody]:text-center 
                         [&_.rdp-day]:h-12 
                         [&_.rdp-day]:w-12 
-                        [&_.rdp-day_selected]:bg-indigo-500 
+                        [&_.rdp-day_selected]:ring-2 
+                        [&_.rdp-day_selected]:ring-orange-500 
+                        [&_.rdp-day_selected]:bg-transparent 
                         [&_.rdp-day_selected]:text-white 
                         [&_.rdp-day_selected]:font-bold 
                         [&_.rdp-day_selected]:rounded-full 
                         [&_.rdp-day]:transition 
                         [&_.rdp-day]:duration-200 
-                        [&_.rdp-day:hover]:bg-indigo-500/30 
+                        [&_.rdp-day:hover]:bg-orange-500/10 
                         [&_.rdp-day:hover]:text-white">
           <DayPicker
             mode="single"
@@ -83,6 +110,8 @@ export const Component = () => {
             showOutsideDays
             defaultMonth={new Date()}
             className="text-sm sm:text-base"
+            modifiers={modifiers}
+            modifiersClassNames={modifiersClassNames}
           />
         </div>
       </div>
