@@ -6,14 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // --- Events Data ---
 const events = {
-  "2025-08-10": ["🎵 Music Night", "🍔 Food Fest"],
-  "2025-08-15": ["🎨 Art Workshop", "📚 Book Club"],
-  "2025-08-22": ["🏃 Marathon Training", "🎭 Theater Show"],
-  recurring: [
-    { type: "weekly", weekday: 1, label: "🧘 Yoga Class" },
-    { type: "weekly", weekday: 3, label: "💻 Tech Meetup" },
-    { type: "monthly", day: 1, label: "💼 Club Meeting" }
-  ]
+  "2025-08-15" : ["🇮🇳 Independence Day "],
+  // "2025-08-10": ["🎵 Music Night", "🍔 Food Fest"],
+  // "2025-08-15": ["🎨 Art Workshop", "📚 Book Club"],
+  // "2025-08-22": ["🏃 Marathon Training", "🎭 Theater Show"],
+  // recurring: [
+  //   { type: "weekly", weekday: 1, label: "🧘 Yoga Class" },
+  //   { type: "weekly", weekday: 3, label: "💻 Tech Meetup" },
+  //   { type: "monthly", day: 1, label: "💼 Club Meeting" }
+  // ]
 };
 
 function formatDate(date) {
@@ -223,7 +224,7 @@ export const Component = () => {
                       <span className="text-2xl">🌙</span>
                     </div>
                     <p className="text-gray-300 font-medium">No events planned</p>
-                    <p className="text-sm text-gray-500 mt-1">Enjoy your free day!</p>
+                    <p className="text-sm text-gray-500 mt-1">Something's cooking for sure, keep checking!</p>
                   </motion.div>
                 )}
               </motion.div>
