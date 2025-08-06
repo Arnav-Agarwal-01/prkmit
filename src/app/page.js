@@ -146,7 +146,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center gap-8 py-8 pt-8">
-          <div className="w-full max-w-md bg-card rounded-lg shadow p-6">
+          <div className="w-full max-w bg-card rounded-lg shadow p-6">
             <CalendarWithEventSlots />
           </div>
         </div>

@@ -4,7 +4,7 @@ import { Component as CalendarWithEventSlots } from "@/components/ui/calendar-wi
 function Page() {
   return (
     <div className="flex flex-col items-center gap-8 py-8 pt-36">
-      <div className="w-full max-w-md bg-card rounded-lg shadow p-6">
+      <div className="w-full max-w bg-card rounded-lg shadow p-6">
         <CalendarWithEventSlots />
       </div>
     </div>
