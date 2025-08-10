@@ -1,14 +1,17 @@
 'use client';
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 
 export const AnimatedEventShowcase = ({ events }) => {
-  const { scrollYProgress } = useScroll();
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    container: containerRef
+  });
 
   return (
-    <div className="relative w-full min-h-screen py-20">
+    <div ref={containerRef} className="relative w-full min-h-screen py-20">
       {events.map((event, index) => (
         <EventCard key={index} event={event} index={index} />
       ))}
@@ -17,32 +20,49 @@ export const AnimatedEventShowcase = ({ events }) => {
 };
 
 const EventCard = ({ event, index }) => {
-  const [ref, inView] = useInView({
+  const cardRef = useRef(null);
+  const [inViewRef, inView] = useInView({
     threshold: 0.2,
-    triggerOnce: true // Changed to true to improve performance
+    triggerOnce: true
   });
 
+  const [isReady, setIsReady] = React.useState(false);
+
+  useEffect(() => {
+    // Wait for next tick to ensure DOM is ready
+    const timeout = setTimeout(() => setIsReady(true), 0);
+    return () => clearTimeout(timeout);
+  }, []);
+
   const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start']
+    target: cardRef,
+    offset: ['start end', 'end start'],
+    // Only enable scroll tracking when component is ready
+    enabled: isReady && !!cardRef.current,
+    onError: (error) => {
+      console.warn('Scroll tracking error:', error);
+      return { scrollYProgress: 0 };
+    }
   });
 
   // Simplified transformations for better performance
-  const rotateX = useTransform(scrollYProgress, [0, 0.3], [10, 0]); // Reduced angle
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]); // Less scaling
+  const rotateX = useTransform(scrollYProgress, [0, 0.3], [10, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const y = useTransform(scrollYProgress, [0, 1], [50, -50]); // Reduced movement
-  
-  // Remove perspective transformation which can be expensive
-  // const perspective = useTransform(scrollYProgress, [0, 0.5], [800, 1200]);
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
+  // Combine refs
+  const setRefs = (element) => {
+    cardRef.current = element;
+    inViewRef(element);
+  };
 
   return (
     <motion.div
-      ref={ref}
+      ref={setRefs}
       className="relative min-h-[80vh] flex items-center justify-center p-8 mb-20"
       style={{
         opacity,
-        // perspective removed
       }}
     >
       <motion.div
@@ -51,7 +71,6 @@ const EventCard = ({ event, index }) => {
           scale,
           y,
           rotateX,
-          // Add will-change to optimize browser rendering
           willChange: "transform"
         }}
       >
@@ -61,7 +80,6 @@ const EventCard = ({ event, index }) => {
               className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
               style={{ 
                 backgroundImage: `url(${event.images[0]})`,
-                // Add will-change for background image transformations
                 willChange: "transform"
               }}
             />
