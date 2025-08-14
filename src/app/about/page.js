@@ -13,6 +13,8 @@ import { FlipCard,FlipCardBack,FlipCardFront } from '@/components/ui/flip-card';
 import { Logos3 } from "@/components/blocks/logos3"
 import { HyperText } from '@/components/ui/hyper-text';
 import localFont from 'next/font/local';
+import StoryTrial from '@/components/ui/storycomponent';
+
 const inconsolata = localFont({
   src : "../../../public/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"
 })
@@ -155,6 +157,13 @@ function page() {
           <br></br>
           <br></br>
           <br></br>
+
+
+          <div className={`text-center mt-20 mb-12 text-4xl font-bold ${inconsolata.className}`}>
+          Watch Us In Action 
+          <div className={`text-center mt-4 mb-12 text-sm font-bold ${inconsolata.className}`}>Scroll to the left for more</div>
+          </div>
+          <StoryTrial className="w-full h-full overflow-hidden"/>
 
           <div>
   <TextAnimate animation="blurInUp" by="character" duration={1} className={`mt-12 pt-10 mt-10 mb-10 text-5xl ${familyName.className} text-center justify-center `}>
@@ -513,9 +522,15 @@ function page() {
 
         
       </div>
+
       
       
+      
+
+
     </div>
+
+    
   )
 }
 
