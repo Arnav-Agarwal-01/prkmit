@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 // --- Events Data ---
 const events = {
   "2025-08-15" : ["🇮🇳 Independence Day "],
+  "2025-09-05" : ["Teacher's Day"],
+  "2025-09-15" : ["Engineer's Day"],
   // "2025-08-10": ["🎵 Music Night", "🍔 Food Fest"],
   // "2025-08-15": ["🎨 Art Workshop", "📚 Book Club"],
   // "2025-08-22": ["🏃 Marathon Training", "🎭 Theater Show"],
