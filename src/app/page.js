@@ -15,7 +15,7 @@ import { InView } from "@/components/ui/in-view";
 import Link from 'next/link';
 import { GradientButton } from "@/components/ui/gradient-button"
 import { Component as CalendarWithEventSlots } from "@/components/ui/calendar-with-event-slots";
-
+import AnimatedModalDemo from "@/components/Registrationlanding";
 
 
 // Remove the direct imports
@@ -84,6 +84,10 @@ export default function Home() {
     <div className="w-full">
       <main className="flex flex-col relative">
         {/* Hero Section */}
+        { // this is the button of our focus right now, this has been uncommented i am assuming
+        <div className="absolute top-8 right-12 z-[50] ">
+         <AnimatedModalDemo />
+       </div> }
         <div className="h-screen flex items-center justify-center px-4 py-8">
           <div className={`text-3xl sm:text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center`}>
             <motion.div
