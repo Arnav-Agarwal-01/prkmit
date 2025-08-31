@@ -153,7 +153,7 @@ export default function HeroHighlightDemo() {
               </ul>
             </div>
             <p className="text-center text-xs mt-4 text-gray-600">
-              Designed and Developed by Vardaan
+              Designed and Developed by Vardaan and Arnav
             </p>
           </motion.div>
         ) : (
