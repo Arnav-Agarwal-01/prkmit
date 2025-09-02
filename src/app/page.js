@@ -84,113 +84,64 @@ export default function Home() {
     <div className="w-full">
       <main className="flex flex-col relative">
         {/* Hero Section */}
-        <div className="min-h-screen pt-40 md:pt-48 px-4 py-12 sm:py-16 md:py-20">
-          <div className="flex flex-col lg:flex-row gap-8 items-center justify-between max-w-7xl mx-auto">
-            
-            {/* Left side - PR KMIT Content */}
-            <div className="lg:w-1/2 flex flex-col items-center text-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.16, 1, 0.3, 1],
-                  scale: {
-                    type: "spring",
-                    damping: 5,
-                    stiffness: 100,
-                    restDelta: 0.001
-                  }
-                }}
-              >
-                <Image
-                  src="/prlogo.png"
-                  width={150}
-                  height={150}
-                  alt="Public Relations KMIT"
-                  className="rounded-full mb-6"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </motion.div>
-              
-              <div className={`text-white flex flex-col items-center gap-2 ${familyName.className}`}>
-                <TextAnimate 
-                  animation="blurInUp" 
-                  by="character" 
-                  duration={1} 
-                  startOnView={false}
-                  className="text-3xl sm:text-4xl md:text-5xl"
-                >
-                  Public Relations
-                </TextAnimate>
-                
-                <TextAnimate 
-                  animation="blurInUp" 
-                  by="character" 
-                  duration={1} 
-                  startOnView={false}
-                  className="text-3xl sm:text-4xl md:text-5xl"
-                >
-                  KMIT
-                </TextAnimate>
-
-                <TextAnimate 
-                  animation="blurInUp" 
-                  by="character" 
-                  duration={1} 
-                  startOnView={false}
-                  className="text-lg sm:text-xl md:text-2xl mt-4"
-                >
-                  Where chaos meets creativity
-                </TextAnimate>
-              </div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1,
-                  ease: [0.3, 1, 0.3, 1],
-                  delay: 0.7
-                }}
-                className="mt-8"
-              >
-                <Link href="/contact" passHref legacyBehavior>
-                  <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-8 text-lg font-medium text-white transition-transform hover:scale-105 cursor-pointer">
-                    ✨ Sponsor Our Next Event ✨
-                  </a>
-                </Link>
-              </motion.div>
+        <div className="h-screen flex items-center justify-center px-4 py-8">
+          <div className={`text-3xl sm:text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center`}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001
+                },
+                rotate: {
+                  type: "spring",
+                  damping: 10,
+                  stiffness: 200
+                }
+              }}
+            >
+              <Image
+                src="/prlogo.png"
+                width={150}
+                height={150}
+                alt="Public Relations KMIT"
+                className="rounded-full mb-6 md:mb-11"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </motion.div>
+            <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
+              Public Relations
+            </TextAnimate>
+            <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false} className={`mt-4`}>
+              KMIT
+            </TextAnimate>
+            <div className={`text-white text-lg sm:text-2xl md:text-3xl text-center mt-4 sm:mt-6 md:mt-8 ${familyName.className}`}>
+              <TextAnimate animation="blurInUp" by="character" duration={1} startOnView={false}>
+                Where chaos meets creativity
+              </TextAnimate>
             </div>
 
-            {/* Right side - Livestream */}
-            <div className="lg:w-1/2 w-full">
-              <div className={`text-2xl sm:text-3xl md:text-4xl text-white ${familyName.className} mb-6 text-center lg:text-center`}>
-                Presidential Debate 2025
-              </div>
-              <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-purple-500/30 bg-black">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/live_stream?channel=UCAORXGr2qMI9N8Rtxp7-8nA"
-                  title="YouTube Live Stream"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-              <div className="mt-6 flex flex-col items-center justify-center">
-                <h4 className="text-xl font-bold text-white mb-4 text-center">If the errors persist, please use the following button to redirect</h4>
-                <div className="flex justify-center w-full">
-                  <Link href="https://www.youtube.com/@KeshavMemorialInstituteofTechn" passHref legacyBehavior>
-                    <a className="inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-8 text-lg font-medium text-white transition-transform hover:scale-105 cursor-pointer">
-                      ✨ Youtube Channel ✨
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.3, 1, 0.3, 1],
+                delay: 0.7 // Adjust delay as needed to sync with other animations
+              }}
+              className="mt-6 sm:mt-8 md:mt-20 flex justify-center relative z-50"
+            >
+              <Link href="/contact" passHref legacyBehavior>
+                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto">
+                  ✨  Sponsor our next event  ✨
+                </a>
+              </Link>
+            </motion.div>
           </div>
         </div>
 
