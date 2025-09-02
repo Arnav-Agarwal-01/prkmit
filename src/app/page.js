@@ -166,7 +166,7 @@ export default function Home() {
             {/* Right side - Livestream */}
             <div className="lg:w-1/2 w-full">
               <div className={`text-2xl sm:text-3xl md:text-4xl text-white ${familyName.className} mb-6 text-center lg:text-center`}>
-                Graduation 2025 Livestream
+                Presidential Debate 2025
               </div>
               <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg border border-purple-500/30 bg-black">
                 <iframe
