@@ -43,3 +43,5 @@ next-env.d.ts
 #backend files 
 /backend/node_modules
 /backend/.env
+ISSUE_FIXES_SUMMARY.md
+NAVRAAS_DESIGN_IMPROVEMENTS.md
