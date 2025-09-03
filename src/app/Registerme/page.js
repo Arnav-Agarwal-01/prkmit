@@ -139,24 +139,37 @@ export default function StepperWithContent() {
   const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 
   return (
-    // Main Container - Full screen with gradient background
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black overflow-x-hidden">
-      {/* Toast notification container for user feedback */}
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-      
-      {/* Responsive container with proper spacing for all devices */}
-      <div className="container mx-auto px-3 sm:px-4 lg:px-6 pt-16 sm:pt-20 lg:pt-24 pb-8 max-w-4xl">
+    <>
+      {/* Force scrollable container */}
+      <div 
+        className="fixed inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-purple-900 to-black overflow-y-auto overflow-x-hidden"
+        style={{ 
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          zIndex: 60
+        }}
+      >
+        {/* Toast notification container for user feedback */}
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        
+        {/* Responsive container with proper spacing for all devices */}
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-4xl" style={{ minHeight: '100vh' }}>
         {/* Header Section - Brand title and subtitle */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -410,6 +423,7 @@ export default function StepperWithContent() {
           </p>
         </motion.div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

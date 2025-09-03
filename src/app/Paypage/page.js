@@ -125,10 +125,23 @@ export default function HeroHighlightDemo() {
   }, [playMusic]);
 
   return (
-    // Main Container: Full screen with purple/dark gradient background
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black">
-      {/* Content Wrapper: Responsive container with proper spacing and max-width */}
-      <div className="container mx-auto px-3 sm:px-4 lg:px-6 pt-16 sm:pt-20 lg:pt-24 pb-12 max-w-2xl min-h-screen">
+    <>
+      {/* Force scrollable container */}
+      <div 
+        className="fixed inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-purple-900 to-black overflow-y-auto overflow-x-hidden"
+        style={{ 
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          overflowY: 'auto',
+          overflowX: 'hidden',
+          zIndex: 60
+        }}
+      >
+        {/* Content Wrapper: Responsive container with proper spacing and max-width */}
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-2xl" style={{ minHeight: '100vh' }}>
         
         {/* CONDITIONAL RENDERING: Payment Form vs Success Screen */}
         {!qrCode ? (
@@ -435,6 +448,7 @@ export default function HeroHighlightDemo() {
           </div>
         )}
       </div>
-    </div>
+      </div>
+    </>
   );
 }
