@@ -45,3 +45,4 @@ next-env.d.ts
 /backend/.env
 ISSUE_FIXES_SUMMARY.md
 NAVRAAS_DESIGN_IMPROVEMENTS.md
+/backend
