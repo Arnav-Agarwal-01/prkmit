@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Stepper, Step, Button, Typography } from "@material-tailwind/react";
 import { CogIcon, UserIcon, BuildingLibraryIcon } from "@heroicons/react/24/outline";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
 
@@ -96,18 +95,7 @@ export default function StepperWithContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black">
-      <ToastContainer 
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+  {/* Toasts are rendered globally in layout via ClientToaster */}
       
       <div className="container mx-auto px-6 py-12 max-w-4xl">
         {/* Header */}

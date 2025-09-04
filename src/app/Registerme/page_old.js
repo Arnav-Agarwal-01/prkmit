@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Stepper, Step, Button, Typography } from "@material-tailwind/react";
 import { CogIcon, UserIcon, BuildingLibraryIcon } from "@heroicons/react/24/outline";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
 
@@ -96,18 +95,7 @@ export default function StepperWithContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black">
-      <ToastContainer 
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
+  {/* Toasts are rendered globally in layout via ClientToaster */}
       
       <div className="container mx-auto px-6 py-12 max-w-4xl">
         {/* Header */}
@@ -353,150 +341,5 @@ export default function StepperWithContent() {
         </motion.div>
       </div>
     </div>
-  );
-}
-          <div className="absolute -bottom-[4.5rem] w-max text-center">
-            <Typography variant="h6" color={activeStep === 0 ? "orange" : "gray"}>
-              Step 1
-            </Typography>
-            <Typography color={activeStep === 0 ? "orange" : "gray"} className="font-normal">
-              Enter Your HallTicket Number
-            </Typography>
-          </div>
-        </Step>
-        <Step >
-          <CogIcon className="h-5 w-5" />
-          <div className="absolute -bottom-[4.5rem] w-max text-center">
-            <Typography variant="h6" color={activeStep === 1 ? "orange" : "gray"}>
-              Step 2
-            </Typography>
-            <Typography color={activeStep === 1 ? "orange" : "gray"} className="font-normal">
-            खम्मा घणी
-            </Typography>
-          </div>
-        </Step>
-        <Step >
-          <BuildingLibraryIcon className="h-5 w-5" />
-          <div className="absolute -bottom-[4.5rem] w-max text-center">
-            <Typography variant="h6" color={activeStep === 2 ? "orange" : "gray"}>
-              Step 3
-            </Typography>
-            <Typography color={activeStep === 2 ? "orange" : "gray"} className="font-normal">
-              Confirm Details and Login
-            </Typography>
-          </div>
-        </Step>
-      </Stepper>
-
-      <div className="mt-48">
-        {activeStep === 0 && (
-          <>
-            <div className="relative mt-8 w-1/2 mx-auto">
-              <input
-                type="text"
-                id="floating_outlined"
-                value={hallTicketNo}
-                onChange={(e) => setHallTicketNo(e.target.value.toUpperCase())}
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-black rounded-lg border border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-blue-500 peer"
-                placeholder=" "
-              />
-              <label
-                htmlFor="floating_outlined"
-                className="absolute text-sm text-gray-400 duration-300 font-baskerville transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-3 peer-focus:px-2 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
-              >
-                Enter Your HallTicket Number
-              </label>
-            </div>
-            <div className="ml-[25%] mt-[2%] font-baskerville">Example: 22BDXYZ63</div>
-          </>
-        )}
-
-        {activeStep === 1 && (
-          <>
-            <div className="text-center">
-              <Typography variant="h6" className="font-baskerville text-3xl">
-                खम्मा घणी, <span className="text-deep-orange-400">{firstName}</span>
-              </Typography>
-            </div>
-
-            <div className="relative mt-9 w-1/2 mx-auto">
-              <input
-                type="tel"
-                id="floating_outlined"
-                maxLength={4} // Limits the input to 4 characters
-                onChange={(e) => {
-                  const value = e.target.value.replace(/\D/g, ""); // Ensures only numeric values are accepted
-                  setSendDigits(value);
-                }}
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-black rounded-lg border border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-blue-500 peer"
-                placeholder=" "
-                inputMode="numeric" // Provides a numeric keyboard on mobile devices
-                pattern="[0-9]*" // Enforces numeric pattern
-              />
-              <label
-                htmlFor="floating_outlined"
-                className="absolute text-sm text-gray-400 duration-300 font-baskerville transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-black px-3 peer-focus:px-2 peer-focus:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
-              >
-                Enter Last 4 Digits of Your Parent Phone Number
-              </label>
-            </div>
-
-            <div className="text-center">
-              <Typography className="text-gray-200 font-normal mt-4">
-                Yo {firstName} your Parent Phone looks something like this:{" "}
-                <span className="font-extrabold">{parentPhone}*****</span>
-              </Typography>
-            </div>
-          </>
-        )}
-
-        {activeStep === 2 && (
-          <>
-            <div className="text-center">
-              <Typography variant="h6" className="font-baskerville text-3xl ">
-                Confirm Your Details <span className="text-deep-orange-400">{firstName}</span>
-              </Typography>
-            </div>
-            <div className="relative mt-9 w-1/2 mx-auto">
-              <div className=" m-[1%] font-baskerville">
-                Your Hallticket Number
-              </div>
-              <input
-                type="text"
-                value={hallTicketNo}
-                readOnly
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-black rounded-lg border border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-blue-500 peer"
-                placeholder="HallTicket Number"
-              />
-              </Step>
-    
-    <div className=" mt-[4%] font-baskerville">
-                Last 4 Digits of Parent&apos;s Phone
-              </div>
-              <input
-                type="text"
-                value={sendDigits}
-                readOnly
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-black rounded-lg border border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-blue-500 peer mt-2"
-                placeholder="Last 4 Digits of Parent's Phone"
-              />
-              
-            </div>
-          </>
-        )}
-      </div>
-
-      <div className=" mt-10 flex justify-between">
-        <Button onClick={handlePrev} disabled={isFirstStep}>
-          Prev
-        </Button>
-        <Button onClick={handleNext}>
-          {isLastStep ? "Login" : "Next"}
-        </Button>
-      </div>
-      
-    </div>
-    
-      
   );
 }

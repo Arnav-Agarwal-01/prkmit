@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "../../app/util/cn";
 import { AnimatePresence, motion } from "framer-motion";
+import { createPortal } from "react-dom";
 import React, {
   ReactNode,
   createContext,
@@ -70,8 +71,10 @@ export const ModalBody = ({
   className?: string;
 }) => {
   const { open } = useModal();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     if (open) {
       document.body.style.overflow = "hidden";
     } else {
@@ -87,7 +90,9 @@ export const ModalBody = ({
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {open && (
         <motion.div
@@ -102,14 +107,14 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-      className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-[200] p-4"
+      className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-[9997] p-4"
         >
           <Overlay />
 
           <motion.div
             ref={modalRef}
             className={cn(
-        "min-h-[50%] max-h-[90dvh] md:max-w-[40%] w-full sm:w-auto bg-black text-white border border-gray-700 md:rounded-2xl relative z-[210] flex flex-col flex-1 min-h-0 overflow-hidden",
+        "min-h-[50%] max-h-[90dvh] md:max-w-[40%] w-full sm:w-auto bg-black text-white border border-gray-700 md:rounded-2xl relative z-[9999] flex flex-col flex-1 min-h-0 overflow-hidden",
               className
             )}
             initial={{
@@ -140,7 +145,8 @@ export const ModalBody = ({
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 
@@ -197,7 +203,7 @@ const Overlay = ({ className }: { className?: string }) => {
         opacity: 0,
         backdropFilter: "blur(0px)",
       }}
-      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
+  className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-[9998] ${className}`}
     ></motion.div>
   );
 };

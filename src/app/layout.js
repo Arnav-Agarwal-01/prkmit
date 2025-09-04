@@ -5,6 +5,8 @@ import { BackgroundGrid } from "@/components/BackgroundGrid";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { Footer } from "@/components/ui/footer";
 import { Analytics } from "@vercel/analytics/next";
+import "react-toastify/dist/ReactToastify.css";
+import { ClientToaster } from "@/components/ui/ClientToaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,6 +62,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </BackgroundGrid>
+  <ClientToaster />
         <Analytics/>
       </body>
     </html>
