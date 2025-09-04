@@ -36,6 +36,9 @@ exports.login = async (req, res) => {
     const payload = { user: { id: user.id, hallticketno: user.hallticketno } };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
+
+
+    // ask about this also
     // Set JWT as an HttpOnly, Secure cookie
     // res.json('token', token, {
     //   httpOnly: true, // Prevent JavaScript access to the cookie
