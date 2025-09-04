@@ -178,8 +178,7 @@ export default function AnimatedModalDemo({ className = "" }) {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10 flex items-center space-x-2">
-                  <span>🎫</span>
-                  <span className={`${familyName.className} tracking-wide`}>Book Now</span>
+                  <span className={`${familyName.className} text-lg`}>🎫 Book Now</span>
                 </span>
                 <div className="absolute inset-0 rounded-full bg-white opacity-20 scale-0 group-hover:scale-100 transition-transform duration-500"></div>
               </motion.button>
