@@ -247,7 +247,7 @@ export default function HeroHighlightDemo() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-center mt-6"
             >
-              <p className={`text-gray-300 text-sm ${comic.className}`}>
+              <p className={`text-white text-sm ${comic.className}`}>
                 Designed and Developed by{' '}
                 <span className="bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent font-bold">
                   Vardaan Bhatia & Arnav Agarwal
