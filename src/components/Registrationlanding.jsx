@@ -40,21 +40,6 @@ export default function AnimatedModalDemo({ className = "" }) {
 
         <ModalBody>
           <ModalContent>
-            {/* Match homepage background with orange accents (does not intercept clicks) */}
-            <div className="fixed inset-0 w-full h-full pointer-events-none">
-              <div 
-                className="w-full h-full"
-                style={{
-                  background: `
-                    radial-gradient(circle at 20% 20%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
-                    radial-gradient(circle at 80% 80%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
-                    radial-gradient(circle at 40% 60%, rgba(237, 107, 32, 0.1) 0%, transparent 25%),
-                    linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)
-                  `
-                }}
-              />
-            </div>
-            
             <div className="relative z-10 text-center space-y-6">
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}

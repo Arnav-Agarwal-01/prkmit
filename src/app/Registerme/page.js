@@ -141,7 +141,21 @@ export default function StepperWithContent() {
   const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 
   return (
-        <div className="container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-4xl" style={{ minHeight: '100vh' }}>
+        <div className="relative container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-4xl" style={{ minHeight: '100vh' }}>
+        {/* Page-specific background overlay (matches Registrationlanding) */}
+        <div className="fixed inset-0 w-full h-full pointer-events-none -z-10">
+          <div 
+            className="w-full h-full"
+            style={{
+              background: `
+                radial-gradient(circle at 20% 20%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 40% 60%, rgba(237, 107, 32, 0.1) 0%, transparent 25%),
+                linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)
+              `
+            }}
+          />
+        </div>
         {/* PR Header - Match homepage orange theme */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
