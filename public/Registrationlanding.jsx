@@ -93,8 +93,8 @@ export default function AnimatedModalDemo({ className = "" }) {
       </ul>
     </div>
   </ModalContent>
-  <div className="text-center font-baskerville text-neutral-600 dark:text-neutral-300 text-lg font-semibold mb-6">
-    Designed and Developed by <span className=" text-deep-orange-400 font-bold"> Vardaan and Arnav </span>
+  <div className="text-center font-baskerville text-neutral-600 dark:text-white-300 text-lg font-semibold mb-6">
+    Designed and Developed by <span className=" text-deep-orange-400 font-bold"> Vardaan Bhatia and Arnav Agarwal </span>
   </div>
   <ModalFooter className="gap-4">
    

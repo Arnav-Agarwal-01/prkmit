@@ -52,11 +52,11 @@ export const ModalTrigger = ({
   return (
     <button
       className={cn(
-        "px-4 py-2 rounded-md font-baskerville text-center relative overflow-hidden",
+  "px-4 py-2 rounded-full text-center relative overflow-hidden text-white cursor-pointer",
         className
       )}
-      style={{ color: 'black', backgroundColor: 'white' }}
       onClick={() => setOpen(true)}
+      style={{ pointerEvents: 'auto' }}
     >
       {children}
     </button>
@@ -114,7 +114,7 @@ export const ModalBody = ({
           <motion.div
             ref={modalRef}
             className={cn(
-        "min-h-[50%] max-h-[90dvh] md:max-w-[40%] w-full sm:w-auto bg-black text-white border border-gray-700 md:rounded-2xl relative z-[9999] flex flex-col flex-1 min-h-0 overflow-hidden",
+        "min-h-[50%] max-h-[90dvh] md:max-w-[40%] w-full sm:w-auto bg-neutral-950 text-white border border-neutral-800 md:rounded-2xl relative z-[9999] flex flex-col flex-1 min-h-0 overflow-hidden",
               className
             )}
             initial={{
@@ -160,7 +160,7 @@ export const ModalContent = ({
   return (
     <div
       className={cn(
-        "flex flex-col flex-1 min-h-0 p-8 md:p-10 bg-black text-white overflow-y-auto",
+  "flex flex-col flex-1 min-h-0 p-8 md:p-10 bg-neutral-950 text-white overflow-y-auto",
         className
       )}
       style={{ WebkitOverflowScrolling: "touch" }}
@@ -180,7 +180,7 @@ export const ModalFooter = ({
   return (
     <div
       className={cn(
-  "flex justify-end p-4 bg-gray-800 text-white border-t border-gray-600 flex-shrink-0",
+  "flex justify-end p-4 bg-neutral-950 text-white border-t border-neutral-800 flex-shrink-0",
         className
       )}
     >
@@ -213,7 +213,8 @@ const CloseIcon = () => {
   return (
     <button
       onClick={() => setOpen(false)}
-      className="absolute top-4 right-4 group"
+      className="absolute top-4 right-4 group z-50 cursor-pointer"
+      style={{ pointerEvents: 'auto' }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

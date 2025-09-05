@@ -4,14 +4,16 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useWindowSize } from "react-use";
 import localFont from "next/font/local";
+import Image from "next/image";
+import NameHighlight from "@/components/ui/name-highlight";
 
-// Load custom fonts for consistent branding
+// Load custom fonts: Headings Montserrat, Body Sora
 const familyName = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
+  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/Montserrat-VariableFont_wght.ttf",
 });
 
 const comic = localFont({
-  src: "../../../public/fonts/Comic_Relief/ComicRelief-Regular.ttf"
+  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf"
 });
 
 /**
@@ -125,31 +127,32 @@ export default function HeroHighlightDemo() {
   }, [playMusic]);
 
   return (
-    <>
-      {/* Force scrollable container */}
-      <div 
-        className="fixed inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-purple-900 to-black overflow-y-auto overflow-x-hidden"
-        style={{ 
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          overflowY: 'auto',
-          overflowX: 'hidden',
-          zIndex: 60
-        }}
-      >
-        {/* Content Wrapper: Responsive container with proper spacing and max-width */}
         <div className="container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-2xl" style={{ minHeight: '100vh' }}>
+        {/* PR Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex items-center justify-center gap-3 mb-4"
+        >
+          <Image
+            src="/prlogo.png"
+            alt="PR KMIT"
+            width={44}
+            height={44}
+            className="rounded-md shadow-sm ring-1 ring-white/10"
+            priority
+          />
+          <NameHighlight className={`${familyName.className} text-lg`} gradient="from-orange-300 via-pink-300 to-purple-300" glowColor="rgba(249,115,22,0.5)">PR KMIT</NameHighlight>
+        </motion.div>
         
         {/* CONDITIONAL RENDERING: Payment Form vs Success Screen */}
         {!qrCode ? (
           // PAYMENT STATE: Before transaction submission - Show payment interface
           <div className="w-full space-y-6">
-            {/* Main Payment Card: Glass morphism container */}
+            {/* Main Payment Card: Orange glass morphism container */}
             <motion.div 
-              className="w-full bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 lg:p-6 border border-white/20"
+              className="w-full bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 lg:p-6 border border-orange-300/20 ring-1 ring-orange-400/20"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -163,14 +166,13 @@ export default function HeroHighlightDemo() {
               className="text-center mb-4 sm:mb-6 lg:mb-8"
             >
               {/* Main title with gradient text effect */}
-              <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 bg-clip-text text-transparent ${familyName.className} mb-2 sm:mb-4`}>
-                Complete Your Payment
+              <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-white ${familyName.className} mb-2 sm:mb-4`}>
+                Complete Payment
               </h1>
-              {/* Decorative underline */}
-              <div className="h-0.5 sm:h-1 w-16 sm:w-24 bg-gradient-to-r from-orange-500 to-purple-600 rounded-full mx-auto mb-2 sm:mb-4"></div>
+              <div className="h-px sm:h-0.5 w-16 sm:w-24 bg-white/15 rounded-full mx-auto mb-2 sm:mb-4"></div>
               {/* Subtitle instruction */}
               <p className={`text-gray-300 ${comic.className} text-sm sm:text-base px-2`}>
-                Scan the QR code to pay for your Navraas'25 ticket
+                Scan the QR to pay for your Navraas’25 ticket
               </p>
             </motion.div>
 
@@ -183,7 +185,7 @@ export default function HeroHighlightDemo() {
             >
               {/* QR Header: Icon and title */}
               <div className="flex items-center justify-center mb-3 sm:mb-4">
-                <div className="bg-gradient-to-r from-orange-500 to-purple-600 rounded-full p-2 sm:p-3">
+                <div className="bg-indigo-600 rounded-full p-2 sm:p-3">
                   <span className="text-white text-lg sm:text-2xl">💳</span>
                 </div>
                 <h3 className={`text-black text-base sm:text-lg font-bold ml-2 sm:ml-3 ${familyName.className}`}>
@@ -217,7 +219,7 @@ export default function HeroHighlightDemo() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-4 sm:space-y-6 bg-white/5 backdrop-blur-lg rounded-xl p-4 sm:p-6 border border-white/10"
+              className="space-y-4 sm:space-y-6 bg-white/5 backdrop-blur rounded-xl p-4 sm:p-6 border border-white/10"
             >
               {/* Transaction ID Input Field */}
               <div>
@@ -237,7 +239,7 @@ export default function HeroHighlightDemo() {
                         setTransactionId(value);
                       }
                     }}
-                    className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white bg-black/50 backdrop-blur-lg rounded-lg sm:rounded-xl border-2 border-gray-600 focus:border-orange-500 focus:outline-none transition-all duration-300"
+                    className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white bg-neutral-900/80 backdrop-blur rounded-lg sm:rounded-xl border-2 border-neutral-700 focus:border-indigo-500 focus:outline-none transition-all duration-300"
                     placeholder="Enter 12-digit Transaction ID"
                     maxLength={12} 
                   />
@@ -252,10 +254,10 @@ export default function HeroHighlightDemo() {
               <motion.button
                 type="submit"
                 disabled={isLoading || transactionId.length !== 12}
-                className={`w-full py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform ${
+        className={`w-full py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform ${
                   isLoading || transactionId.length !== 12
-                    ? 'bg-gray-600 cursor-not-allowed' // Disabled state
-                    : 'bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 hover:from-orange-600 hover:via-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl hover:scale-105' // Active state with gradient
+                    ? 'bg-neutral-700 cursor-not-allowed' // Disabled state
+                    : 'bg-indigo-600 hover:bg-indigo-700 shadow-md hover:shadow-lg hover:scale-105' // Active state
                 } text-white ${familyName.className}`}
                 whileHover={!isLoading && transactionId.length === 12 ? { scale: 1.02 } : {}}
                 whileTap={!isLoading && transactionId.length === 12 ? { scale: 0.98 } : {}}
@@ -288,30 +290,30 @@ export default function HeroHighlightDemo() {
             
             {/* Instructions Card: Important guidelines for users */}
             <motion.div 
-              className="p-4 sm:p-6 bg-gradient-to-r from-orange-500/10 to-purple-600/10 rounded-xl border border-orange-500/20"
+              className="p-4 sm:p-6 bg-white/5 rounded-xl border border-white/10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               {/* Instructions header */}
               <div className="flex items-center mb-3">
-                <span className="text-orange-400 text-lg sm:text-xl mr-2 sm:mr-3">📋</span>
-                <h4 className={`text-orange-400 font-bold ${familyName.className} text-sm sm:text-base`}>
+                <span className="text-indigo-300 text-lg sm:text-xl mr-2 sm:mr-3">📋</span>
+                <h4 className={`text-indigo-300 font-semibold ${familyName.className} text-sm sm:text-base`}>
                   Important Instructions
                 </h4>
               </div>
               {/* Bulleted list of important guidelines */}
               <ul className={`space-y-2 text-gray-300 text-xs sm:text-sm ${comic.className}`}>
                 <li className="flex items-start">
-                  <span className="text-orange-400 mr-2">•</span>
+                  <span className="text-indigo-300 mr-2">•</span>
                   Enter the Transaction ID after completing payment
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-400 mr-2">•</span>
+                  <span className="text-indigo-300 mr-2">•</span>
                   Entry requires both ticket and valid ID card
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-400 mr-2">•</span>
+                  <span className="text-indigo-300 mr-2">•</span>
                   Keep your entry pass safe for the event
                 </li>
               </ul>
@@ -324,11 +326,11 @@ export default function HeroHighlightDemo() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-center mt-6"
             >
-              <p className={`text-gray-400 text-xs sm:text-sm ${comic.className}`}>
-                Designed and Developed by{' '}
-                <span className="bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent font-bold">
-                  Vardaan & Arnav
-                </span>
+              <p className={`text-gray-500 text-xs sm:text-sm ${comic.className}`}>
+                Designed and Developed by 
+                <NameHighlight className="mx-1" gradient="from-indigo-300 via-violet-300 to-cyan-300">Vardaan Bhatia</NameHighlight>
+                &
+                <NameHighlight className="ml-1" gradient="from-indigo-300 via-violet-300 to-cyan-300" delay={0.6}>Arnav Agarwal</NameHighlight>
               </p>
             </motion.div>
           </motion.div>
@@ -338,13 +340,13 @@ export default function HeroHighlightDemo() {
           <div className="w-full space-y-6">
             {/* Entry Pass Card: Main success container with celebration theme */}
             <motion.div 
-              className="w-full bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 lg:p-6 border border-white/20 relative overflow-hidden"
+              className="w-full bg-neutral-900/60 backdrop-blur rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 lg:p-6 border border-neutral-800 relative overflow-hidden"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7 }}
             >
             {/* Celebration Background: Colorful overlay for success state */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-pink-500/20 to-purple-600/20"></div>
+            <div className="absolute inset-0 bg-indigo-500/10"></div>
             
             {/* Success Header: Confirmation message with checkmark */}
             <motion.div
@@ -354,11 +356,11 @@ export default function HeroHighlightDemo() {
               className="text-center mb-4 sm:mb-6 lg:mb-8 relative z-10"
             >
               {/* Success checkmark icon */}
-              <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <div className="bg-green-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
                 <span className="text-white text-2xl sm:text-3xl">✅</span>
               </div>
               {/* Success title with green gradient */}
-              <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent ${familyName.className} mb-2`}>
+              <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-white ${familyName.className} mb-2`}>
                 Payment Successful!
               </h1>
               {/* Success subtitle */}
@@ -400,7 +402,7 @@ export default function HeroHighlightDemo() {
             {/* Download Button: Save entry pass to device */}
             <motion.button
               onClick={handleDownload}
-              className={`w-full py-3 sm:py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mb-4 sm:mb-6 ${familyName.className} relative z-10`}
+              className={`w-full py-3 sm:py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg mb-4 sm:mb-6 ${familyName.className} relative z-10`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -416,30 +418,30 @@ export default function HeroHighlightDemo() {
 
             {/* Success Instructions: Final guidelines for event attendance */}
             <motion.div 
-              className="p-3 sm:p-4 lg:p-6 bg-gradient-to-r from-green-500/10 to-green-600/10 rounded-lg sm:rounded-xl border border-green-500/20 relative z-10"
+              className="p-3 sm:p-4 lg:p-6 bg-white/5 rounded-lg sm:rounded-xl border border-white/10 relative z-10"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
             >
               {/* Success instructions header */}
               <div className="flex items-center mb-2 sm:mb-3">
-                <span className="text-green-400 text-lg sm:text-xl mr-2 sm:mr-3">🎉</span>
-                <h4 className={`text-green-400 font-bold ${familyName.className} text-sm sm:text-base`}>
+                <span className="text-indigo-300 text-lg sm:text-xl mr-2 sm:mr-3">🎉</span>
+                <h4 className={`text-white font-semibold ${familyName.className} text-sm sm:text-base`}>
                   You're All Set!
                 </h4>
               </div>
               {/* Final instructions for successful registration */}
               <ul className={`space-y-1 sm:space-y-2 text-gray-300 text-xs sm:text-sm ${comic.className}`}>
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-1 sm:mr-2">•</span>
+                  <span className="text-indigo-300 mr-1 sm:mr-2">•</span>
                   Download and save this QR code securely
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-1 sm:mr-2">•</span>
+                  <span className="text-indigo-300 mr-1 sm:mr-2">•</span>
                   Do you have a Dandiya partner? Better find one! 💃🕺
                 </li>
                 <li className="flex items-start">
-                  <span className="text-green-400 mr-1 sm:mr-2">•</span>
+                  <span className="text-indigo-300 mr-1 sm:mr-2">•</span>
                   See you at Navraas'25 for an unforgettable night!
                 </li>
               </ul>
@@ -447,8 +449,6 @@ export default function HeroHighlightDemo() {
           </motion.div>
           </div>
         )}
-      </div>
-      </div>
-    </>
+        </div>
   );
 }

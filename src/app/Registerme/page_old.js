@@ -335,7 +335,7 @@ export default function StepperWithContent() {
           <p className={`text-gray-400 text-sm ${comic.className}`}>
             Designed and Developed by{' '}
             <span className="bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent font-bold">
-              Vardaan & Arnav
+              Vardaan Bhatia & Arnav Agarwal
             </span>
           </p>
         </motion.div>
