@@ -203,7 +203,15 @@ const Overlay = ({ className }: { className?: string }) => {
         opacity: 0,
         backdropFilter: "blur(0px)",
       }}
-  className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-[9998] ${className}`}
+      className={`fixed inset-0 h-full w-full z-[9998] ${className}`}
+      style={{
+        background: `
+          radial-gradient(circle at 20% 20%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
+          radial-gradient(circle at 80% 80%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
+          radial-gradient(circle at 40% 60%, rgba(237, 107, 32, 0.1) 0%, transparent 25%),
+          linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)
+        `
+      }}
     ></motion.div>
   );
 };
