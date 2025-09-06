@@ -292,7 +292,7 @@ export default function StepperWithContent() {
                   {/* Floating label animation */}
                   <label
                     htmlFor="hallticket"
-                    className={`absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-3 sm:top-4 z-10 left-1/2 -translate-x-1/2 bg-neutral-900/80 px-2 sm:px-3 peer-focus:text-indigo-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 sm:peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}
+                    className={`absolute text-white duration-300 transform -translate-y-4 scale-75 top-3 sm:top-4 z-10 left-1/2 -translate-x-1/2  px-2 sm:px-3 peer-focus:text-indigo-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 sm:peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}
                   >
                     Enter Hall Ticket Number
                   </label>
@@ -342,7 +342,7 @@ export default function StepperWithContent() {
                   {/* Floating label for parent phone input */}
                   <label
                     htmlFor="parentphone"
-                    className={`absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-3 sm:top-4 z-10 left-1/2 -translate-x-1/2 bg-neutral-900/80 px-2 sm:px-3 peer-focus:text-indigo-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 sm:peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}
+                    className={`absolute text-gray-400 duration-300 transform -translate-y-4 scale-75 top-3 sm:top-4 z-10 left-1/2 -translate-x-1/2  px-2 sm:px-3 peer-focus:text-indigo-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-3 sm:peer-focus:top-4 peer-focus:scale-75 peer-focus:-translate-y-4 ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}
                   >
                     Last 4 Digits of Parent's Phone
                   </label>
