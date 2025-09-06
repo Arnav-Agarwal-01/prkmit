@@ -184,7 +184,7 @@ export default function StepperWithContent() {
               priority
             />
           </motion.div>
-          <NameHighlight className={`${familyName.className} text-lg`} gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">PR KMIT</NameHighlight>
+          <span className={`${familyName.className} text-lg text-white`}>PR KMIT</span>
         </motion.div>
         
         {/* Header Section - Brand title and subtitle */}
@@ -202,7 +202,10 @@ export default function StepperWithContent() {
           <div className="h-px sm:h-0.5 w-20 sm:w-28 bg-white/15 rounded-full mx-auto"></div>
           {/* Subtitle with event description */}
           <p className={`text-gray-300 text-sm sm:text-base lg:text-lg mt-2 sm:mt-4 px-4 ${comic.className}`}>
-            Brought to you by Public Relations, KMIT
+            Designed and Developed by 
+            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Bhatia</NameHighlight>
+            and
+            <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)" delay={0.6}>Arnav Agarwal</NameHighlight>
           </p>
         </motion.div>
 
@@ -425,7 +428,7 @@ export default function StepperWithContent() {
           </div>
         </motion.div>
 
-        {/* Footer - Developer Credits */}
+        {/* Footer - Developer Credits 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -433,12 +436,12 @@ export default function StepperWithContent() {
           className="text-center mt-6 sm:mt-8 px-4"
         >
           <p className={`text-orange-300/60 text-xs sm:text-sm ${comic.className}`}>
-            Designed and Developed by 
+            Designed and Developed by lmfao
             <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100">Vardaan Bhatia</NameHighlight>
             &
             <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" delay={0.6}>Arnav Agarwal</NameHighlight>
           </p>
-        </motion.div>
+        </motion.div>*/}
         </div>
   );
 }

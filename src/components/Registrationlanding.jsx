@@ -62,7 +62,7 @@ export default function AnimatedModalDemo({ className = "" }) {
                   >
                     <Image src="/prlogo.png" alt="PR KMIT" width={48} height={48} className="rounded-md" />
                   </motion.div>
-                  <NameHighlight className={`${familyName.className} text-3xl md:text-4xl leading-none align-middle`} gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)" >PR KMIT</NameHighlight>
+                  <span className={`${familyName.className} text-3xl md:text-4xl leading-none align-middle text-white`}>PR KMIT</span>
                 </div>
                 <h4 className={`text-2xl md:text-3xl font-bold text-white ${familyName.className} mb-2`}>
                   Navras 2025
@@ -77,7 +77,6 @@ export default function AnimatedModalDemo({ className = "" }) {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="mt-8"
               >
-                <h5 className={`text-white font-semibold ${familyName.className} mb-6 text-lg`}>Important Information</h5>
                 <div className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-xl rounded-xl p-6 border border-orange-300/20 shadow-lg">
                   <div className={`${instructionFont.className} space-y-5`}>
                     <motion.div 
@@ -155,69 +154,7 @@ export default function AnimatedModalDemo({ className = "" }) {
                   </div>
                 </div>
               </motion.div>
-
-              {/* Event Information Cards (moved down) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm rounded-xl p-4 border border-orange-300/20"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">🗓️</span>
-                    </div>
-                    <h5 className={`text-white font-medium ${familyName.className}`}>Event Date</h5>
-                  </div>
-                  <p className={`text-gray-200 text-sm ${instructionFont.className}`}>October 2025</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm rounded-xl p-4 border border-orange-300/20"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">🎫</span>
-                    </div>
-                    <h5 className={`text-white font-medium ${familyName.className}`}>Ticket Price</h5>
-                  </div>
-                  <p className={`text-gray-200 text-sm ${instructionFont.className}`}>₹199 per person</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm rounded-xl p-4 border border-orange-300/20"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">📍</span>
-                    </div>
-                    <h5 className={`text-white font-medium ${familyName.className}`}>Venue</h5>
-                  </div>
-                  <p className={`text-gray-200 text-sm ${instructionFont.className}`}>KMIT Campus</p>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm rounded-xl p-4 border border-orange-300/20"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">🎉</span>
-                    </div>
-                    <h5 className={`text-white font-medium ${familyName.className}`}>Experience</h5>
-                  </div>
-                  <p className={`text-gray-200 text-sm ${instructionFont.className}`}>Garba & Dandiya Night</p>
-                </motion.div>
-              </div>
+              {/* Event Information Cards removed as requested */}
             </div>
           </ModalContent>
 
@@ -246,9 +183,9 @@ export default function AnimatedModalDemo({ className = "" }) {
               >
                 <p className={`text-amber-200 text-sm sm:text-base leading-snug font-medium ${instructionFont.className}`}>
                   Designed and Developed by
-                  <NameHighlight className="mx-1" gradient="from-amber-200 via-yellow-200 to-white" glowColor="rgba(255,196,64,0.7)">Vardaan Bhatia</NameHighlight>
+                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Bhatia</NameHighlight>
                   and
-                  <NameHighlight className="ml-1" gradient="from-amber-200 via-yellow-200 to-white" glowColor="rgba(255,196,64,0.7)">Arnav Agarwal</NameHighlight>
+                  <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</NameHighlight>
                 </p>
               </motion.div>
             </div>
