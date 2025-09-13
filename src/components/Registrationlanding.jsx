@@ -31,7 +31,6 @@ export default function AnimatedModalDemo({ className = "" }) {
           className="relative group inline-flex items-center justify-center shrink-0 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 hover:from-orange-600 hover:via-pink-600 hover:to-purple-700 text-white px-8 sm:px-10 py-3 sm:py-3.5 min-w-[280px] sm:min-w-[340px] text-center rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold overflow-hidden"
         >
           <span className="relative z-10 flex items-center justify-center gap-2">
-            <Image src="/prlogo.png" alt="PR KMIT" width={24} height={24} className="rounded" />
             <span className={`${familyName.className} text-lg sm:text-xl font-medium text-white leading-tight`}>
               Book Navraas'25 Tickets
             </span>
