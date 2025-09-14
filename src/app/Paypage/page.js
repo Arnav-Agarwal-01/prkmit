@@ -199,9 +199,7 @@ export default function HeroHighlightDemo() {
                     transition={{ duration: 0.4, delay: 0.1 }}
                   >
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <div className="bg-indigo-600 rounded-full p-2 sm:p-3">
-                        <span className="text-white text-lg sm:text-2xl">💳</span>
-                      </div>
+                      
                       <h3 className={`text-black text-base sm:text-lg font-bold ml-2 sm:ml-3 ${familyName.className}`}>
                         Scan to Pay
                       </h3>
@@ -233,7 +231,7 @@ export default function HeroHighlightDemo() {
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
                     <div className="flex items-center mb-4">
-                      <span className="text-indigo-300 text-xl sm:text-2xl mr-2 sm:mr-3">📋</span>
+                      <span className="text-indigo-300 text-xl sm:text-2xl mr-2 sm:mr-3"></span>
                       <h4 className={`text-indigo-300 font-semibold ${familyName.className} text-base sm:text-lg`}>
                         Important Instructions
                       </h4>
@@ -281,7 +279,7 @@ export default function HeroHighlightDemo() {
                           maxLength={12}
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3 sm:pr-4">
-                          <span className="text-gray-400">💳</span>
+                          <span className="text-gray-400"></span>
                         </div>
                       </div>
                     </div>
@@ -303,7 +301,7 @@ export default function HeroHighlightDemo() {
                           <span>Processing...</span>
                         </div>
                       ) : (
-                        '🎫 Submit & Get Entry Pass'
+                        'Submit & Get Entry Pass'
                       )}
                     </motion.button>
                   </motion.form>
@@ -332,7 +330,7 @@ export default function HeroHighlightDemo() {
               >
                 <p className={`text-gray-500 text-xs sm:text-sm ${comic.className}`}>
                   Designed and Developed by 
-                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Bhatia</NameHighlight>
+                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</NameHighlight>
                   and
                   <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</NameHighlight>
                 </p>
@@ -358,7 +356,7 @@ export default function HeroHighlightDemo() {
                 className="text-center mb-5 sm:mb-7 lg:mb-8 relative z-10"
               >
                 <div className="bg-green-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <span className="text-white text-2xl sm:text-3xl">✅</span>
+                  {/* Removed emoji as requested */}
                 </div>
                 <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-white ${familyName.className} mb-2`}>
                   Payment Successful!
@@ -379,7 +377,7 @@ export default function HeroHighlightDemo() {
                 >
                   <div className="text-center mb-3 sm:mb-4">
                     <h3 className={`text-black text-base sm:text-lg lg:text-xl font-bold ${familyName.className}`}>
-                      🎭 Your Entry Pass 🎭
+                      Your Entry Pass
                     </h3>
                     <p className={`text-gray-600 text-xs sm:text-sm ${comic.className}`}>
                       Present this QR code at the event entrance
@@ -406,7 +404,7 @@ export default function HeroHighlightDemo() {
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
                     <div className="flex items-center mb-3 sm:mb-4">
-                      <span className="text-indigo-300 text-lg sm:text-xl mr-2 sm:mr-3">🎉</span>
+                      {/* Removed emoji as requested */}
                       <h4 className={`text-white font-semibold ${familyName.className} text-sm sm:text-base`}>
                         You're All Set!
                       </h4>
@@ -418,7 +416,7 @@ export default function HeroHighlightDemo() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-indigo-300 mr-2 mt-1">•</span>
-                        Do you have a Dandiya partner? Better find one! 💃🕺
+                        Do you have a Dandiya partner? Better find one!
                       </li>
                       <li className="flex items-start">
                         <span className="text-indigo-300 mr-2 mt-1">•</span>
@@ -437,7 +435,6 @@ export default function HeroHighlightDemo() {
                     whileTap={{ scale: 0.98 }}
                   >
                     <div className="flex items-center justify-center space-x-2">
-                      <span>📱</span>
                       <span>Download Entry Pass</span>
                     </div>
                   </motion.button>

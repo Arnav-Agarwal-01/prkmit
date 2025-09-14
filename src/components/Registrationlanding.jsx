@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 import Link from 'next/link';
 import localFont from "next/font/local";
 import NameHighlight from "./ui/name-highlight";
+import { SERVER_IS_UP } from "@/lib/serverStatus";
+import { useRouter } from "next/navigation";
 
 // Load custom fonts - Better font selection
 const familyName = localFont({
@@ -23,6 +25,8 @@ const instructionFont = localFont({
 });
 
 export default function AnimatedModalDemo({ className = "" }) {
+  const router = useRouter();
+
   return (
     <div className={`${className}`}>
       <Modal>
@@ -160,18 +164,23 @@ export default function AnimatedModalDemo({ className = "" }) {
           <ModalFooter>
             <div className="w-full relative isolate grid grid-cols-1 sm:grid-cols-[1fr_auto] items-center gap-3 sm:gap-6 mt-3 sm:mt-5">
               {/* CTA left, full width on mobile */}
-              <Link href="/Registerme" className="w-full sm:w-auto sm:justify-self-start">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="button"
-                  className="relative z-20 w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white font-semibold py-3 px-7 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 cursor-pointer ring-1 ring-orange-400/30 focus:outline-none focus:ring-2 focus:ring-orange-300/60 focus:ring-offset-2 focus:ring-offset-black"
-                  style={{ pointerEvents: 'auto' }}
-                >
-                  <span className={`${familyName.className}`}>Continue to Registration</span>
-                  <span>→</span>
-                </motion.button>
-              </Link>
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="button"
+                onClick={() => {
+                  if (!SERVER_IS_UP) {
+                    router.push('/passes-on-hold');
+                  } else {
+                    router.push('/Registerme');
+                  }
+                }}
+                className="relative z-20 w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-500 hover:to-orange-700 text-white font-semibold py-3 px-7 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 cursor-pointer ring-1 ring-orange-400/30 focus:outline-none focus:ring-2 focus:ring-orange-300/60 focus:ring-offset-2 focus:ring-offset-black sm:justify-self-start"
+                style={{ pointerEvents: 'auto' }}
+              >
+                <span className={`${familyName.className}`}>Continue to Registration</span>
+                {/* Removed arrow emoji as requested */}
+              </motion.button>
 
               {/* Credits right, wraps nicely and aligns */}
               <motion.div
@@ -182,7 +191,7 @@ export default function AnimatedModalDemo({ className = "" }) {
               >
                 <p className={`text-amber-200 text-sm sm:text-base leading-snug font-medium ${instructionFont.className}`}>
                   Designed and Developed by
-                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Bhatia</NameHighlight>
+                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</NameHighlight>
                   and
                   <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</NameHighlight>
                 </p>

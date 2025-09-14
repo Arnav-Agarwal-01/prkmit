@@ -203,7 +203,7 @@ export default function StepperWithContent() {
           {/* Subtitle with event description */}
           <p className={`text-gray-300 text-sm sm:text-base lg:text-lg mt-2 sm:mt-4 px-4 ${comic.className}`}>
             Designed and Developed by 
-            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Bhatia</NameHighlight>
+            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</NameHighlight>
             and
             <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)" delay={0.6}>Arnav Agarwal</NameHighlight>
           </p>
@@ -222,7 +222,6 @@ export default function StepperWithContent() {
               activeStep={activeStep}
               className="mb-4 sm:mb-6 lg:mb-8"
               activeLineClassName="bg-indigo-500"
-              completedLineClassName="bg-indigo-500"
             >
               {/* Step 1: Login/Hall Ticket Entry */}
               <Step 
@@ -423,7 +422,7 @@ export default function StepperWithContent() {
               whileTap={{ scale: 0.95 }} // Click animation
             >
               {/* Dynamic button text based on current step */}
-              {isLastStep ? "🎫 Login & Proceed" : "Next →"}
+              {isLastStep ? "Login & Proceed" : "Next"}
             </motion.button>
           </div>
         </motion.div>
@@ -437,7 +436,7 @@ export default function StepperWithContent() {
         >
           <p className={`text-orange-300/60 text-xs sm:text-sm ${comic.className}`}>
             Designed and Developed by lmfao
-            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100">Vardaan Bhatia</NameHighlight>
+            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100">Vardaan Arora Bhatia</NameHighlight>
             &
             <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" delay={0.6}>Arnav Agarwal</NameHighlight>
           </p>
