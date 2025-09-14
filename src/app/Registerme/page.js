@@ -64,7 +64,7 @@ export default function StepperWithContent() {
       }
       
       try {
-        console.log(api);
+        console.log('[Registration] Checking hall ticket number');
         // API call to verify hall ticket exists in database
         const response = await fetch(api+"api/auth/check", {
           method: "POST",
@@ -78,12 +78,14 @@ export default function StepperWithContent() {
         const data = await response.json();
         
         if (response.status === 200) {
+          console.log('[Registration] Hall ticket verified, user found');
           // Clean up the first name (remove 'KMIT' suffix if present)
           const sanitizedFirstName = data.firstname.replace(/KMIT/g, "");
           setFirstName(sanitizedFirstName.trim());
           setParentPhone(data.parentphone);
           setActiveStep((cur) => cur + 1); // Move to step 2
         } else {
+          console.log('[Registration] Hall ticket verification failed');
           toast.error(data.msg || "An error occurred");
         }
       } catch (err) {
@@ -103,6 +105,7 @@ export default function StepperWithContent() {
     // STEP 3: Final Login
     else if (activeStep === 2) {
       try {
+        console.log('[Registration] Attempting user login');
         // API call to authenticate user with hall ticket and parent phone verification
         const response = await fetch(api+"api/auth/login", {
           method: "POST",
@@ -116,19 +119,20 @@ export default function StepperWithContent() {
         });
         
         const data = await response.json();
-        console.log(data);
         
         if (response.status === 200) {
+          console.log('[Registration] Login successful, redirecting to payment');
           toast.success("Login successful!");
           // Store authentication token for subsequent API calls
           localStorage.setItem("token", data.token);
           // Navigate to payment page
           router.push(`/Paypage`);
         } else {
+          console.log('[Registration] Login failed');
           toast.error(data.msg || "Login failed");
         }
       } catch (err) {
-        console.error("Error:", err);
+        console.log('[Registration] Login error:', err.message);
         toast.error("Server Error");
       }
     }

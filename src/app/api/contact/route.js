@@ -3,6 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
+    console.log('[Contact] Processing contact form submission');
     const { name, email, message } = await request.json();
 
     const transporter = nodemailer.createTransport({
@@ -25,8 +26,10 @@ export async function POST(request) {
       `
     });
 
+    console.log('[Contact] Email sent successfully');
     return NextResponse.json({ success: true });
   } catch (error) {
+    console.log('[Contact] Email sending failed:', error.message);
     return NextResponse.json(
       { success: false, error: error.message },
       { status: 500 }

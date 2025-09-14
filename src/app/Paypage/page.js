@@ -42,6 +42,7 @@ export default function HeroHighlightDemo() {
   const [error, setError] = useState(""); // Error message display
   const [playMusic, setPlayMusic] = useState(false); // Background music trigger
   const [isLoading, setIsLoading] = useState(false); // Loading state for API calls
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Authentication verification state
   
   // Configuration and utilities
   const api = process.env.NEXT_PUBLIC_API_ENDPOINT; // Backend API endpoint
@@ -66,6 +67,7 @@ export default function HeroHighlightDemo() {
     }
 
     try {
+      console.log('[Payment] Submitting transaction ID');
       // API call to submit transaction ID and generate entry pass
       const response = await fetch(api+"api/transaction/submit", {
         method: "POST",
@@ -78,6 +80,7 @@ export default function HeroHighlightDemo() {
 
       // Handle API response errors
       if (!response.ok) {
+        console.log('[Payment] Transaction submission failed');
         const err = await response.json();
         setError(err.message || "Error submitting transaction");
         setIsLoading(false);
@@ -85,13 +88,14 @@ export default function HeroHighlightDemo() {
       }
 
       // Success: Extract QR code and trigger success state
+      console.log('[Payment] Transaction processed successfully');
       const data = await response.json();
       setQrCode(data.qrCode); // Base64 encoded QR code image
       setError(""); // Clear any previous errors
       setPlayMusic(true); // Trigger celebration music
       setIsLoading(false);
     } catch (error) {
-      console.error("Error submitting transaction:", error);
+      console.log('[Payment] Transaction error:', error.message);
       setError("Failed to submit transaction. Please try again.");
       setIsLoading(false);
     }
@@ -126,22 +130,76 @@ export default function HeroHighlightDemo() {
     }
   }, [playMusic]);
 
+  /**
+   * Authentication guard - verify token validity on page load
+   * Prevents unauthorized access to payment page
+   */
+  useEffect(() => {
+    const verifyAuthentication = async () => {
+      const token = localStorage.getItem("token");
+      
+      if (!token) {
+        console.log('[Payment] No authentication token found, redirecting to login');
+        router.push('/Registerme');
+        return;
+      }
+
+      try {
+        // Verify token with backend by making a test API call
+        const response = await fetch(api + "api/auth/verify", {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!response.ok) {
+          console.log('[Payment] Invalid token, redirecting to login');
+          localStorage.removeItem("token"); // Clear invalid token
+          localStorage.clear(); // Clear all localStorage data for security
+          router.push('/Registerme');
+          return;
+        }
+
+        console.log('[Payment] Authentication verified');
+        setIsAuthenticated(true); // Allow access to payment page
+      } catch (error) {
+        console.log('[Payment] Token verification failed, redirecting to login');
+        localStorage.clear(); // Clear all localStorage data for security
+        router.push('/Registerme');
+      }
+    };
+
+    verifyAuthentication();
+  }, [router, api]);
+
   return (
-  <div className="relative container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-6xl" style={{ minHeight: '100vh' }}>
-        {/* Page-specific background overlay (matches Registrationlanding) */}
-        <div className="fixed inset-0 w-full h-full pointer-events-none -z-10">
-          <div 
-            className="w-full h-full"
-            style={{
-              background: `
-                radial-gradient(circle at 20% 20%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
-                radial-gradient(circle at 80% 80%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
-                radial-gradient(circle at 40% 60%, rgba(237, 107, 32, 0.1) 0%, transparent 25%),
-                linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)
-              `
-            }}
-          />
+    <div className="relative container mx-auto px-3 sm:px-4 lg:px-6 pt-20 sm:pt-24 lg:pt-28 pb-24 max-w-6xl" style={{ minHeight: '100vh' }}>
+      {/* Show loading screen while authentication is being verified */}
+      {!isAuthenticated ? (
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
+            <p className="text-white">Verifying authentication...</p>
+          </div>
         </div>
+      ) : (
+        <>
+          {/* Page-specific background overlay (matches Registrationlanding) */}
+          <div className="fixed inset-0 w-full h-full pointer-events-none -z-10">
+            <div 
+              className="w-full h-full"
+              style={{
+                background: `
+                  radial-gradient(circle at 20% 20%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
+                  radial-gradient(circle at 80% 80%, rgba(237, 107, 32, 0.15) 0%, transparent 30%),
+                  radial-gradient(circle at 40% 60%, rgba(237, 107, 32, 0.1) 0%, transparent 25%),
+                  linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%)
+                `
+              }}
+            />
+          </div>
         {/* PR Header */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -443,6 +501,8 @@ export default function HeroHighlightDemo() {
             </motion.div>
           </div>
         )}
-        </div>
+        </>
+      )}
+    </div>
   );
 }
