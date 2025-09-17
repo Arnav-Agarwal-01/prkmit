@@ -5,19 +5,13 @@ import { Stepper, Step, Button, Typography } from "@material-tailwind/react";
 import { CogIcon, UserIcon, BuildingLibraryIcon } from "@heroicons/react/24/outline";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
-import localFont from "next/font/local";
 import Image from "next/image";
 import DeveloperNameHighlight from "@/components/ui/developer-name-highlight";
+import { helvetica, helveticaCompressed } from "@/components/fonts/fonts";
 
-// Load custom fonts for consistent branding
-// Headings: Montserrat, Body: Sora
-const familyName = localFont({
-  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/Montserrat-VariableFont_wght.ttf",
-});
-
-const comic = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf"
-});
+// Use Helvetica fonts instead of multiple different fonts
+const familyName = helvetica;
+const comic = helvetica;
 
 /**
  * StepperWithContent Component - Main Registration/Login Flow

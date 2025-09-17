@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Set a consistent background color */
+/* Set a consistent background color and font */
 body {
-  @apply bg-background text-foreground;
+  @apply bg-background text-foreground font-sans;
 }
 
 :root {
@@ -16,6 +16,33 @@ body {
 .dark {
   --background: 0 0% 3.9%;
   --foreground: 0 0% 98%;
+}
+
+/* Apply Helvetica font family globally */
+* {
+  font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif;
+}
+
+/* Override any font families that might be applied */
+h1, h2, h3, h4, h5, h6, p, span, div, section, article, main, header, footer, nav, aside {
+  font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif !important;
+}
+
+/* Utility classes for different Helvetica variants */
+.font-helvetica {
+  font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif;
+}
+
+.font-helvetica-compressed {
+  font-family: var(--font-helvetica-compressed), system-ui, -apple-system, sans-serif;
+}
+
+.font-helvetica-rounded {
+  font-family: var(--font-helvetica-rounded), system-ui, -apple-system, sans-serif;
 }
 
 .navbar-static-gradient {
@@ -71,10 +98,17 @@ body {
 @layer base {
   * {
     @apply border-border;
+    font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif !important;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif !important;
   }
+}
+
+/* Additional aggressive font override for all common elements */
+button, input, textarea, select, option, label, a, li, ul, ol, table, th, td, caption {
+  font-family: var(--font-helvetica), system-ui, -apple-system, sans-serif !important;
 }
 
 

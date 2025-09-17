@@ -9,7 +9,7 @@ const DEVELOPER_DATA = {
     url: "https://www.linkedin.com/in/vardaan-bhatia12/", // Replace with actual LinkedIn URL
   },
   "Arnav Agarwal": {
-    image: "/team/arnav.jpeg", 
+    image: "/arnavWebsite.jpeg", 
     url: "https://www.linkedin.com/in/arnavagarwal05//", // Replace with actual LinkedIn URL
   }
 };

@@ -62,7 +62,7 @@ export function NavBar({
       {/* Mobile view with PRKMIT text and hamburger */}
       {isMobile && (
         <div className="flex justify-between items-center w-full px-4 sm:px-6 py-3 pointer-events-auto navbar-mobile-gradient" style={{ minHeight: '60px' }}>
-          <Link href="/" className="text-xl sm:text-2xl font-extrabold glow-effect" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", fontFamily: "Arial, sans-serif", letterSpacing: '0.05em' }}>
+          <Link href="/" className="text-xl sm:text-2xl font-extrabold glow-effect font-helvetica" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", letterSpacing: '0.05em' }}>
             PRKMIT
           </Link>
           <button 

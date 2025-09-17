@@ -28,7 +28,6 @@
 "use client";
 import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
-import localFont from "next/font/local";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { WavyText } from "@/components/magicui/wavy-text";
 import { AnimatedText } from "@/components/ui/animated-shiny-text";
@@ -43,27 +42,13 @@ import Link from 'next/link';
 import { GradientButton } from "@/components/ui/gradient-button"
 import { Component as CalendarWithEventSlots } from "@/components/ui/calendar-with-event-slots";
 import AnimatedModalDemo from "@/components/Registrationlanding";
+import { helvetica, helveticaCompressed, helveticaRounded } from "@/components/fonts/fonts";
 
-// Font Configurations: Local font imports for consistent typography
-// Sora: Primary font family for headings and important text
-const familyName = localFont({
-  src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
-})
-
-// Montserrat: Secondary font for subheadings and emphasis
-const familyName2 = localFont({
-  src: "../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/static/Montserrat-SemiBold.ttf",
-})
-
-// Comic Relief: Fun, casual font for body text and descriptions
-const comic = localFont({
-  src : "../../public/fonts/Comic_Relief/ComicRelief-Regular.ttf"
-})
-
-// Inconsolata: Monospace font for technical text and code-like elements
-const inconsolata = localFont({
-  src : "../../public/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"
-})
+// Use Helvetica fonts instead of multiple different fonts
+const familyName = helvetica;
+const familyName2 = helveticaCompressed;
+const comic = helvetica;
+const inconsolata = helveticaRounded;
 
 /**
  * Home Component - Main Landing Page

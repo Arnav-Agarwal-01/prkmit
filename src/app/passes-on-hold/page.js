@@ -1,18 +1,13 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import localFont from "next/font/local";
 import Image from "next/image";
 import Link from "next/link";
+import { helvetica, helveticaCompressed } from "@/components/fonts/fonts";
 
-// Load custom fonts
-const familyName = localFont({
-  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/Montserrat-VariableFont_wght.ttf",
-});
-
-const comic = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf"
-});
+// Use Helvetica fonts
+const familyName = helvetica;
+const comic = helvetica;
 
 export default function PassesOnHold() {
   return (

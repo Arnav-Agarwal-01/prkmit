@@ -31,8 +31,8 @@ export const navraasTheme = {
   
   typography: {
     fontFamilies: {
-      primary: 'Sora', // For headings and important text
-      secondary: 'Comic Relief', // For body text and casual content
+      primary: 'Helvetica', // For headings and important text
+      secondary: 'Helvetica', // For body text and casual content
     },
     sizes: {
       xs: 'text-xs',

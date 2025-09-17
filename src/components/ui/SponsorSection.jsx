@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import localFont from 'next/font/local';
+import { helvetica } from "../fonts/fonts";
 
-const familyName = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
-});
+// Use Helvetica font
+const familyName = helvetica;
 
 /**
  * SponsorSection - A reusable component for displaying sponsor information sections

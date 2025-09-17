@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-helvetica)', 'system-ui', 'sans-serif'],
+  			compressed: ['var(--font-helvetica-compressed)', 'system-ui', 'sans-serif'],
+  			rounded: ['var(--font-helvetica-rounded)', 'system-ui', 'sans-serif'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

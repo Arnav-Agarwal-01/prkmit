@@ -3,18 +3,13 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useWindowSize } from "react-use";
-import localFont from "next/font/local";
 import Image from "next/image";
 import DeveloperNameHighlight from "@/components/ui/developer-name-highlight";
+import { helvetica, helveticaCompressed } from "@/components/fonts/fonts";
 
-// Load custom fonts: Headings Montserrat, Body Sora
-const familyName = localFont({
-  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/Montserrat-VariableFont_wght.ttf",
-});
-
-const comic = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf"
-});
+// Use Helvetica fonts instead of multiple different fonts
+const familyName = helvetica;
+const comic = helvetica;
 
 /**
  * HeroHighlightDemo Component - Payment Processing Flow

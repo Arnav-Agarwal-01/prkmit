@@ -12,22 +12,13 @@ import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-sec
 import { FlipCard,FlipCardBack,FlipCardFront } from '@/components/ui/flip-card';
 import { Logos3 } from "@/components/blocks/logos3"
 import { HyperText } from '@/components/ui/hyper-text';
-import localFont from 'next/font/local';
-const inconsolata = localFont({
-  src : "../../../public/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"
-})
+import { helvetica, helveticaCompressed, helveticaRounded } from "@/components/fonts/fonts";
 
-const familyName = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
-})
-
-const familyName2 = localFont({
-  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/static/Montserrat-SemiBold.ttf",
-})
-
-const comic = localFont({
-  src : "../../../public/fonts/Comic_Relief/ComicRelief-Regular.ttf"
-})
+// Use Helvetica fonts
+const inconsolata = helveticaRounded;
+const familyName = helvetica;
+const familyName2 = helveticaCompressed;
+const comic = helvetica;
 
 function page() {
   

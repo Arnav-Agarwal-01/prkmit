@@ -10,19 +10,14 @@ import {
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import localFont from "next/font/local";
 import DeveloperNameHighlight from "./ui/developer-name-highlight";
 import { SERVER_IS_UP } from "@/lib/serverStatus";
 import { useRouter } from "next/navigation";
+import { helvetica, helveticaCompressed } from "./fonts/fonts";
 
-// Load custom fonts - Better font selection
-const familyName = localFont({
-  src: "../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/Montserrat-VariableFont_wght.ttf",
-});
-
-const instructionFont = localFont({
-  src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf"
-});
+// Use Helvetica fonts
+const familyName = helvetica;
+const instructionFont = helvetica;
 
 export default function AnimatedModalDemo({ className = "" }) {
   const router = useRouter();
