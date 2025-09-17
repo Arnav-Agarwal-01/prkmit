@@ -68,7 +68,7 @@ export default function AnimatedModalDemo({ className = "" }) {
                   <span className={`${familyName.className} text-3xl md:text-4xl leading-none align-middle text-white`}>PR KMIT</span>
                 </div>
                 <h4 className={`text-2xl md:text-3xl font-bold text-white ${familyName.className} mb-2`}>
-                  Navras 2025
+                  Navraas 2025
                 </h4>
                 <div className="mt-2 h-1 w-32 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full mx-auto shadow-sm"></div>
               </motion.div>

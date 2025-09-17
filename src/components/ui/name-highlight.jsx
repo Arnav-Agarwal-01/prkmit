@@ -34,7 +34,7 @@ export default function NameHighlight({
           width: 18%;
           background: linear-gradient(80deg, rgba(255,255,255,0), rgba(255,255,255,.85), rgba(255,255,255,0));
           filter: blur(1.5px);
-          opacity: 0.7;
+          opacity: 0.6;
           animation: nh-sheen 2.8s ease-in-out infinite;
           animation-delay: calc(var(--nh-delay, 0s) + .25s);
         }
