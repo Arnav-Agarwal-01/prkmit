@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useWindowSize } from "react-use";
 import localFont from "next/font/local";
 import Image from "next/image";
-import NameHighlight from "@/components/ui/name-highlight";
+import DeveloperNameHighlight from "@/components/ui/developer-name-highlight";
 
 // Load custom fonts: Headings Montserrat, Body Sora
 const familyName = localFont({
@@ -388,9 +388,9 @@ export default function HeroHighlightDemo() {
               >
                 <p className={`text-gray-500 text-xs sm:text-sm ${comic.className}`}>
                   Designed and Developed by 
-                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</NameHighlight>
+                  <DeveloperNameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</DeveloperNameHighlight>
                   and
-                  <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</NameHighlight>
+                  <DeveloperNameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</DeveloperNameHighlight>
                 </p>
               </motion.div>
             </motion.div>

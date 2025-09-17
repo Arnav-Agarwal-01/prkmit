@@ -11,7 +11,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import localFont from "next/font/local";
-import NameHighlight from "./ui/name-highlight";
+import DeveloperNameHighlight from "./ui/developer-name-highlight";
 import { SERVER_IS_UP } from "@/lib/serverStatus";
 import { useRouter } from "next/navigation";
 
@@ -187,13 +187,13 @@ export default function AnimatedModalDemo({ className = "" }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="pointer-events-none text-center sm:text-right sm:justify-self-end sm:max-w-[460px]"
+                className="text-center sm:text-right sm:justify-self-end sm:max-w-[460px]"
               >
                 <p className={`text-amber-200 text-sm sm:text-base leading-snug font-medium ${instructionFont.className}`}>
                   Designed and Developed by
-                  <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</NameHighlight>
+                  <DeveloperNameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</DeveloperNameHighlight>
                   and
-                  <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</NameHighlight>
+                  <DeveloperNameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</DeveloperNameHighlight>
                 </p>
               </motion.div>
             </div>

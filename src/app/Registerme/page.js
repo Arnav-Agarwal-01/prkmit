@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import Image from "next/image";
-import NameHighlight from "@/components/ui/name-highlight";
+import DeveloperNameHighlight from "@/components/ui/developer-name-highlight";
 
 // Load custom fonts for consistent branding
 // Headings: Montserrat, Body: Sora
@@ -207,9 +207,9 @@ export default function StepperWithContent() {
           {/* Subtitle with event description */}
           <p className={`text-gray-300 text-sm sm:text-base lg:text-lg mt-2 sm:mt-4 px-4 ${comic.className}`}>
             Designed and Developed by 
-            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</NameHighlight>
+            <DeveloperNameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</DeveloperNameHighlight>
             and
-            <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)" delay={0.6}>Arnav Agarwal</NameHighlight>
+            <DeveloperNameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</DeveloperNameHighlight>
           </p>
         </motion.div>
 
@@ -440,9 +440,9 @@ export default function StepperWithContent() {
         >
           <p className={`text-orange-300/60 text-xs sm:text-sm ${comic.className}`}>
             Designed and Developed by lmfao
-            <NameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100">Vardaan Arora Bhatia</NameHighlight>
+            <DeveloperNameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100">Vardaan Arora Bhatia</DeveloperNameHighlight>
             &
-            <NameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" delay={0.6}>Arnav Agarwal</NameHighlight>
+            <DeveloperNameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100">Arnav Agarwal</DeveloperNameHighlight>
           </p>
         </motion.div>*/}
         </div>
