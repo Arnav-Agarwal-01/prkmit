@@ -71,7 +71,7 @@ export default function PassesOnHold() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-white ${familyName.className} mb-4`}
           >
-            Passes Reopening Soon
+            Passes Reopen Soon
           </motion.h1>
 
           {/* Subtitle */}
