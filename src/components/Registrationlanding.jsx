@@ -13,11 +13,11 @@ import Link from 'next/link';
 import DeveloperNameHighlight from "./ui/developer-name-highlight";
 import { SERVER_IS_UP } from "@/lib/serverStatus";
 import { useRouter } from "next/navigation";
-import { helvetica, helveticaCompressed } from "./fonts/fonts";
+import { roboto, robotoCondensed } from "./fonts/fonts";
 
-// Use Helvetica fonts
-const familyName = helvetica;
-const instructionFont = helvetica;
+// Use Roboto fonts
+const familyName = roboto;
+const instructionFont = roboto;
 
 export default function AnimatedModalDemo({ className = "" }) {
   const router = useRouter();

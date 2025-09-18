@@ -6,7 +6,7 @@ import { Footer } from "@/components/ui/footer";
 import { Analytics } from "@vercel/analytics/next";
 import "react-toastify/dist/ReactToastify.css";
 import { ClientToaster } from "@/components/ui/ClientToaster";
-import { helvetica, helveticaCompressed } from "@/components/fonts/fonts";
+import { roboto, robotoCondensed, robotoSemiCondensed } from "@/components/fonts/fonts";
 
 export const metadata = {
   title: "PR KMIT",
@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${helvetica.variable} ${helveticaCompressed.variable} antialiased`}
+        className={`${roboto.variable} ${robotoCondensed.variable} ${robotoSemiCondensed.variable} antialiased`}
       >
         <BackgroundGrid color="rgb(237, 107, 32)" maxOpacity={0.7} squareSize={1.8} gridGap={10} flickerChance={0.3}>
           <NavBar items={navItems} />

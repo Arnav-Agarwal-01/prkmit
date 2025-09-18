@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { helvetica } from "../fonts/fonts";
+import { roboto } from "../fonts/fonts";
 import {
   IconAdjustmentsBolt,
   IconCloud,
@@ -11,9 +11,9 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 
-// Use Helvetica font
-const familyName = helvetica;
-const familyName2 = helvetica;
+// Use Roboto font
+const familyName = roboto;
+const familyName2 = roboto;
 
 export function FeaturesSectionWithHoverEffects() {
   const features = [
