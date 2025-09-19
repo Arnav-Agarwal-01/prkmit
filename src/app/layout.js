@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "react-toastify/dist/ReactToastify.css";
 import { ClientToaster } from "@/components/ui/ClientToaster";
 import { roboto, robotoCondensed, robotoSemiCondensed } from "@/components/fonts/fonts";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: "PR KMIT",
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
         </BackgroundGrid>
   <ClientToaster />
         <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   );
