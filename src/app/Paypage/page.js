@@ -278,7 +278,7 @@ export default function HeroHighlightDemo() {
                 {/* Right: Instructions pinned to top */}
                 <div className="lg:col-span-5 flex flex-col gap-5">
                   <motion.div 
-                    className="p-5 sm:p-6 lg:p-7 bg-white/5 rounded-xl sm:rounded-2xl border border-white/10 lg:sticky lg:top-4"
+                    className="p-5 sm:p-6 lg:p-7 bg-white/5 rounded-xl sm:rounded-2xl border border-white/10  lg:top-4"
                     initial={{ opacity: 0, x: 8 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 0.2 }}
@@ -290,6 +290,14 @@ export default function HeroHighlightDemo() {
                       </h4>
                     </div>
                     <ul className={`space-y-3 text-gray-300 text-sm sm:text-base leading-relaxed ${comic.className}`}>
+                      <li className="flex items-start">
+                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        Passes are strictly for the student they are issued to and will be invalid if transferred or used by others.
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        Entry requires both ticket and College ID card
+                      </li>
                       <li className="flex items-start">
                         <span className="text-indigo-300 mr-2 mt-1">•</span>
                         Enter the Transaction ID after completing payment
