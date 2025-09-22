@@ -227,7 +227,7 @@ export default function StepperWithContent() {
               >
                 <UserIcon className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
                 <div className="absolute -bottom-8 sm:-bottom-10 lg:-bottom-12 w-max text-center left-1/2 transform -translate-x-1/2">
-                  <Typography variant="h6" className={`${activeStep === 0 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}>
+                  <Typography variant="h6" className={`${activeStep === 0 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs whitespace-nowrap`}>
                     Login
                   </Typography>
                 </div>
@@ -239,7 +239,7 @@ export default function StepperWithContent() {
               >
                 <CogIcon className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
                 <div className="absolute -bottom-8 sm:-bottom-10 lg:-bottom-12 w-max text-center left-1/2 transform -translate-x-1/2">
-                  <Typography variant="h6" className={`${activeStep === 1 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}>
+                  <Typography variant="h6" className={`${activeStep === 1 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs whitespace-nowrap`}>
                     Verify
                   </Typography>
                 </div>
@@ -251,7 +251,7 @@ export default function StepperWithContent() {
               >
                 <BuildingLibraryIcon className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
                 <div className="absolute -bottom-8 sm:-bottom-10 lg:-bottom-12 w-max text-center left-1/2 transform -translate-x-1/2">
-                  <Typography variant="h6" className={`${activeStep === 2 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs sm:text-sm whitespace-nowrap`}>
+                  <Typography variant="h6" className={`${activeStep === 2 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs whitespace-nowrap`}>
                     Confirm
                   </Typography>
                 </div>
@@ -347,6 +347,15 @@ export default function StepperWithContent() {
                     Last 4 Digits of Parent's Phone
                   </label>
                 </div>
+
+                {/* Parent Phone Number Hint - First 5 digits display */}
+                {parentPhone && (
+                  <div className="text-center mt-3 px-4">
+                    <p className={`text-gray-400 text-xs sm:text-sm ${comic.className}`}>
+                      Parent's phone number starts with: <span className="text-indigo-300 font-semibold">{parentPhone.slice(0, 5)}</span>
+                    </p>
+                  </div>
+                )}
               </motion.div>
             )}
 
