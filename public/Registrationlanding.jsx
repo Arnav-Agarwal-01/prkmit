@@ -73,7 +73,7 @@ export default function AnimatedModalDemo({ className = "" }) {
       <ul className="list-disc pl-5 space-y-4">
         <li className="text-neutral-700 dark:text-neutral-300 text-sm">
           To understand the PASS GENERATING process{' '}
-          <Link href="https://www.instagram.com/p/DAlVxmRNVw_/"  target="_blank"
+          <Link href="https://www.instagram.com/p/DO6AftlkwwB/"  target="_blank"
           className="text-blue-500 hover:underline">
             click on this link
           </Link>
@@ -83,6 +83,9 @@ export default function AnimatedModalDemo({ className = "" }) {
           This gateway is initiative of PR KMIT.
         </li>
         <li className="text-neutral-700 dark:text-neutral-300 text-sm">
+          This is a NON REFUNDABLE ticket
+        </li>
+        <li className="text-neutral-700 dark:text-neutral-300 text-sm">
           Follow <Link href="https://www.instagram.com/pr.kmit/" target="_blank" className="text-blue-500 hover:underline">
           PR KMIT
           </Link>  for continuous updates of the event.
@@ -90,6 +93,7 @@ export default function AnimatedModalDemo({ className = "" }) {
         <li className="text-neutral-700 dark:text-neutral-300 text-sm">
           By buying the ticket, you agree to the terms and conditions.
         </li>
+        
       </ul>
     </div>
   </ModalContent>

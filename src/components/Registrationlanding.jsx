@@ -77,6 +77,22 @@ export default function AnimatedModalDemo({ className = "" }) {
               >
                 <div className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-xl rounded-xl p-6 border border-orange-300/20 shadow-lg">
                   <div className={`${instructionFont.className} space-y-5`}>
+
+                    <motion.div 
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      className="flex items-start space-x-3"
+                    >
+                      <span className="text-orange-300 text-lg font-bold mt-0.5 flex-shrink-0">•</span>
+                      <div>
+                        <p className="text-gray-200 text-sm leading-relaxed">
+                          These tickets are  <span className="text-orange-300 font-semibold">NON REFUNDABLE</span>
+                        </p>
+                      </div>
+                    </motion.div>
+
+                    
                     <motion.div 
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -88,7 +104,7 @@ export default function AnimatedModalDemo({ className = "" }) {
                         <p className="text-gray-200 text-sm leading-relaxed">
                           To understand the pass generation process,{' '}
                           <a 
-                            href="https://www.instagram.com/p/DAlVxmRNVw_/" 
+                            href="https://www.instagram.com/p/DO6AftlkwwB/" 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-orange-300 hover:text-orange-200 underline decoration-wavy decoration-orange-400/50 hover:decoration-orange-300/70 transition-all duration-300 font-medium"
@@ -98,6 +114,9 @@ export default function AnimatedModalDemo({ className = "" }) {
                         </p>
                       </div>
                     </motion.div>
+
+
+                    
                     
                     <motion.div 
                       initial={{ opacity: 0, x: -10 }}
