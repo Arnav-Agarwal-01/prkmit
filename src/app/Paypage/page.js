@@ -284,30 +284,30 @@ export default function HeroHighlightDemo() {
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
                     <div className="flex items-center mb-4">
-                      <span className="text-indigo-300 text-xl sm:text-2xl mr-2 sm:mr-3"></span>
-                      <h4 className={`text-indigo-300 font-semibold ${familyName.className} text-base sm:text-lg`}>
+                      <span className="text-orange-300 text-xl sm:text-2xl mr-2 sm:mr-3"></span>
+                      <h4 className={`text-orange-300 font-semibold ${familyName.className} text-base sm:text-lg`}>
                         Important Instructions
                       </h4>
                     </div>
                     <ul className={`space-y-3 text-gray-300 text-sm sm:text-base leading-relaxed ${comic.className}`}>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Passes are strictly for the student they are issued to and will be invalid if transferred or used by others.
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Entry requires both ticket and College ID card
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Enter the Transaction ID after completing payment
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Entry requires both ticket and College ID card
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Keep your entry pass safe for the event
                       </li>
                     </ul>
@@ -335,7 +335,7 @@ export default function HeroHighlightDemo() {
                               setTransactionId(value);
                             }
                           }}
-                          className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white bg-neutral-900/80 backdrop-blur rounded-lg sm:rounded-xl border-2 border-neutral-700 focus:border-indigo-500 focus:outline-none transition-all duration-300"
+                          className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white bg-neutral-900/80 backdrop-blur rounded-lg sm:rounded-xl border-2 border-neutral-700 focus:border-orange-500 focus:outline-none transition-all duration-300"
                           placeholder="Enter 12-digit Transaction ID"
                           maxLength={12}
                         />
@@ -351,7 +351,7 @@ export default function HeroHighlightDemo() {
                       className={`w-full py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform ${
                         isLoading || transactionId.length !== 12
                           ? 'bg-neutral-700 cursor-not-allowed'
-                          : 'bg-indigo-600 hover:bg-indigo-700 shadow-md hover:shadow-lg hover:scale-105'
+                          : 'bg-orange-600 hover:bg-orange-700 shadow-md hover:shadow-lg hover:scale-105'
                       } text-white ${familyName.className}`}
                       whileHover={!isLoading && transactionId.length === 12 ? { scale: 1.02 } : {}}
                       whileTap={!isLoading && transactionId.length === 12 ? { scale: 0.98 } : {}}
@@ -402,12 +402,12 @@ export default function HeroHighlightDemo() {
           /* SUCCESS STATE: Entry Pass Generated - two-column layout */
           <div className="w-full space-y-6">
             <motion.div 
-              className="w-full bg-neutral-900/60 backdrop-blur rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 lg:p-6 border border-neutral-800 relative overflow-hidden"
+              className="w-full bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-xl rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 lg:p-6 border border-orange-300/20 ring-1 ring-orange-400/20 relative overflow-hidden"
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="absolute inset-0 bg-indigo-500/10"></div>
+              <div className="absolute inset-0 bg-orange-500/5"></div>
 
               {/* Success header */}
               <motion.div
@@ -480,7 +480,7 @@ export default function HeroHighlightDemo() {
                 {/* Right: Instructions then download button */}
                 <div className="lg:col-span-5 flex flex-col gap-5">
                   <motion.div 
-                    className="p-4 sm:p-5 lg:p-6 bg-white/5 rounded-lg sm:rounded-xl border border-white/10"
+                    className="p-4 sm:p-5 lg:p-6 bg-orange-500/5 backdrop-blur rounded-lg sm:rounded-xl border border-orange-300/20"
                     initial={{ opacity: 0, x: 8 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 0.2 }}
@@ -493,15 +493,15 @@ export default function HeroHighlightDemo() {
                     </div>
                     <ul className={`space-y-2 sm:space-y-3 text-gray-300 text-xs sm:text-sm ${comic.className}`}>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Download and save this QR code securely
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         Do you have a Dandiya partner? Better find one!
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-300 mr-2 mt-1">•</span>
+                        <span className="text-orange-300 mr-2 mt-1">•</span>
                         See you at Navraas'25 for an unforgettable night!
                       </li>
                     </ul>
@@ -524,7 +524,7 @@ export default function HeroHighlightDemo() {
                   {/* Follow Us Button */}
                   <motion.button
                     onClick={() => window.open('https://www.instagram.com/pr.kmit/', '_blank')}
-                    className={`w-full py-3 sm:py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg ${familyName.className}`}
+                    className={`w-full py-3 sm:py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg ${familyName.className}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.4 }}

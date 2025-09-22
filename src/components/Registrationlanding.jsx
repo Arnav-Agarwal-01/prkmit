@@ -92,7 +92,23 @@ export default function AnimatedModalDemo({ className = "" }) {
                       </div>
                     </motion.div>
 
+                    <motion.div 
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      className="flex items-start space-x-1.5"
+                    >
+                      <span className="text-orange-300 text-lg font-bold mt-0.5 flex-shrink-0">•</span>
+                      <div>
+                        <p className="text-gray-200 text-sm leading-relaxed">
+                          These tickets are linked to the roll number and are <span className="text-orange-300 font-semibold">NOT  TRANSFERABLE</span>
+                        </p>
+                      </div>
+                    </motion.div>
+
                     
+
+
                     <motion.div 
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
