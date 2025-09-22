@@ -296,7 +296,7 @@ export default function HeroHighlightDemo() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-indigo-300 mr-2 mt-1">•</span>
-                        Entry requires both ticket and valid ID card
+                        Entry requires both ticket and College ID card
                       </li>
                       <li className="flex items-start">
                         <span className="text-indigo-300 mr-2 mt-1">•</span>
