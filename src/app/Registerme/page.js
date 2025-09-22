@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Stepper, Step, Button, Typography } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
 import { CogIcon, UserIcon, BuildingLibraryIcon } from "@heroicons/react/24/outline";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
@@ -214,49 +214,93 @@ export default function StepperWithContent() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-2xl border border-orange-300/20 ring-1 ring-orange-400/20"
         >
-          {/* Stepper Progress Indicator */}
+          {/* Custom Progress Indicator */}
           <div className="mb-6 sm:mb-8 lg:mb-12">
-            <Stepper 
-              activeStep={activeStep}
-              className="mb-4 sm:mb-6 lg:mb-8"
-              activeLineClassName="bg-indigo-500"
-            >
-              {/* Step 1: Login/Hall Ticket Entry */}
-              <Step 
-                className={`${activeStep >= 0 ? 'bg-indigo-600 text-white' : 'bg-neutral-700 text-gray-300'} transition-all duration-300 w-8 h-8 sm:w-10 sm:h-10`}
-              >
-                <UserIcon className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
-                <div className="absolute -bottom-8 sm:-bottom-10 lg:-bottom-12 w-max text-center left-1/2 transform -translate-x-1/2">
-                  <Typography variant="h6" className={`${activeStep === 0 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs whitespace-nowrap`}>
-                    Login
-                  </Typography>
+            <div className="flex items-center justify-between max-w-md mx-auto">
+              {/* Step 1: Login */}
+              <div className="flex flex-col items-center">
+                <motion.div
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                    activeStep >= 0 
+                      ? 'bg-indigo-600 border-indigo-400 text-white shadow-lg shadow-indigo-500/30' 
+                      : 'bg-neutral-800 border-neutral-600 text-gray-400'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <UserIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </motion.div>
+                <span className={`mt-2 text-xs sm:text-sm ${activeStep === 0 ? 'text-indigo-300' : 'text-gray-500'} ${familyName.className}`}>
+                  Login
+                </span>
+              </div>
+
+              {/* Progress Line 1 */}
+              <div className="flex-1 mx-2 sm:mx-4">
+                <div className="h-0.5 bg-neutral-700 rounded-full overflow-hidden">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-indigo-500 to-indigo-400"
+                    initial={{ width: "0%" }}
+                    animate={{ width: activeStep >= 1 ? "100%" : "0%" }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  />
                 </div>
-              </Step>
-              
-              {/* Step 2: Phone Verification */}
-              <Step 
-                className={`${activeStep >= 1 ? 'bg-indigo-600 text-white' : 'bg-neutral-700 text-gray-300'} transition-all duration-300 w-8 h-8 sm:w-10 sm:h-10`}
-              >
-                <CogIcon className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
-                <div className="absolute -bottom-8 sm:-bottom-10 lg:-bottom-12 w-max text-center left-1/2 transform -translate-x-1/2">
-                  <Typography variant="h6" className={`${activeStep === 1 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs whitespace-nowrap`}>
-                    Verify
-                  </Typography>
+              </div>
+
+              {/* Step 2: Verify */}
+              <div className="flex flex-col items-center">
+                <motion.div
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                    activeStep >= 1 
+                      ? 'bg-indigo-600 border-indigo-400 text-white shadow-lg shadow-indigo-500/30' 
+                      : 'bg-neutral-800 border-neutral-600 text-gray-400'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <CogIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </motion.div>
+                <span className={`mt-2 text-xs sm:text-sm ${activeStep === 1 ? 'text-indigo-300' : 'text-gray-500'} ${familyName.className}`}>
+                  Verify
+                </span>
+              </div>
+
+              {/* Progress Line 2 */}
+              <div className="flex-1 mx-2 sm:mx-4">
+                <div className="h-0.5 bg-neutral-700 rounded-full overflow-hidden">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-indigo-500 to-indigo-400"
+                    initial={{ width: "0%" }}
+                    animate={{ width: activeStep >= 2 ? "100%" : "0%" }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  />
                 </div>
-              </Step>
-              
-              {/* Step 3: Confirmation */}
-              <Step 
-                className={`${activeStep >= 2 ? 'bg-indigo-600 text-white' : 'bg-neutral-700 text-gray-300'} transition-all duration-300 w-8 h-8 sm:w-10 sm:h-10`}
-              >
-                <BuildingLibraryIcon className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
-                <div className="absolute -bottom-8 sm:-bottom-10 lg:-bottom-12 w-max text-center left-1/2 transform -translate-x-1/2">
-                  <Typography variant="h6" className={`${activeStep === 2 ? 'text-indigo-300' : 'text-gray-400'} ${familyName.className} text-xs whitespace-nowrap`}>
-                    Confirm
-                  </Typography>
-                </div>
-              </Step>
-            </Stepper>
+              </div>
+
+              {/* Step 3: Confirm */}
+              <div className="flex flex-col items-center">
+                <motion.div
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                    activeStep >= 2 
+                      ? 'bg-indigo-600 border-indigo-400 text-white shadow-lg shadow-indigo-500/30' 
+                      : 'bg-neutral-800 border-neutral-600 text-gray-400'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
+                >
+                  <BuildingLibraryIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                </motion.div>
+                <span className={`mt-2 text-xs sm:text-sm ${activeStep === 2 ? 'text-indigo-300' : 'text-gray-500'} ${familyName.className}`}>
+                  Confirm
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Dynamic Step Content Container */}
