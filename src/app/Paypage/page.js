@@ -416,36 +416,27 @@ export default function HeroHighlightDemo() {
                 transition={{ duration: 0.4 }}
                 className="text-center mb-5 sm:mb-7 lg:mb-8 relative z-10"
               >
-                <motion.div 
-                  className="bg-green-600 rounded-full w-16 sm:w-20 h-16 sm:h-20 flex items-center justify-center mx-auto mb-3 sm:mb-4"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, type: "spring", delay: 0.2 }}
-                >
-                  <motion.svg
-                    className="w-8 sm:w-10 h-8 sm:h-10 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                  >
-                    <motion.path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={3}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </motion.svg>
-                </motion.div>
                 <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-semibold text-white ${familyName.className} mb-2`}>
                   Payment Successful!
                 </h1>
-                <p className={`text-gray-300 ${comic.className} text-sm sm:text-base px-2`}>
+                <p className={`text-gray-300 ${comic.className} text-sm sm:text-base px-2 mb-3`}>
                   Your Navraas'25 entry pass is ready
                 </p>
+                
+                {/* Developer credits */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="text-center"
+                >
+                  <p className={`text-gray-400 text-xs sm:text-sm ${comic.className}`}>
+                    Designed and Developed by 
+                    <DeveloperNameHighlight className="mx-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Vardaan Arora Bhatia</DeveloperNameHighlight>
+                    and
+                    <DeveloperNameHighlight className="ml-1" gradient="from-orange-300 via-orange-200 to-orange-100" glowColor="rgba(237,107,32,0.6)">Arnav Agarwal</DeveloperNameHighlight>
+                  </p>
+                </motion.div>
               </motion.div>
 
               {/* Two-column grid: Left QR, Right instructions + download */}
