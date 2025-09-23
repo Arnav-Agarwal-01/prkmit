@@ -524,7 +524,7 @@ export default function HeroHighlightDemo() {
                   {/* Follow Us Button */}
                   <motion.button
                     onClick={() => window.open('https://www.instagram.com/pr.kmit/', '_blank')}
-                    className={`w-full py-3 sm:py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg ${familyName.className}`}
+                    className={`w-full py-3 sm:py-4 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 hover:from-orange-600 hover:via-pink-600 hover:to-purple-700 text-white rounded-lg sm:rounded-xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg ${familyName.className}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.4 }}
