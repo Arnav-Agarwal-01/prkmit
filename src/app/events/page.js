@@ -1,10 +1,10 @@
 import React from 'react'
-import localFont from 'next/font/local';
 import { TextAnimate } from '@/components/magicui/text-animate';
 import { AnimatedEventShowcase } from '@/components/ui/animated-event-showcase';
 import { CardSpotlight } from '@/components/ui/card-spotlight';
 import { Testimonial } from '@/components/ui/testimonial-card';
 import { ArrowUpRight } from "lucide-react"
+import { helvetica } from "@/components/fonts/fonts";
 
 import { 
   CardCurtainReveal,
@@ -15,9 +15,9 @@ import {
   CardCurtain } from "@/components/ui/card-curtain-reveal"
 
 import Link from 'next/link';
-const familyName = localFont({
-    src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
-  })
+
+// Use Helvetica font
+const familyName = helvetica;
 
 export default function page() {
   const timelineData = [

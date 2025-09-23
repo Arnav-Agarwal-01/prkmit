@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-roboto)', 'system-ui', 'sans-serif'],
+  			roboto: ['var(--font-roboto)', 'system-ui', 'sans-serif'],
+  			condensed: ['var(--font-roboto-condensed)', 'system-ui', 'sans-serif'],
+  			'semi-condensed': ['var(--font-roboto-semi-condensed)', 'system-ui', 'sans-serif'],
+  			// Backward compatibility
+  			helvetica: ['var(--font-roboto)', 'system-ui', 'sans-serif'],
+  			'helvetica-compressed': ['var(--font-roboto-condensed)', 'system-ui', 'sans-serif'],
+  			rounded: ['var(--font-roboto-semi-condensed)', 'system-ui', 'sans-serif'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

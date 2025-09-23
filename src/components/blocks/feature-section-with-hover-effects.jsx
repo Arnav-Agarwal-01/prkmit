@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
+import { roboto } from "../fonts/fonts";
 import {
   IconAdjustmentsBolt,
   IconCloud,
@@ -11,13 +11,9 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 
-const familyName = localFont({
-  src: "../../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
-})
-
-const familyName2 = localFont({
-  src: "../../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/static/Montserrat-SemiBold.ttf",
-})
+// Use Roboto font
+const familyName = roboto;
+const familyName2 = roboto;
 
 export function FeaturesSectionWithHoverEffects() {
   const features = [

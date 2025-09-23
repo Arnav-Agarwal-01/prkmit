@@ -1,7 +1,33 @@
+/**
+ * NAVRAAS'25 MAIN HOMEPAGE COMPONENT
+ * 
+ * This is the primary landing page for the Navraas'25 cultural festival website.
+ * Features include event timeline, hero sections, sponsor showcases, and registration modal.
+ * 
+ * Key Features:
+ * - Hero section with animated text and festival branding
+ * - Interactive timeline showcasing past and upcoming events
+ * - 3D event carousel with visual previews
+ * - Sponsor showcase with infinite slider
+ * - Registration modal integration
+ * - Responsive design with custom fonts (Sora, Montserrat, Comic Relief, Inconsolata)
+ * 
+ * Technologies Used:
+ * - Next.js 15.1.7 with Turbopack
+ * - Framer Motion for animations
+ * - Custom UI components with Magic UI library
+ * - Local font integration
+ * - 3D card components and carousels
+ * 
+ * @component
+ * @returns {JSX.Element} The main homepage component
+ * 
+ * @author Vardaan & Arnav
+ * @version 1.0.0
+ */
 "use client";
 import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
-import localFont from "next/font/local";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { WavyText } from "@/components/magicui/wavy-text";
 import { AnimatedText } from "@/components/ui/animated-shiny-text";
@@ -15,29 +41,25 @@ import { InView } from "@/components/ui/in-view";
 import Link from 'next/link';
 import { GradientButton } from "@/components/ui/gradient-button"
 import { Component as CalendarWithEventSlots } from "@/components/ui/calendar-with-event-slots";
+import AnimatedModalDemo from "@/components/Registrationlanding";
+import { helvetica, helveticaCompressed, helveticaRounded } from "@/components/fonts/fonts";
 
+// Use Helvetica fonts instead of multiple different fonts
+const familyName = helvetica;
+const familyName2 = helveticaCompressed;
+const comic = helvetica;
+const inconsolata = helveticaRounded;
 
-
-// Remove the direct imports
-// Instead we'll use the Image component with the path directly
-
-const familyName = localFont({
-  src: "../../public/fonts/Sora/Sora-VariableFont_wght.ttf",
-})
-
-const familyName2 = localFont({
-  src: "../../public/fonts/Bangers,Montserrat,Sora,Ysabeau_SC/Montserrat/static/Montserrat-SemiBold.ttf",
-})
-
-const comic = localFont({
-  src : "../../public/fonts/Comic_Relief/ComicRelief-Regular.ttf"
-})
-
-const inconsolata = localFont({
-  src : "../../public/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf"
-})
-
+/**
+ * Home Component - Main Landing Page
+ * 
+ * The central homepage component that orchestrates all major sections of the Navraas'25 website.
+ * Includes timeline data configuration, hero sections, and component rendering logic.
+ * 
+ * @returns {JSX.Element} Complete homepage with all sections and animations
+ */
 export default function Home() {
+  // Timeline Data Configuration: Past and upcoming events for the festival
   const timelineData = [
     {
       title: "January - Patang Utsav",
@@ -84,8 +106,9 @@ export default function Home() {
     <div className="w-full">
       <main className="flex flex-col relative">
         {/* Hero Section */}
+        
         <div className="h-screen flex items-center justify-center px-4 py-8">
-          <div className={`text-3xl sm:text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center`}>
+          <div className={`text-3xl sm:text-3xl md:text-5xl text-white ${familyName.className} flex flex-col items-center w-full max-w-4xl`}>
             <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -125,24 +148,38 @@ export default function Home() {
                 Where chaos meets creativity
               </TextAnimate>
             </div>
-
+            
+            {/* Navraas 25 Registration Button */}
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mt-6 sm:mt-8 md:mt-10 z-[100] w-full flex justify-center "
+            >
+              
+                <AnimatedModalDemo  />
+              
+            </motion.div>
+            
+            {/* Sponsor us Button 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 1,
                 ease: [0.3, 1, 0.3, 1],
-                delay: 0.7 // Adjust delay as needed to sync with other animations
+                delay: 0.7
               }}
-              className="mt-6 sm:mt-8 md:mt-20 flex justify-center relative z-50"
+              className="mt-6 sm:mt-8 md:mt-10 w-full flex justify-center relative z-10"
             >
               <Link href="/contact" passHref legacyBehavior>
-                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 sm:w-auto relative z-[9999] cursor-pointer pointer-events-auto">
+                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 relative z-10 cursor-pointer pointer-events-auto">
                   ✨  Sponsor our next event  ✨
                 </a>
               </Link>
-            </motion.div>
+            </motion.div>*/}
           </div>
+            
         </div>
 
         <div className="flex flex-col items-center gap-8 py-8 pt-8">

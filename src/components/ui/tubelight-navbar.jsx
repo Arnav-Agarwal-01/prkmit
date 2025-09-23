@@ -62,7 +62,7 @@ export function NavBar({
       {/* Mobile view with PRKMIT text and hamburger */}
       {isMobile && (
         <div className="flex justify-between items-center w-full px-4 sm:px-6 py-3 pointer-events-auto navbar-mobile-gradient" style={{ minHeight: '60px' }}>
-          <Link href="/" className="text-xl sm:text-2xl font-extrabold glow-effect" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", fontFamily: "Arial, sans-serif", letterSpacing: '0.05em' }}>
+          <Link href="/" className="text-xl sm:text-2xl font-extrabold glow-effect font-helvetica" style={{ textShadow: "0 0 12px rgba(255, 255, 255, 0.9)", color: "white", letterSpacing: '0.05em' }}>
             PRKMIT
           </Link>
           <button 
@@ -78,7 +78,7 @@ export function NavBar({
       {/* Overlay to close menu when clicking outside */}
       {isMobile && menuOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-[998]"
+          className="fixed inset-0 bg-transparent z-[998]"
           onClick={() => setMenuOpen(false)}
           aria-hidden="true"
         />
@@ -91,7 +91,7 @@ export function NavBar({
           animate={menuOpen ? "open" : "closed"}
           className={cn(
             "flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 border-t border-gray-700/30 py-4 px-4 sm:px-6 bg-black/95 navbar-mobile-menu pointer-events-auto",
-            "w-full absolute top-[60px] left-0 overflow-hidden shadow-lg",
+            "w-full absolute top-[60px] left-0 overflow-hidden shadow-lg z-[1000]",
             !menuOpen && "pointer-events-none h-0 opacity-0"
           )}>
         {items.map((item) => {
@@ -119,7 +119,7 @@ export function NavBar({
               }}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold rounded-full transition-colors",
-                "text-foreground/80 hover:text-primary",
+                "text-foreground hover:text-primary",
                 isActive && "bg-muted text-primary",
                 "px-3 py-2"
               )}>
