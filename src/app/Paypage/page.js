@@ -300,7 +300,7 @@ export default function HeroHighlightDemo() {
                       </li>
                       <li className="flex items-start">
                         <span className="text-orange-300 mr-2 mt-1">•</span>
-                        Enter the Transaction ID after completing payment
+                        Enter the Transaction UTR after completing payment
                       </li>
                       <li className="flex items-start">
                         <span className="text-orange-300 mr-2 mt-1">•</span>
@@ -322,7 +322,7 @@ export default function HeroHighlightDemo() {
                   >
                     <div>
                       <label className={`block text-white text-base sm:text-lg font-semibold mb-2 sm:mb-3 ${familyName.className}`}>
-                        Enter Transaction ID
+                        Enter Transaction UTR
                       </label>
                       <div className="relative">
                         <input
@@ -336,7 +336,7 @@ export default function HeroHighlightDemo() {
                             }
                           }}
                           className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white bg-neutral-900/80 backdrop-blur rounded-lg sm:rounded-xl border-2 border-neutral-700 focus:border-orange-500 focus:outline-none transition-all duration-300"
-                          placeholder="Enter 12-digit Transaction ID"
+                          placeholder="Enter 12-digit Transaction UTR"
                           maxLength={12}
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3 sm:pr-4">
