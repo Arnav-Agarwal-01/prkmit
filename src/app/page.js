@@ -149,7 +149,7 @@ export default function Home() {
               </TextAnimate>
             </div>
             
-            {/* Navraas 25 Registration Button */}
+            {/* Navraas 25 Registration Button 
             <motion.div 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -159,6 +159,25 @@ export default function Home() {
               
                 <AnimatedModalDemo  />
               
+            </motion.div>
+            */}
+            
+            {/* QR Retrieval Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                ease: [0.3, 1, 0.3, 1],
+                delay: 0.5
+              }}
+              className="mt-4 sm:mt-6 w-full flex justify-center relative z-10"
+            >
+              <Link href="/retrieve-qr" passHref legacyBehavior>
+                <a className="inline-flex h-10 sm:h-12 items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-orange-700 px-4 sm:px-6 md:px-8 text-base sm:text-lg font-medium text-white transition-transform hover:scale-105 relative z-10 cursor-pointer pointer-events-auto">
+                  Retrieve Your QR Code Here
+                </a>
+              </Link>
             </motion.div>
             
             {/* Sponsor us Button 

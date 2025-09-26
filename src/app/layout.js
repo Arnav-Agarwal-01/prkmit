@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
     { name: "Sponsorships", url: "/events", icon: "calendar" },
     { name: "About", url: "/about", icon: "info" },
     { name: "Event Calendar", url: "/eventcal" , icon : "calendar"},
+    { name: "Retrieve QR", url: "/retrieve-qr", icon: "qr-code" },
     { name: "Contact", url: "/contact", icon: "mail" },
   ];
 
