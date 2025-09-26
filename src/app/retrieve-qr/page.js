@@ -32,7 +32,7 @@ export default function RetrieveQRPage() {
 
     try {
       const apiBaseUrl = process.env.NEXT_PUBLIC_API_ENDPOINT || 'http://localhost:3000';
-      const response = await fetch(`${apiBaseUrl}/api/auth/getqr`, {
+      const response = await fetch(`${apiBaseUrl}api/auth/getqr`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
